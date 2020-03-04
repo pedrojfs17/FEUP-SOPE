@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         if (S_ISREG(stat_buf.st_mode)) str = "regular";
         else if (S_ISDIR(stat_buf.st_mode)) str = "directory";
         else str = "other";
-        printf("%-25s - %s\n", direntp->d_name, str);
+        printf("%-25s - %s\t - %ld\n", direntp->d_name, str, stat_buf.st_ino);
     }
 
     closedir(dirp);
