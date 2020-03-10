@@ -8,7 +8,7 @@ int main(int argc, char *argv[], char *envp[])
 {
     pid_t pid;
 
-    char *command[] = {"ls","-la",NULL};
+    char *command[] = {"ls","-la",argv[1],NULL};
 
     if (argc != 2) {
         printf("usage: %s dirname\n",argv[0]);
