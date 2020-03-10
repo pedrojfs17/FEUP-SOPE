@@ -23,7 +23,7 @@ int main(int argc, char *argv[], char *envp[])
     else if (pid == 0){
         if (argc == 3) {
             pfd = open(argv[2], O_WRONLY | O_CREAT, 0666);
-            close(1);//Close stdout
+            close(1);
             dup(pfd);
         }
         execlp("ls","ls","-la",argv[1],NULL);
