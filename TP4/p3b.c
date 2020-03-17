@@ -47,5 +47,8 @@ int main(void) {
         }
     }
 
+    if (pid == 0)
+        exit(0);
+
     exit(0); 
 } 
