@@ -11,7 +11,7 @@
 
 #define COMMAND_SIZE 200
 #define MAX_NUM_COMMANDS 10
-#define ARGS (const char*[14]){"-a", "--all", "-b", "--bytes", "-B", "--block-size=", "-l", "--count-links", "-L", "--deference", "-S", "--separate-dirs", "--max-depth="}
+#define ARGS (const char*[14]){"-a", "--all", "-b", "--bytes", "-B", "--block-size", "-l", "--count-links", "-L", "--deference", "-S", "--separate-dirs", "--max-depth"}
 #define ARGS_SIZE 14
 
 // Argument struct
@@ -19,10 +19,11 @@ struct Args args = {0, 0, 1024, 0, 0, 0, -1};
 
 
 // Check if 'element' is in 'arr' of size 'arr_size' (return indice)
-int check_in_array(char *arr[], int arr_size, char *element) {
+int check_in_array(char *arr[], int arr_size, char *element) { 
     for(int i = 0; i < arr_size; ++i) {
         if (!strcmp(arr[i], element))
             return i;
+ 
     }
     return -1;
 }
@@ -62,13 +63,25 @@ int activate_flag(char *arg, int num) {
     return 0;
 }
 
+int isNumber(char *number)
+{
+    int i = 0;
+    for (; number[i] != 0; i++)
+    {
+        //if (number[i] > '9' || number[i] < '0')
+        if (!isdigit(number[i]))
+            return 0;
+    }
+    return 1;
+}
+
 /*-----------------------------------------------------------------
 
 TODO
 
     - Verificar quando é '-B' para enviar o argumento asseguir
 
-TODO BUT MORE DIFICULT (DESEMMERDA-TE)
+Done
 
     - Quando for '--block-size=XXX' ou '--max-depth=XXX' conta como
     um só argumento, ou seja, nao sei como fazer para separar o numero. 
@@ -81,14 +94,24 @@ int check_args(int argc, char *argv[]) {
     int path_found = 0;
     char *temp[14];
     int temp_size = 0;
+    int blck_sz=0;          //Used to find the block size, but also has a default number for 'activate_flag' function
+    char *elmnt_cpy;
 
     for (int i = 1; i < argc; i++) {
-        int pos = check_in_array(ARGS, ARGS_SIZE, argv[i]);
+        elmnt_cpy=strtok(argv[i],"=");
+        int pos = check_in_array(ARGS, ARGS_SIZE, elmnt_cpy);
         if (pos >= 0) { // Check valid Argument
-            if (check_in_array(temp, temp_size, argv[i]) < 0) { // Check if it isn't duplicate
+            if (check_in_array(temp, temp_size, elmnt_cpy) < 0) { // Check if it isn't duplicate 
                 temp[temp_size] = ARGS[pos];
                 if (pos == 12)
                     temp_size++;
+                if(pos==5 || pos==12){                  //If the arg is '--block-size' or '--max-depth'
+                    blck_sz= atoi(strtok(NULL,"="));
+                }
+                if(pos==4){                           //If the arg is '-B'
+                    blck_sz=atoi(argv[i+1]);
+                    i++;
+                }
                 else {
                     if (pos % 2 == 0)
                         temp[temp_size + 1] = ARGS[pos + 1];
@@ -96,8 +119,8 @@ int check_args(int argc, char *argv[]) {
                         temp[temp_size + 1] = ARGS[pos - 1];
                     temp_size+=2;
                 }
-                if (activate_flag(argv[i], 0) < 0) {
-                    printf("O argumento que falhou (activate flag): %s\n", argv[i]);
+                if (activate_flag(elmnt_cpy, blck_sz) < 0) {
+                    printf("O argumento que falhou (activate flag): %s\n", elmnt_cpy);
                     return 0;
                 }
                 continue;
@@ -115,6 +138,7 @@ int check_args(int argc, char *argv[]) {
                 return 0;
             }
         }
+        blck_sz=0;
     }
 
     return 1;
@@ -122,6 +146,7 @@ int check_args(int argc, char *argv[]) {
 
 int main(int argc, char *argv[], char *envp[])
 {
+    setenv("LOG_FILENAME", "log.txt", 0);
     if (argc > MAX_NUM_COMMANDS || !check_args(argc, argv)) {
         fprintf(stderr, "Usage: %s -l [path] [-a] [-b] [-B size] [-L] [-S] [--max-depth=N]\n", argv[0]);
         exit(1);
