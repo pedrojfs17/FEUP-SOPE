@@ -9,6 +9,7 @@
 #include <ctype.h>
 
 #include "args.h"
+#include "register.h"
 
 #define COMMAND_SIZE 200
 #define MAX_NUM_COMMANDS 10
@@ -82,20 +83,6 @@ int isNumber(char *number)
     return 1;
 }
 
-/*-----------------------------------------------------------------
-
-TODO
-
-    - Verificar quando é '-B' para enviar o argumento asseguir
-
-Done
-
-    - Quando for '--block-size=XXX' ou '--max-depth=XXX' conta como
-    um só argumento, ou seja, nao sei como fazer para separar o numero. 
-
------------------------------------------------------------------*/
-
-
 // Check if the arguments are valid
 int check_args(int argc, char *argv[]) {
     int path_found = 0;
@@ -141,13 +128,16 @@ int check_args(int argc, char *argv[]) {
 
 int main(int argc, char *argv[], char *envp[])
 {
-    setenv("LOG_FILENAME", "log.txt", 0);
+    initLogs();
+
     if (argc > MAX_NUM_COMMANDS || !check_args(argc, argv)) {
         fprintf(stderr, "Usage: %s -l [path] [-a] [-b] [-B size] [-L] [-S] [--max-depth=N]\n", argv[0]);
         exit(1);
     }
 
+    logCreate(argc, argv);
+
     printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
 
-    return 0;
+    logExit(0);
 }

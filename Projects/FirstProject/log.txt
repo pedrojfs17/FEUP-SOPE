@@ -1,0 +1,2 @@
+0.29 - 00019518 - CREATE - Command: ./simpledu -a -l .
+0.38 - 00019518 - EXIT - 0
