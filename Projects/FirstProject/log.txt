@@ -1,2 +1,2 @@
-0.29 - 00019518 - CREATE - Command: ./simpledu -a -l .
-0.38 - 00019518 - EXIT - 0
+0.11 - 00022355 - CREATE - Command: ./simpledu register.c
+0.16 - 00022355 - EXIT - 0

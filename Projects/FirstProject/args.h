@@ -6,4 +6,5 @@ struct Args {
     int deference;
     int separateDirs;
     int max_depth;
+    char path[256];
 };

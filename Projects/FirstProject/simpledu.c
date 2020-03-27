@@ -7,6 +7,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <ctype.h>
+#include <dirent.h>
 
 #include "args.h"
 #include "register.h"
@@ -108,8 +109,10 @@ int check_args(int argc, char *argv[]) {
             continue;
         }
         else {
-            if (!path_found && check_path(argv[i]) >= 0)
+            if (!path_found && check_path(argv[i]) >= 0) {
                 path_found = 1;
+                strncpy(args.path, argv[i], sizeof(args.path));
+            }
             else {
                 printf("O argumento que falhou: %s\n", argv[i]);
                 return 0;
@@ -126,6 +129,43 @@ int check_args(int argc, char *argv[]) {
     return 1;
 }
 
+int search_file(char * filename) {
+    struct stat fileStat;
+
+    if (stat(filename, &fileStat) < 0) {
+        printf("Error reading file stat.\n");
+        logExit(1);
+    }
+
+    printf("File: %s\n",filename);
+    printf("Total size (bytes): %ld\n",fileStat.st_size);
+    printf("Total size (blocks of %ld): %ld\n",fileStat.st_blksize,fileStat.st_blocks);
+
+    return 0;
+}
+
+int search_directory(char * path) {
+    DIR * midir;
+    struct dirent * info_archivo;
+    char fullpath[256];
+
+    if ((midir=opendir(path)) == NULL) {
+        perror("Error opening directory");
+        logExit(1);
+    }
+
+    while ((info_archivo = readdir(midir)) != 0) {
+        strcpy (fullpath, path);
+        strcat (fullpath, "/");
+        strcat (fullpath, info_archivo->d_name);
+        search_file(fullpath);
+        printf("\n");
+    }
+
+    closedir(midir);
+    return 0;
+}
+
 int main(int argc, char *argv[], char *envp[])
 {
     initLogs();
@@ -138,6 +178,11 @@ int main(int argc, char *argv[], char *envp[])
     logCreate(argc, argv);
 
     printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
+
+    if (check_path(args.path) == 1) // Directory
+        search_directory(args.path);
+    else
+        search_file(args.path);
 
     logExit(0);
 }
