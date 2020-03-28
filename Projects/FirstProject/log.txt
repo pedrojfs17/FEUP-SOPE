@@ -1,2 +1,17 @@
-0.11 - 00022355 - CREATE - Command: ./simpledu register.c
-0.16 - 00022355 - EXIT - 0
+0.07 - 00023878 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.25 - 00023878 - EXIT - 0
+T - 1
+0.03 - 00023956 - CREATE - Command: ./simpledu TestDir/D1/src.c -B 1024 --max-depth
+0.05 - 00023956 - EXIT - 1
+0.03 - 00023960 - CREATE - Command: ./simpledu TestDir/D1/src.c -B 1024 --max-depth
+0.07 - 00023960 - EXIT - 1
+0.04 - 00023962 - CREATE - Command: ./simpledu TestDir/D1/src.c -B 1024 --max-depth
+0.07 - 00023962 - EXIT - 1
+0.09 - 00023952 - CREATE - Command: ./simpledu TestDir --max-depth
+2.74 - 00023952 - EXIT - 0
+0.03 - 00023954 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.19 - 00023954 - EXIT - 0
+0.04 - 00023964 - CREATE - Command: ./simpledu TestDir/D1/src.c -B 1024 --max-depth
+0.07 - 00023964 - EXIT - 1
+0.04 - 00023959 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.37 - 00023959 - EXIT - 0

@@ -16,6 +16,8 @@
 #define MAX_NUM_COMMANDS 10
 #define ARGS (char*[13]){"-a", "--all", "-b", "--bytes", "-B", "--block-size", "-l", "--count-links", "-L", "--deference", "-S", "--separate-dirs", "--max-depth"}
 #define ARGS_SIZE 13
+#define READ 0
+#define WRITE 1
 
 // Argument struct
 struct Args args = {0, 0, 1024, 0, 0, 0, -1};
@@ -33,12 +35,14 @@ int check_in_array(char *arr[], int arr_size, char *element) {
 // Check if a path is valid (return -1), a directory (return 1) or a file (return 0)
 int check_path(const char *path) {
     struct stat path_stat;
-    if (stat(path, &path_stat) < 0) // Invalid path
+    if (lstat(path, &path_stat) < 0) // Invalid path
         return -1;
     else if (S_ISDIR(path_stat.st_mode)) // Directory
         return 1;
     else if (S_ISREG(path_stat.st_mode)) // File
         return 0;
+    else if(S_ISLNK(path_stat.st_mode))
+        return 2;
     else
         return -1;
 }
@@ -131,12 +135,20 @@ int check_args(int argc, char *argv[]) {
 
 int search_file(char * filename) {
     struct stat fileStat;
-
+    char buf[1024];
+    ssize_t len;
     if (stat(filename, &fileStat) < 0) {
         printf("Error reading file stat.\n");
         logExit(1);
     }
-
+    if((check_path(filename)==2) && args.deference){
+        lstat(filename,&fileStat);
+        if((len=readlink(filename,buf,sizeof(buf)-1))!=-1){
+            buf[len]='\0';
+            strcat(filename,"/");
+            strcat(filename,buf);
+        }
+    }
     printf("File: %s\n",filename);
     printf("Total size (bytes): %ld\n",fileStat.st_size);
     printf("Total size (blocks of %ld): %ld\n",fileStat.st_blksize,fileStat.st_blocks);
@@ -144,45 +156,121 @@ int search_file(char * filename) {
     return 0;
 }
 
-int search_directory(char * path) {
+int search_directory(char * path, char * directories[]) {
     DIR * midir;
     struct dirent * info_archivo;
     char fullpath[256];
-
+    
+    int i=0;
     if ((midir=opendir(path)) == NULL) {
         perror("Error opening directory");
         logExit(1);
     }
-
+    
     while ((info_archivo = readdir(midir)) != 0) {
         strcpy (fullpath, path);
         strcat (fullpath, "/");
         strcat (fullpath, info_archivo->d_name);
-        search_file(fullpath);
+        printf("TIPO DE FICHEIRO: %d\n",check_path(fullpath));
+        if(check_path(fullpath)==2 || check_path(fullpath)==0){
+            search_file(fullpath);
+        }
+        else if(strcmp(info_archivo->d_name,".")&&strcmp(info_archivo->d_name,"..")){
+            printf("FOUND: %s",fullpath);
+            directories[i]=fullpath;
+            i++;
+        }
+        
         printf("\n");
     }
 
     closedir(midir);
-    return 0;
+    return i;
+}
+
+void build_command(char * path, char * command1[]){
+    char command[256];
+    char buf[256];
+    strncpy(command,"./simpledu ", sizeof("./simpledu "));
+    strcat(command,path);
+    if(args.all){
+        strcat(command," -a");
+    }
+    if(args.bytes){
+        strcat(command," -b");
+    }
+    if(args.block_size){
+        strcat(command," -B ");
+        sprintf(buf,"%d",args.block_size);
+        strcat(command, buf);
+    }
+    if(args.countLinks){
+        strcat(command," -l");
+    }
+    if(args.deference){
+        strcat(command," -L");
+    }
+    if(args.separateDirs){
+        strcat(command," -S");
+    }
+    if(args.max_depth>0){
+        strcat(command," --max-depth=");
+        sprintf(buf,"%d",args.max_depth-1);
+        strcat(command, buf);
+    }
+    //printf("%s\n",command);
+    strcpy(command1,command);
 }
 
 int main(int argc, char *argv[], char *envp[])
 {
     initLogs();
+    char *directories[1024];
+    char command[256];
 
     if (argc > MAX_NUM_COMMANDS || !check_args(argc, argv)) {
         fprintf(stderr, "Usage: %s -l [path] [-a] [-b] [-B size] [-L] [-S] [--max-depth=N]\n", argv[0]);
         exit(1);
     }
 
-    logCreate(argc, argv);
+    logCreate(argc, argv); 
 
     printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
+    
+    if(args.max_depth==0){
+        search_directory(args.path, directories);
+        logExit(0);
+    }
+    else{
+        int num_dir=search_directory(args.path, directories);
+        for(int i=0;i<num_dir;i++){
+            int n;
+            n=fork(); 
 
-    if (check_path(args.path) == 1) // Directory
-        search_directory(args.path);
-    else
-        search_file(args.path);
+            if(n<0){
+                printf("Fork failed\n");
+                logExit(-1);
+            }
+            else if (n == 0){
+                if(directories[i]!=NULL){
+                    //printf("DIRETORIO: %s\n",directories[i]);
+                    build_command(directories[i], &command);
+                    printf("COMMAND: %s\n",command);
+                    execl("/bin/sh","/bin/sh","-c",command,0);
+                }
+                logExit(0);
+            }
+            else{
+                
+                sleep(1);
+        }
+
+    }
+    }
+    
+    
+    
+    
 
     logExit(0);
 }
