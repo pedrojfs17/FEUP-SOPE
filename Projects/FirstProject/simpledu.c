@@ -171,10 +171,7 @@ int search_directory(char * path, char directories[1024][256]) {
         strcpy (fullpath, path);
         strcat (fullpath, "/");
         strcat (fullpath, info_archivo->d_name);
-        if(check_path(fullpath)==2 || check_path(fullpath)==0){
-            search_file(fullpath);
-        }
-        else if(strcmp(info_archivo->d_name,".")&&strcmp(info_archivo->d_name,"..")){
+        if(check_path(fullpath)==1 && strcmp(info_archivo->d_name,".") && strcmp(info_archivo->d_name,"..")){
             strcpy(directories[i],fullpath);
             i++;
         }
@@ -182,6 +179,28 @@ int search_directory(char * path, char directories[1024][256]) {
 
     closedir(midir);
     return i;
+}
+
+void print_directory(char * path) {
+    DIR * midir;
+    struct dirent * info_archivo;
+    char fullpath[256];
+    
+    if ((midir=opendir(path)) == NULL) {
+        perror("Error opening directory");
+        logExit(1);
+    }
+    
+    while ((info_archivo = readdir(midir)) != 0) {
+        strcpy (fullpath, path);
+        strcat (fullpath, "/");
+        strcat (fullpath, info_archivo->d_name);
+        if(check_path(fullpath)==2 || check_path(fullpath)==0){
+            search_file(fullpath);
+        }
+    }
+
+    closedir(midir);
 }
 
 void build_command(char * path, char * command1){
@@ -232,22 +251,24 @@ int main(int argc, char *argv[], char *envp[])
 
     //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
     
+    int status;
+
     if(args.max_depth==0){
-        search_directory(args.path, directories);
+        print_directory(args.path);
         logExit(0);
     }
     else{
         int num_dir = search_directory(args.path, directories);
 
         for(int i=0;i<num_dir;i++){
-            int n;
-            n=fork(); 
+            pid_t pid;
+            pid=fork(); 
 
-            if(n<0){
+            if(pid<0){
                 printf("Fork failed\n");
                 logExit(-1);
             }
-            else if (n == 0){
+            else if (pid == 0){
                 if(directories[i]!=NULL){
                     build_command(directories[i], command);
                     execl("/bin/sh","/bin/sh","-c",command,(char*)0);
@@ -255,10 +276,12 @@ int main(int argc, char *argv[], char *envp[])
                 logExit(0);
             }
             else{
-                sleep(1);
+                waitpid(pid, &status, 0);
             }
 
         }
+
+        print_directory(args.path);
     }
 
     logExit(0);
