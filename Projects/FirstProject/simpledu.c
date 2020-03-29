@@ -233,11 +233,11 @@ int main(int argc, char *argv[], char *envp[])
     //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
     
     if(args.max_depth==0){
-        search_directory(args.path, &directories);
+        search_directory(args.path, directories);
         logExit(0);
     }
     else{
-        int num_dir = search_directory(args.path, &directories);
+        int num_dir = search_directory(args.path, directories);
 
         for(int i=0;i<num_dir;i++){
             int n;
