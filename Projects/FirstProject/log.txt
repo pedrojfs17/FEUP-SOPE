@@ -36,3 +36,411 @@
 0.53 - 00017101 - EXIT - 0
 0.22 - 00017093 - CREATE - Command: ./simpledu TestDir --max-depth -L
 0.96 - 00017093 - EXIT - 0
+0.04 - 00011204 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L --max-depth
+0.06 - 00011204 - EXIT - 0
+0.04 - 00011208 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L --max-depth
+0.11 - 00011208 - EXIT - 0
+0.03 - 00011210 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L --max-depth
+0.06 - 00011210 - EXIT - 0
+0.04 - 00011206 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L --max-depth
+0.14 - 00011206 - EXIT - 0
+0.04 - 00011202 - CREATE - Command: ./simpledu TestDir -L -a --max-depth
+0.23 - 00011202 - EXIT - 0
+0.03 - 00011302 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -l -L --max-depth
+0.06 - 00011302 - EXIT - 0
+0.03 - 00011306 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -l -L --max-depth
+0.08 - 00011306 - EXIT - 0
+0.04 - 00011308 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -l -L --max-depth
+0.07 - 00011308 - EXIT - 0
+0.04 - 00011304 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -l -L --max-depth
+0.14 - 00011304 - EXIT - 0
+0.04 - 00011300 - CREATE - Command: ./simpledu TestDir -l -L -a --max-depth
+0.18 - 00011300 - EXIT - 0
+0.03 - 00014683 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.06 - 00014683 - EXIT - 0
+0.04 - 00014689 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.10 - 00014689 - EXIT - 0
+0.03 - 00014687 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.13 - 00014687 - EXIT - 0
+0.04 - 00014691 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.07 - 00014691 - EXIT - 0
+0.03 - 00014685 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.15 - 00014685 - EXIT - 0
+0.04 - 00014681 - CREATE - Command: ./simpledu TestDir -L -a
+0.17 - 00014681 - EXIT - 0
+0.04 - 00014796 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.07 - 00014796 - EXIT - 0
+0.13 - 00014922 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.23 - 00014922 - EXIT - 0
+0.08 - 00014931 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00014931 - EXIT - 0
+0.10 - 00014928 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.26 - 00014928 - EXIT - 0
+0.12 - 00014934 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.20 - 00014934 - EXIT - 0
+0.06 - 00014925 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.29 - 00014925 - EXIT - 0
+0.04 - 00014919 - CREATE - Command: ./simpledu TestDir -L -a
+0.32 - 00014919 - EXIT - 0
+0.06 - 00014940 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.18 - 00014940 - EXIT - 0
+0.08 - 00015023 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.15 - 00015023 - EXIT - 0
+0.10 - 00015080 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.18 - 00015080 - EXIT - 0
+0.04 - 00015253 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.07 - 00015253 - EXIT - 0
+0.03 - 00015259 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.10 - 00015259 - EXIT - 0
+0.03 - 00015257 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.12 - 00015257 - EXIT - 0
+0.03 - 00015261 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.07 - 00015261 - EXIT - 0
+0.04 - 00015255 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.15 - 00015255 - EXIT - 0
+0.04 - 00015251 - CREATE - Command: ./simpledu TestDir -L -a
+0.18 - 00015251 - EXIT - 0
+0.08 - 00015507 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.16 - 00015507 - EXIT - 0
+0.06 - 00016965 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.13 - 00016965 - EXIT - 0
+0.04 - 00016963 - CREATE - Command: ./simpledu TestDir -L -a
+0.24 - 00016963 - EXIT - 0
+0.07 - 00016971 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00016971 - EXIT - 0
+0.11 - 00016969 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.28 - 00016969 - EXIT - 0
+0.07 - 00016973 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00016973 - EXIT - 0
+0.07 - 00016967 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.26 - 00016967 - EXIT - 0
+0.05 - 00016977 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.09 - 00016977 - EXIT - 0
+0.08 - 00016983 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00016983 - EXIT - 0
+0.07 - 00016981 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.23 - 00016981 - EXIT - 0
+0.05 - 00016985 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.10 - 00016985 - EXIT - 0
+0.08 - 00016979 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.27 - 00016979 - EXIT - 0
+0.04 - 00016975 - CREATE - Command: ./simpledu TestDir -L -a
+0.21 - 00016975 - EXIT - 0
+0.06 - 00017194 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.18 - 00017194 - EXIT - 0
+0.07 - 00017200 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.18 - 00017200 - EXIT - 0
+0.07 - 00017198 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.23 - 00017198 - EXIT - 0
+0.04 - 00017188 - CREATE - Command: ./simpledu TestDir -L -a
+0.21 - 00017188 - EXIT - 0
+0.06 - 00017204 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00017204 - EXIT - 0
+0.07 - 00017196 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.29 - 00017196 - EXIT - 0
+0.11 - 00017230 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.18 - 00017230 - EXIT - 0
+0.04 - 00017222 - CREATE - Command: ./simpledu TestDir -L -a
+0.22 - 00017222 - EXIT - 0
+0.03 - 00017262 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.08 - 00017262 - EXIT - 0
+0.09 - 00017243 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.21 - 00017243 - EXIT - 0
+0.04 - 00017265 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.08 - 00017265 - EXIT - 0
+0.08 - 00017233 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.23 - 00017233 - EXIT - 0
+0.06 - 00017303 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.13 - 00017303 - EXIT - 0
+0.04 - 00017300 - CREATE - Command: ./simpledu TestDir -L -a
+0.21 - 00017300 - EXIT - 0
+0.11 - 00017313 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.23 - 00017313 - EXIT - 0
+0.07 - 00017309 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.26 - 00017309 - EXIT - 0
+0.11 - 00017317 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.18 - 00017317 - EXIT - 0
+0.03 - 00017305 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.21 - 00017305 - EXIT - 0
+0.06 - 00017352 - CREATE - Command: ./simpledu TestDir -L -a
+0.16 - 00017352 - EXIT - 0
+0.06 - 00017359 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.19 - 00017359 - EXIT - 0
+0.04 - 00017360 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.08 - 00017360 - EXIT - 0
+0.06 - 00017366 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00017366 - EXIT - 0
+0.06 - 00017367 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.22 - 00017367 - EXIT - 0
+0.09 - 00017371 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00017371 - EXIT - 0
+0.04 - 00017378 - CREATE - Command: ./simpledu TestDir -L -a
+0.15 - 00017378 - EXIT - 0
+0.06 - 00017396 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.13 - 00017396 - EXIT - 0
+0.06 - 00017395 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.24 - 00017395 - EXIT - 0
+0.05 - 00017411 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.10 - 00017411 - EXIT - 0
+0.04 - 00017412 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.14 - 00017412 - EXIT - 0
+0.06 - 00017427 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.13 - 00017427 - EXIT - 0
+0.06 - 00017525 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.12 - 00017525 - EXIT - 0
+0.04 - 00017519 - CREATE - Command: ./simpledu TestDir -L -a
+0.21 - 00017519 - EXIT - 0
+0.04 - 00017556 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.08 - 00017556 - EXIT - 0
+0.04 - 00017543 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.15 - 00017543 - EXIT - 0
+0.04 - 00017568 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.09 - 00017568 - EXIT - 0
+0.04 - 00017531 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.18 - 00017531 - EXIT - 0
+0.09 - 00019299 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.16 - 00019299 - EXIT - 0
+0.04 - 00019295 - CREATE - Command: ./simpledu TestDir -L -a
+0.26 - 00019295 - EXIT - 0
+0.07 - 00019311 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.18 - 00019311 - EXIT - 0
+0.04 - 00019306 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.19 - 00019306 - EXIT - 0
+0.08 - 00019315 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.15 - 00019315 - EXIT - 0
+0.06 - 00019302 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.25 - 00019302 - EXIT - 0
+0.07 - 00019388 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.14 - 00019388 - EXIT - 0
+0.06 - 00019510 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.14 - 00019510 - EXIT - 0
+0.05 - 00019580 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.10 - 00019580 - EXIT - 0
+0.04 - 00019575 - CREATE - Command: ./simpledu TestDir -L -a
+0.26 - 00019575 - EXIT - 0
+0.03 - 00019606 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.08 - 00019606 - EXIT - 0
+0.06 - 00019594 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.18 - 00019594 - EXIT - 0
+0.04 - 00019677 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.07 - 00019677 - EXIT - 0
+0.06 - 00019589 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.22 - 00019589 - EXIT - 0
+0.04 - 00019736 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.07 - 00019736 - EXIT - 0
+0.08 - 00019752 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00019752 - EXIT - 0
+0.08 - 00019747 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.24 - 00019747 - EXIT - 0
+0.07 - 00019756 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00019756 - EXIT - 0
+0.06 - 00019743 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.27 - 00019743 - EXIT - 0
+0.04 - 00019728 - CREATE - Command: ./simpledu TestDir -L -a
+0.33 - 00019728 - EXIT - 0
+0.06 - 00019825 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.11 - 00019825 - EXIT - 0
+0.08 - 00020026 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.15 - 00020026 - EXIT - 0
+0.04 - 00020023 - CREATE - Command: ./simpledu TestDir -L -a
+0.26 - 00020023 - EXIT - 0
+0.06 - 00020033 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00020033 - EXIT - 0
+0.07 - 00020031 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.23 - 00020031 - EXIT - 0
+0.06 - 00020036 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.16 - 00020036 - EXIT - 0
+0.06 - 00020029 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.27 - 00020029 - EXIT - 0
+0.11 - 00020124 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.18 - 00020124 - EXIT - 0
+0.10 - 00002549 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.17 - 00002549 - EXIT - 0
+0.06 - 00002572 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.18 - 00002572 - EXIT - 0
+0.06 - 00002570 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.21 - 00002570 - EXIT - 0
+0.09 - 00002576 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.16 - 00002576 - EXIT - 0
+0.06 - 00002568 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.32 - 00002568 - EXIT - 0
+0.06 - 00002564 - CREATE - Command: ./simpledu TestDir -L -a
+0.33 - 00002564 - EXIT - 0
+0.06 - 00002739 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.16 - 00002739 - EXIT - 0
+0.08 - 00002745 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.15 - 00002745 - EXIT - 0
+0.06 - 00002753 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.17 - 00002753 - EXIT - 0
+0.06 - 00002751 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.24 - 00002751 - EXIT - 0
+0.07 - 00002755 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00002755 - EXIT - 0
+0.06 - 00002748 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.31 - 00002748 - EXIT - 0
+0.04 - 00002743 - CREATE - Command: ./simpledu TestDir -L -a
+0.30 - 00002743 - EXIT - 0
+0.06 - 00002758 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.14 - 00002758 - EXIT - 0
+0.06 - 00002764 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00002764 - EXIT - 0
+0.16 - 00002762 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.39 - 00002762 - EXIT - 0
+0.08 - 00002766 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00002766 - EXIT - 0
+0.06 - 00002760 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.33 - 00002760 - EXIT - 0
+0.04 - 00002756 - CREATE - Command: ./simpledu TestDir -L -a
+0.25 - 00002756 - EXIT - 0
+0.07 - 00002774 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00002774 - EXIT - 0
+0.06 - 00002772 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.28 - 00002772 - EXIT - 0
+0.07 - 00002776 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.17 - 00002776 - EXIT - 0
+0.06 - 00002770 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.35 - 00002770 - EXIT - 0
+0.04 - 00002767 - CREATE - Command: ./simpledu TestDir -L -a
+0.29 - 00002767 - EXIT - 0
+0.08 - 00003199 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.17 - 00003199 - EXIT - 0
+0.05 - 00003197 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.21 - 00003197 - EXIT - 0
+0.06 - 00003201 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.13 - 00003201 - EXIT - 0
+0.06 - 00003195 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.36 - 00003195 - EXIT - 0
+0.04 - 00003192 - CREATE - Command: ./simpledu TestDir -L -a
+0.30 - 00003192 - EXIT - 0
+0.07 - 00003256 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.18 - 00003256 - EXIT - 0
+0.07 - 00003254 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.27 - 00003254 - EXIT - 0
+0.03 - 00003258 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.07 - 00003258 - EXIT - 0
+0.06 - 00003252 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.36 - 00003252 - EXIT - 0
+0.03 - 00003249 - CREATE - Command: ./simpledu TestDir -L -a
+0.29 - 00003249 - EXIT - 0
+0.06 - 00003368 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.14 - 00003368 - EXIT - 0
+0.06 - 00003435 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.23 - 00003435 - EXIT - 0
+0.10 - 00003433 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.29 - 00003433 - EXIT - 0
+0.06 - 00003445 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.11 - 00003445 - EXIT - 0
+0.06 - 00003431 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.34 - 00003431 - EXIT - 0
+0.04 - 00003428 - CREATE - Command: ./simpledu TestDir -L -a
+0.29 - 00003428 - EXIT - 0
+0.05 - 00003981 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.10 - 00003981 - EXIT - 0
+0.05 - 00003984 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.10 - 00003984 - EXIT - 0
+0.06 - 00003990 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.15 - 00003990 - EXIT - 0
+0.05 - 00003988 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.22 - 00003988 - EXIT - 0
+0.04 - 00003992 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.08 - 00003992 - EXIT - 0
+0.05 - 00003986 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.26 - 00003986 - EXIT - 0
+0.04 - 00003982 - CREATE - Command: ./simpledu TestDir -L -a
+0.31 - 00003982 - EXIT - 0
+0.04 - 00004070 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.07 - 00004070 - EXIT - 0
+0.03 - 00004076 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.08 - 00004076 - EXIT - 0
+0.04 - 00004074 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.17 - 00004074 - EXIT - 0
+0.04 - 00004111 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.07 - 00004111 - EXIT - 0
+0.04 - 00004072 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.26 - 00004072 - EXIT - 0
+0.04 - 00004058 - CREATE - Command: ./simpledu TestDir -L -a
+0.29 - 00004058 - EXIT - 0
+0.04 - 00004142 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.07 - 00004142 - EXIT - 0
+0.04 - 00004156 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.10 - 00004156 - EXIT - 0
+0.04 - 00004146 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.17 - 00004146 - EXIT - 0
+0.06 - 00004181 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.12 - 00004181 - EXIT - 0
+0.04 - 00004144 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.28 - 00004144 - EXIT - 0
+0.04 - 00004140 - CREATE - Command: ./simpledu TestDir -L -a
+0.23 - 00004140 - EXIT - 0
+0.04 - 00004210 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.07 - 00004210 - EXIT - 0
+0.04 - 00004217 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.09 - 00004217 - EXIT - 0
+0.05 - 00004215 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.27 - 00004215 - EXIT - 0
+0.05 - 00004219 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.10 - 00004219 - EXIT - 0
+0.07 - 00004212 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.34 - 00004212 - EXIT - 0
+0.04 - 00004208 - CREATE - Command: ./simpledu TestDir -L -a
+0.24 - 00004208 - EXIT - 0
+0.06 - 00004271 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.18 - 00004271 - EXIT - 0
+0.04 - 00004285 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.16 - 00004285 - EXIT - 0
+0.08 - 00004275 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.30 - 00004275 - EXIT - 0
+0.04 - 00004331 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00004331 - EXIT - 0
+0.04 - 00004273 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.39 - 00004273 - EXIT - 0
+0.04 - 00004269 - CREATE - Command: ./simpledu TestDir -L -a
+0.37 - 00004269 - EXIT - 0
+0.04 - 00004730 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.14 - 00004730 - EXIT - 0
+0.04 - 00004728 - CREATE - Command: ./simpledu TestDir -L -a
+0.44 - 00004728 - EXIT - 0
+0.04 - 00004736 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.15 - 00004736 - EXIT - 0
+0.03 - 00004734 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.19 - 00004734 - EXIT - 0
+0.03 - 00004740 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.11 - 00004740 - EXIT - 0
+0.05 - 00004732 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.31 - 00004732 - EXIT - 0
+0.04 - 00004886 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.13 - 00004886 - EXIT - 0
+0.03 - 00004884 - CREATE - Command: ./simpledu TestDir -L -a
+0.36 - 00004884 - EXIT - 0
+0.05 - 00004892 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.11 - 00004892 - EXIT - 0
+0.03 - 00004890 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.29 - 00004890 - EXIT - 0
+0.04 - 00005288 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00005288 - EXIT - 0
+0.05 - 00004888 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.39 - 00004888 - EXIT - 0
+0.03 - 00005328 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.12 - 00005328 - EXIT - 0
+0.04 - 00005335 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.14 - 00005335 - EXIT - 0
+0.03 - 00005333 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.25 - 00005333 - EXIT - 0
+0.03 - 00005337 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.11 - 00005337 - EXIT - 0
+0.04 - 00005330 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.29 - 00005330 - EXIT - 0
+0.04 - 00005325 - CREATE - Command: ./simpledu TestDir -L -a
+0.41 - 00005325 - EXIT - 0
+0.09 - 00005741 - CREATE - Command: ./simpledu TestDir/D2 -a -B 1024 -L
+0.20 - 00005741 - EXIT - 0
+0.04 - 00005739 - CREATE - Command: ./simpledu TestDir -L -a
+0.33 - 00005739 - EXIT - 0
+0.11 - 00005752 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -a -B 1024 -L
+0.20 - 00005752 - EXIT - 0
+0.06 - 00005745 - CREATE - Command: ./simpledu TestDir/D1/Db -a -B 1024 -L
+0.30 - 00005745 - EXIT - 0
+0.06 - 00005754 - CREATE - Command: ./simpledu TestDir/D1/Da -a -B 1024 -L
+0.14 - 00005754 - EXIT - 0
+0.14 - 00005743 - CREATE - Command: ./simpledu TestDir/D1 -a -B 1024 -L
+0.39 - 00005743 - EXIT - 0

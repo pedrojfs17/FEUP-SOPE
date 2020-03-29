@@ -236,8 +236,56 @@ void build_command(char * path, char * command1){
     strncpy(command1,command,sizeof(command));
 }
 
+void sigint_handler(int signo) {   
+    printf("Entering SIG handler ...\n");
+    kill(-2,SIGTSTP); //supostamente para todos os filhos
+    printf("Do you want to terminate? (Y/N): ");
+    char terminate;
+    scanf("%c",&terminate);
+
+    if(terminate=='Y'){
+        kill(getpid(),SIGTERM); //termina o pai
+    }
+    else if(terminate=='N'){
+        kill(-2, SIGCONT); 
+    }
+    else{
+        printf("Invalid input!\n");
+    }
+    
+    printf("Exiting SIG handler ...\n");  
+} 
+
+/*void sigchld_handler(int signo) {   
+    printf("Entering SIGINT handler ...\n");   
+    pid_t pid;
+    int status;
+    while((pid = waitpid(0, &status, WNOHANG)) > 0);
+    printf("Exiting SIGINT handler ...\n");  
+}*/
+
 int main(int argc, char *argv[], char *envp[])
 {
+    struct sigaction action;  
+    action.sa_handler = sigint_handler;  
+    sigemptyset(&action.sa_mask);  
+    action.sa_flags = 0; 
+
+    /*struct sigaction action2;  
+    action.sa_handler = sigchld_handler;  
+    sigemptyset(&action.sa_mask);  
+    action.sa_flags = 0;*/
+
+     if (sigaction(SIGINT,&action,NULL) < 0)  {   
+                    fprintf(stderr,"Unable to install SIGINT handler\n");        
+                    exit(1);  
+                }
+
+   /* if (sigaction(SIGCHLD,&action2,NULL) < 0)  {        
+        fprintf(stderr,"Unable to install SIGINT handler\n");        
+        exit(1);  
+    } */
+
     initLogs();
     char directories[1024][256];// = malloc(sizeof(char**));
     char *command = malloc(sizeof(char*));
@@ -252,7 +300,7 @@ int main(int argc, char *argv[], char *envp[])
     //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
     
     int status;
-
+    sleep(5);
     if(args.max_depth==0){
         print_directory(args.path);
         logExit(0);
@@ -269,6 +317,7 @@ int main(int argc, char *argv[], char *envp[])
                 logExit(-1);
             }
             else if (pid == 0){
+                sleep(1);
                 if(directories[i]!=NULL){
                     build_command(directories[i], command);
                     execl("/bin/sh","/bin/sh","-c",command,(char*)0);
