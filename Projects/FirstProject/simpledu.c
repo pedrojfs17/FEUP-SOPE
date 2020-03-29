@@ -149,14 +149,14 @@ int search_file(char * filename) {
             strcat(filename,buf);
         }
     }
-    printf("File: %s\n",filename);
-    printf("Total size (bytes): %ld\n",fileStat.st_size);
-    printf("Total size (blocks of %ld): %ld\n",fileStat.st_blksize,fileStat.st_blocks);
+    printf("Bytes: %ld\t\t",fileStat.st_size); // Size in bytes
+    printf("Blocks: %ld\t->",fileStat.st_blocks); // Number of blocks
+    printf("%s\n",filename);
 
     return 0;
 }
 
-int search_directory(char * path, char * directories[]) {
+int search_directory(char * path, char directories[1024][256]) {
     DIR * midir;
     struct dirent * info_archivo;
     char fullpath[256];
@@ -171,24 +171,20 @@ int search_directory(char * path, char * directories[]) {
         strcpy (fullpath, path);
         strcat (fullpath, "/");
         strcat (fullpath, info_archivo->d_name);
-        printf("TIPO DE FICHEIRO: %d\n",check_path(fullpath));
         if(check_path(fullpath)==2 || check_path(fullpath)==0){
             search_file(fullpath);
         }
         else if(strcmp(info_archivo->d_name,".")&&strcmp(info_archivo->d_name,"..")){
-            printf("FOUND: %s",fullpath);
-            directories[i]=fullpath;
+            strcpy(directories[i],fullpath);
             i++;
         }
-        
-        printf("\n");
     }
 
     closedir(midir);
     return i;
 }
 
-void build_command(char * path, char * command1[]){
+void build_command(char * path, char * command1){
     char command[256];
     char buf[256];
     strncpy(command,"./simpledu ", sizeof("./simpledu "));
@@ -218,15 +214,14 @@ void build_command(char * path, char * command1[]){
         sprintf(buf,"%d",args.max_depth-1);
         strcat(command, buf);
     }
-    //printf("%s\n",command);
-    strcpy(command1,command);
+    strncpy(command1,command,sizeof(command));
 }
 
 int main(int argc, char *argv[], char *envp[])
 {
     initLogs();
-    char *directories[1024];
-    char command[256];
+    char directories[1024][256];// = malloc(sizeof(char**));
+    char *command = malloc(sizeof(char*));
 
     if (argc > MAX_NUM_COMMANDS || !check_args(argc, argv)) {
         fprintf(stderr, "Usage: %s -l [path] [-a] [-b] [-B size] [-L] [-S] [--max-depth=N]\n", argv[0]);
@@ -235,14 +230,15 @@ int main(int argc, char *argv[], char *envp[])
 
     logCreate(argc, argv); 
 
-    printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
+    //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
     
     if(args.max_depth==0){
-        search_directory(args.path, directories);
+        search_directory(args.path, &directories);
         logExit(0);
     }
     else{
-        int num_dir=search_directory(args.path, directories);
+        int num_dir = search_directory(args.path, &directories);
+
         for(int i=0;i<num_dir;i++){
             int n;
             n=fork(); 
@@ -253,24 +249,17 @@ int main(int argc, char *argv[], char *envp[])
             }
             else if (n == 0){
                 if(directories[i]!=NULL){
-                    //printf("DIRETORIO: %s\n",directories[i]);
-                    build_command(directories[i], &command);
-                    printf("COMMAND: %s\n",command);
-                    execl("/bin/sh","/bin/sh","-c",command,0);
+                    build_command(directories[i], command);
+                    execl("/bin/sh","/bin/sh","-c",command,(char*)0);
                 }
                 logExit(0);
             }
             else{
-                
                 sleep(1);
-        }
+            }
 
+        }
     }
-    }
-    
-    
-    
-    
 
     logExit(0);
 }
