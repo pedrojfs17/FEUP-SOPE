@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <ctype.h>
 #include <dirent.h>
+#include <signal.h>
 
 #include "args.h"
 #include "register.h"
@@ -21,6 +22,8 @@
 
 // Argument struct
 struct Args args = {0, 0, 1024, 0, 0, 0, -1};
+
+long folder_size = 0;
 
 
 // Check if 'element' is in 'arr' of size 'arr_size' (return indice)
@@ -133,6 +136,15 @@ int check_args(int argc, char *argv[]) {
     return 1;
 }
 
+void print_file(char * path, long size) {
+    if (args.bytes)
+        printf("%ld\t",size); // Size in bytes
+    else
+        printf("%ld\t",size % args.block_size == 0 ? size / args.block_size : size / args.block_size + 1 );
+    
+    printf("%s\n",path);
+}
+
 int search_file(char * filename) {
     struct stat fileStat;
     char buf[1024];
@@ -149,9 +161,11 @@ int search_file(char * filename) {
             strcat(filename,buf);
         }
     }
-    printf("Bytes: %ld\t\t",fileStat.st_size); // Size in bytes
-    printf("Blocks: %ld\t->",fileStat.st_blocks); // Number of blocks
-    printf("%s\n",filename);
+    
+    print_file(filename, fileStat.st_size);
+    folder_size += fileStat.st_size;
+
+    //printf("NEW FOLDER SIZE = %ld\n",folder_size );
 
     return 0;
 }
@@ -243,10 +257,10 @@ void sigint_handler(int signo) {
     char terminate;
     scanf("%c",&terminate);
 
-    if(terminate=='Y'){
+    if(terminate=='Y' || terminate=='y'){
         kill(getpid(),SIGTERM); //termina o pai
     }
-    else if(terminate=='N'){
+    else if(terminate=='N' || terminate=='n'){
         kill(-2, SIGCONT); 
     }
     else{
@@ -256,13 +270,13 @@ void sigint_handler(int signo) {
     printf("Exiting SIG handler ...\n");  
 } 
 
-/*void sigchld_handler(int signo) {   
-    printf("Entering SIGINT handler ...\n");   
+void sigchld_handler(int signo) {   
+    printf("Entering SIGUSR2 handler, my pid is %d...\n",getpid());   
     pid_t pid;
     int status;
     while((pid = waitpid(0, &status, WNOHANG)) > 0);
-    printf("Exiting SIGINT handler ...\n");  
-}*/
+    printf("Exiting SIGUSR2 handler ...\n");  
+}
 
 int main(int argc, char *argv[], char *envp[])
 {
@@ -271,20 +285,38 @@ int main(int argc, char *argv[], char *envp[])
     sigemptyset(&action.sa_mask);  
     action.sa_flags = 0; 
 
-    /*struct sigaction action2;  
-    action.sa_handler = sigchld_handler;  
-    sigemptyset(&action.sa_mask);  
-    action.sa_flags = 0;*/
+    struct sigaction action2;  
+    action2.sa_handler = sigchld_handler;  
+    sigemptyset(&action2.sa_mask);  
+    action2.sa_flags = 0;
 
-     if (sigaction(SIGINT,&action,NULL) < 0)  {   
-                    fprintf(stderr,"Unable to install SIGINT handler\n");        
-                    exit(1);  
-                }
-
-   /* if (sigaction(SIGCHLD,&action2,NULL) < 0)  {        
+    if (sigaction(SIGINT,&action,NULL) < 0)  {   
         fprintf(stderr,"Unable to install SIGINT handler\n");        
         exit(1);  
-    } */
+    }
+
+    if (sigaction(SIGUSR2,&action2,NULL) < 0)  {        
+        fprintf(stderr,"Unable to install SIGUSR2 handler\n");        
+        exit(1);  
+    } 
+
+    char parentPID[10];
+    char myPID[10];
+    if (getenv("PARENT_PID") == NULL) {
+        sprintf(parentPID, "%d", getpid());
+        setenv("PARENT_PID", parentPID, 0);
+    }
+    else {
+        sprintf(parentPID, "%s", getenv("PARENT_PID"));
+    }
+
+    //printf("My PID is: %d\tParent PID: %s\n",getpid(),getenv("PARENT_PID"));
+
+    sprintf(myPID, "%d", getpid());
+    if (atoi(parentPID) != getpid()) {
+        //printf("Kill %d\n",atoi(parentPID));
+        //kill(atoi(parentPID),SIGUSR2);
+    }
 
     initLogs();
     char directories[1024][256];// = malloc(sizeof(char**));
@@ -300,12 +332,16 @@ int main(int argc, char *argv[], char *envp[])
     //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
     
     int status;
-    sleep(5);
+    //sleep(2);
     if(args.max_depth==0){
         print_directory(args.path);
         logExit(0);
     }
     else{
+        int cp[2];
+        long subFolderSize;
+        pipe(cp);
+
         int num_dir = search_directory(args.path, directories);
 
         for(int i=0;i<num_dir;i++){
@@ -317,20 +353,36 @@ int main(int argc, char *argv[], char *envp[])
                 logExit(-1);
             }
             else if (pid == 0){
-                sleep(1);
                 if(directories[i]!=NULL){
                     build_command(directories[i], command);
                     execl("/bin/sh","/bin/sh","-c",command,(char*)0);
                 }
+                //write(cp[WRITE],&folder_size,sizeof(long));
                 logExit(0);
             }
             else{
+                dup2(cp[READ],STDIN_FILENO);
+                close(cp[WRITE]);
                 waitpid(pid, &status, 0);
+                sleep(1);
+                read(cp[READ],&subFolderSize, sizeof(long));
+                print_file(directories[i],subFolderSize);
+                folder_size+=subFolderSize;
+                //printf("Parent -- FOLDER SIZE = %ld\n",folder_size );
             }
+
+            // PRINT THE FOLDER HERE
 
         }
 
         print_directory(args.path);
+
+        if (atoi(parentPID) != getpid()) {
+            dup2(cp[WRITE], STDOUT_FILENO);
+            close(cp[READ]);
+            printf("%ld\n",folder_size);
+            write(cp[WRITE],&folder_size,sizeof(long));
+        }
     }
 
     logExit(0);
