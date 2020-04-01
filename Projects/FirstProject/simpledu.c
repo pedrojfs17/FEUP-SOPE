@@ -116,7 +116,7 @@ int check_args(int argc, char *argv[]) {
         else {
             if (!path_found && check_path(argv[i]) >= 0) {
                 path_found = 1;
-                strncpy(args.path, argv[i], sizeof(args.path));
+                strcpy(args.path, argv[i]);
             }
             else {
                 printf("O argumento que falhou: %s\n", argv[i]);
@@ -132,6 +132,17 @@ int check_args(int argc, char *argv[]) {
     }
 
     return 1;
+}
+
+void print_subdirectory(char * path, long size){
+    if (args.bytes)
+        printf("%ld\t",size); // Size in bytes
+    else
+        printf("%ld\t",size % args.block_size == 0 ? size / args.block_size : size / args.block_size + 1 );
+}
+
+void print_path(char *path){
+    printf("%s\n",path);
 }
 
 void print_file(char * path, long size) {
@@ -211,7 +222,7 @@ void print_directory(char * path) {
             search_file(fullpath);
         }
     }
-
+    print_subdirectory(path,folder_size);
     closedir(midir);
 }
 
@@ -245,7 +256,7 @@ void build_command(char * path, char * command1){
         sprintf(buf,"%d",args.max_depth-1);
         strcat(command, buf);
     }
-    strncpy(command1,command,sizeof(command));
+    strcpy(command1,command);
 }
 
 void sigint_handler(int signo) {   
@@ -309,8 +320,10 @@ int main(int argc, char *argv[], char *envp[])
     }
 
     //printf("My PID is: %d\tParent PID: %s\n",getpid(),getenv("PARENT_PID"));
-
+    int my_pipe[2];
+    pipe(my_pipe);
     sprintf(myPID, "%d", getpid());
+
     if (atoi(parentPID) != getpid()) {
         //printf("Kill %d\n",atoi(parentPID));
         //kill(atoi(parentPID),SIGUSR2);
@@ -336,10 +349,9 @@ int main(int argc, char *argv[], char *envp[])
         logExit(0);
     }
     else{
-        int my_pipe[2];
+        
         char buf[1024];
         long subFolderSize;
-        pipe(my_pipe);
 
         int num_dir = search_directory(args.path, directories);
 
@@ -365,9 +377,19 @@ int main(int argc, char *argv[], char *envp[])
                 close(my_pipe[WRITE]);
                 waitpid(pid, &status, 0);
                 sleep(1);
-                while(read(my_pipe[READ],&buf, sizeof(buf)))
-                    printf(" ");
-                print_file(directories[i],folder_size);
+                ssize_t len;
+                while((len=read(my_pipe[READ],&buf, sizeof(buf)))){
+                    printf("%s",buf);
+                }
+                //buf[len]='\0';
+                char * last_newline = strrchr(buf,'\n');
+                char * last_line = last_newline+1;
+                printf("\nSize in last line - %s\n",last_line);
+                char * tok = strtok(last_line," \t\0");
+                subFolderSize= atol(tok);
+                printf("Size of subfolder - %ld\n",subFolderSize);
+                folder_size=subFolderSize;
+                print_path(directories[i]);
                 //folder_size+=subFolderSize;
                 //printf("Parent -- FOLDER SIZE = %ld\n",folder_size );
             }

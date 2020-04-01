@@ -854,3 +854,435 @@
 0.35 - 00004703 - EXIT - 0
 0.04 - 00004691 - CREATE - Command: ./simpledu TestDir
 1.05 - 00004691 - EXIT - 0
+0.03 - 00002840 - CREATE - Command: ./simpledu TestDir/D2 -B 1024
+0.05 - 00002840 - EXIT - 0
+0.03 - 00002846 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024
+0.06 - 00002846 - EXIT - 0
+0.03 - 00002844 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024
+0.15 - 00002844 - EXIT - 0
+0.03 - 00002852 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024
+0.06 - 00002852 - EXIT - 0
+0.03 - 00002842 - CREATE - Command: ./simpledu TestDir/D1 -B 1024
+0.27 - 00002842 - EXIT - 0
+0.01 - 00002838 - CREATE - Command: ./simpledu TestDir
+0.28 - 00002838 - EXIT - 0
+0.03 - 00002858 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.06 - 00002858 - EXIT - 0
+0.03 - 00002862 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.06 - 00002862 - EXIT - 0
+0.04 - 00002865 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.06 - 00002865 - EXIT - 0
+0.04 - 00002860 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.29 - 00002860 - EXIT - 0
+0.01 - 00002856 - CREATE - Command: ./simpledu TestDir --max-depth
+0.28 - 00002856 - EXIT - 0
+0.03 - 00003008 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00003008 - EXIT - 0
+0.03 - 00003014 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.06 - 00003014 - EXIT - 0
+0.03 - 00003012 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.17 - 00003012 - EXIT - 0
+0.05 - 00003016 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00003016 - EXIT - 0
+0.04 - 00003010 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.32 - 00003010 - EXIT - 0
+0.01 - 00003006 - CREATE - Command: ./simpledu TestDir --max-depth
+0.27 - 00003006 - EXIT - 0
+0.03 - 00003068 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00003068 - EXIT - 0
+0.03 - 00003074 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.06 - 00003074 - EXIT - 0
+0.03 - 00003072 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.15 - 00003072 - EXIT - 0
+0.06 - 00003077 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.11 - 00003077 - EXIT - 0
+0.04 - 00003070 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.35 - 00003070 - EXIT - 0
+0.01 - 00003066 - CREATE - Command: ./simpledu TestDir --max-depth
+0.27 - 00003066 - EXIT - 0
+0.03 - 00003090 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00003090 - EXIT - 0
+0.04 - 00003096 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -b -B 1024 --max-depth
+0.08 - 00003096 - EXIT - 0
+0.03 - 00003094 - CREATE - Command: ./simpledu TestDir/D1/Db -b -B 1024 --max-depth
+0.16 - 00003094 - EXIT - 0
+0.03 - 00003098 - CREATE - Command: ./simpledu TestDir/D1/Da -b -B 1024 --max-depth
+0.07 - 00003098 - EXIT - 0
+0.04 - 00003092 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.26 - 00003092 - EXIT - 0
+0.01 - 00003088 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.26 - 00003088 - EXIT - 0
+0.03 - 00003454 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00003454 - EXIT - 0
+0.05 - 00003460 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -b -B 1024 --max-depth
+0.10 - 00003460 - EXIT - 0
+0.01 - 00003452 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.26 - 00003452 - EXIT - 0
+0.03 - 00003589 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00003589 - EXIT - 0
+0.09 - 00003596 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -b -B 1024 --max-depth
+0.13 - 00003596 - EXIT - 0
+0.06 - 00003594 - CREATE - Command: ./simpledu TestDir/D1/Db -b -B 1024 --max-depth
+0.24 - 00003594 - EXIT - 0
+0.05 - 00003598 - CREATE - Command: ./simpledu TestDir/D1/Da -b -B 1024 --max-depth
+0.10 - 00003598 - EXIT - 0
+0.05 - 00003592 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.36 - 00003592 - EXIT - 0
+0.01 - 00003587 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.31 - 00003587 - EXIT - 0
+0.03 - 00003716 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00003716 - EXIT - 0
+0.04 - 00003722 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -b -B 1024 --max-depth
+0.07 - 00003722 - EXIT - 0
+0.04 - 00003720 - CREATE - Command: ./simpledu TestDir/D1/Db -b -B 1024 --max-depth
+0.20 - 00003720 - EXIT - 0
+0.06 - 00003724 - CREATE - Command: ./simpledu TestDir/D1/Da -b -B 1024 --max-depth
+0.10 - 00003724 - EXIT - 0
+0.04 - 00003718 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.34 - 00003718 - EXIT - 0
+0.01 - 00003714 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.28 - 00003714 - EXIT - 0
+0.03 - 00003734 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00003734 - EXIT - 0
+0.06 - 00003736 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.11 - 00003736 - EXIT - 0
+0.01 - 00003732 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.32 - 00003732 - EXIT - 0
+0.03 - 00003741 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.04 - 00003741 - EXIT - 0
+0.03 - 00003743 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.06 - 00003743 - EXIT - 0
+0.01 - 00003739 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.26 - 00003739 - EXIT - 0
+0.03 - 00004003 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00004003 - EXIT - 0
+0.03 - 00004074 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00004074 - EXIT - 0
+0.06 - 00004077 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.11 - 00004077 - EXIT - 0
+0.01 - 00004072 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.30 - 00004072 - EXIT - 0
+0.03 - 00004080 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00004080 - EXIT - 0
+0.05 - 00004084 - CREATE - Command: ./simpledu TestDir/D1/Db -b -B 1024 --max-depth
+0.09 - 00004084 - EXIT - 0
+0.06 - 00004086 - CREATE - Command: ./simpledu TestDir/D1/Da -b -B 1024 --max-depth
+0.10 - 00004086 - EXIT - 0
+0.06 - 00004082 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.39 - 00004082 - EXIT - 0
+0.01 - 00004078 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.29 - 00004078 - EXIT - 0
+0.03 - 00004390 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00004390 - EXIT - 0
+0.06 - 00004394 - CREATE - Command: ./simpledu TestDir/D1/Db -b -B 1024 --max-depth
+0.09 - 00004394 - EXIT - 0
+0.06 - 00004396 - CREATE - Command: ./simpledu TestDir/D1/Da -b -B 1024 --max-depth
+0.10 - 00004396 - EXIT - 0
+0.06 - 00004392 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.38 - 00004392 - EXIT - 0
+0.01 - 00004388 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.32 - 00004388 - EXIT - 0
+0.03 - 00004462 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00004462 - EXIT - 0
+0.07 - 00004467 - CREATE - Command: ./simpledu TestDir/D1/Db -b -B 1024 --max-depth
+0.11 - 00004467 - EXIT - 0
+0.06 - 00004469 - CREATE - Command: ./simpledu TestDir/D1/Da -b -B 1024 --max-depth
+0.10 - 00004469 - EXIT - 0
+0.06 - 00004465 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.38 - 00004465 - EXIT - 0
+0.01 - 00004460 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.31 - 00004460 - EXIT - 0
+0.03 - 00004512 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00004512 - EXIT - 0
+0.05 - 00004516 - CREATE - Command: ./simpledu TestDir/D1/Db -b -B 1024 --max-depth
+0.09 - 00004516 - EXIT - 0
+0.06 - 00004518 - CREATE - Command: ./simpledu TestDir/D1/Da -b -B 1024 --max-depth
+0.10 - 00004518 - EXIT - 0
+0.06 - 00004514 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.37 - 00004514 - EXIT - 0
+0.01 - 00004510 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.31 - 00004510 - EXIT - 0
+0.03 - 00004524 - CREATE - Command: ./simpledu TestDir/D2 -b -B 1024 --max-depth
+0.05 - 00004524 - EXIT - 0
+0.04 - 00004530 - CREATE - Command: ./simpledu TestDir/D1/Db -b -B 1024 --max-depth
+0.08 - 00004530 - EXIT - 0
+0.06 - 00004532 - CREATE - Command: ./simpledu TestDir/D1/Da -b -B 1024 --max-depth
+0.11 - 00004532 - EXIT - 0
+0.05 - 00004528 - CREATE - Command: ./simpledu TestDir/D1 -b -B 1024 --max-depth
+0.35 - 00004528 - EXIT - 0
+0.01 - 00004522 - CREATE - Command: ./simpledu TestDir --max-depth -b
+0.30 - 00004522 - EXIT - 0
+0.03 - 00004538 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00004538 - EXIT - 0
+0.09 - 00004542 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.13 - 00004542 - EXIT - 0
+0.06 - 00004544 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00004544 - EXIT - 0
+0.06 - 00004540 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.38 - 00004540 - EXIT - 0
+0.01 - 00004536 - CREATE - Command: ./simpledu TestDir --max-depth
+0.30 - 00004536 - EXIT - 0
+0.03 - 00004784 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00004784 - EXIT - 0
+0.03 - 00004789 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.06 - 00004789 - EXIT - 0
+0.05 - 00004791 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.09 - 00004791 - EXIT - 0
+0.04 - 00004787 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.31 - 00004787 - EXIT - 0
+0.01 - 00004782 - CREATE - Command: ./simpledu TestDir --max-depth
+0.30 - 00004782 - EXIT - 0
+0.07 - 00005064 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.09 - 00005064 - EXIT - 0
+0.04 - 00005068 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.06 - 00005068 - EXIT - 0
+0.04 - 00005070 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.06 - 00005070 - EXIT - 0
+0.04 - 00005066 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.29 - 00005066 - EXIT - 0
+0.01 - 00005062 - CREATE - Command: ./simpledu TestDir --max-depth
+0.29 - 00005062 - EXIT - 0
+0.03 - 00005076 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00005076 - EXIT - 0
+0.06 - 00005081 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.09 - 00005081 - EXIT - 0
+0.04 - 00005083 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.06 - 00005083 - EXIT - 0
+0.06 - 00005079 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.32 - 00005079 - EXIT - 0
+0.01 - 00005074 - CREATE - Command: ./simpledu TestDir --max-depth
+0.27 - 00005074 - EXIT - 0
+0.03 - 00005350 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00005350 - EXIT - 0
+0.05 - 00005354 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.09 - 00005354 - EXIT - 0
+0.06 - 00005357 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00005357 - EXIT - 0
+0.05 - 00005352 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.37 - 00005352 - EXIT - 0
+0.01 - 00005348 - CREATE - Command: ./simpledu TestDir --max-depth
+0.32 - 00005348 - EXIT - 0
+0.03 - 00005651 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00005651 - EXIT - 0
+0.03 - 00005680 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00005680 - EXIT - 0
+0.05 - 00005685 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.09 - 00005685 - EXIT - 0
+0.06 - 00005687 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.09 - 00005687 - EXIT - 0
+0.06 - 00005683 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.37 - 00005683 - EXIT - 0
+0.01 - 00005678 - CREATE - Command: ./simpledu TestDir --max-depth
+0.35 - 00005678 - EXIT - 0
+0.03 - 00005988 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00005988 - EXIT - 0
+0.03 - 00006020 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.08 - 00006020 - EXIT - 0
+0.05 - 00006025 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.09 - 00006025 - EXIT - 0
+0.05 - 00006027 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00006027 - EXIT - 0
+0.08 - 00006023 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.41 - 00006023 - EXIT - 0
+0.01 - 00006018 - CREATE - Command: ./simpledu TestDir --max-depth
+0.30 - 00006018 - EXIT - 0
+0.03 - 00006403 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00006403 - EXIT - 0
+0.04 - 00006407 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.08 - 00006407 - EXIT - 0
+0.06 - 00006409 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00006409 - EXIT - 0
+0.10 - 00006405 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.42 - 00006405 - EXIT - 0
+0.01 - 00006401 - CREATE - Command: ./simpledu TestDir --max-depth
+0.33 - 00006401 - EXIT - 0
+0.03 - 00006491 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00006491 - EXIT - 0
+0.09 - 00006495 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.13 - 00006495 - EXIT - 0
+0.06 - 00006497 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00006497 - EXIT - 0
+0.06 - 00006493 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.35 - 00006493 - EXIT - 0
+0.01 - 00006489 - CREATE - Command: ./simpledu TestDir --max-depth
+0.32 - 00006489 - EXIT - 0
+0.03 - 00006529 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00006529 - EXIT - 0
+0.06 - 00006533 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.09 - 00006533 - EXIT - 0
+0.06 - 00006535 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00006535 - EXIT - 0
+0.06 - 00006531 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.39 - 00006531 - EXIT - 0
+0.01 - 00006527 - CREATE - Command: ./simpledu TestDir --max-depth
+0.32 - 00006527 - EXIT - 0
+0.03 - 00006641 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00006641 - EXIT - 0
+0.03 - 00006645 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.04 - 00006645 - EXIT - 0
+0.09 - 00006647 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.13 - 00006647 - EXIT - 0
+0.03 - 00006643 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.28 - 00006643 - EXIT - 0
+0.01 - 00006639 - CREATE - Command: ./simpledu TestDir --max-depth
+0.27 - 00006639 - EXIT - 0
+0.03 - 00006680 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00006680 - EXIT - 0
+0.06 - 00006684 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.10 - 00006684 - EXIT - 0
+0.06 - 00006688 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00006688 - EXIT - 0
+0.06 - 00006682 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.40 - 00006682 - EXIT - 0
+0.01 - 00006678 - CREATE - Command: ./simpledu TestDir --max-depth
+0.31 - 00006678 - EXIT - 0
+0.03 - 00006692 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00006692 - EXIT - 0
+0.04 - 00006696 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.07 - 00006696 - EXIT - 0
+0.04 - 00006698 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.06 - 00006698 - EXIT - 0
+0.04 - 00006694 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.31 - 00006694 - EXIT - 0
+0.01 - 00006690 - CREATE - Command: ./simpledu TestDir --max-depth
+0.28 - 00006690 - EXIT - 0
+0.03 - 00006748 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00006748 - EXIT - 0
+0.07 - 00006753 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.11 - 00006753 - EXIT - 0
+0.06 - 00006755 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00006755 - EXIT - 0
+0.05 - 00006751 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.37 - 00006751 - EXIT - 0
+0.01 - 00006746 - CREATE - Command: ./simpledu TestDir --max-depth
+0.31 - 00006746 - EXIT - 0
+0.04 - 00006896 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.07 - 00006896 - EXIT - 0
+0.05 - 00006900 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.09 - 00006900 - EXIT - 0
+0.06 - 00006902 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.11 - 00006902 - EXIT - 0
+0.06 - 00006898 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.39 - 00006898 - EXIT - 0
+0.01 - 00006894 - CREATE - Command: ./simpledu TestDir --max-depth
+0.33 - 00006894 - EXIT - 0
+0.03 - 00006953 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00006953 - EXIT - 0
+0.05 - 00006959 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.09 - 00006959 - EXIT - 0
+0.05 - 00006957 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.23 - 00006957 - EXIT - 0
+0.06 - 00006961 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00006961 - EXIT - 0
+0.06 - 00006955 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.41 - 00006955 - EXIT - 0
+0.01 - 00006951 - CREATE - Command: ./simpledu TestDir --max-depth
+0.31 - 00006951 - EXIT - 0
+0.03 - 00007109 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007109 - EXIT - 0
+0.05 - 00007115 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.09 - 00007115 - EXIT - 0
+0.05 - 00007113 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.23 - 00007113 - EXIT - 0
+0.06 - 00007117 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00007117 - EXIT - 0
+0.05 - 00007111 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.39 - 00007111 - EXIT - 0
+0.01 - 00007107 - CREATE - Command: ./simpledu TestDir --max-depth
+0.33 - 00007107 - EXIT - 0
+0.03 - 00007160 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007160 - EXIT - 0
+0.05 - 00007166 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.09 - 00007166 - EXIT - 0
+0.09 - 00007164 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.28 - 00007164 - EXIT - 0
+0.05 - 00007169 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.11 - 00007169 - EXIT - 0
+0.05 - 00007162 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.37 - 00007162 - EXIT - 0
+0.01 - 00007158 - CREATE - Command: ./simpledu TestDir --max-depth
+0.29 - 00007158 - EXIT - 0
+0.03 - 00007257 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007257 - EXIT - 0
+0.05 - 00007263 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.08 - 00007263 - EXIT - 0
+0.04 - 00007261 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.18 - 00007261 - EXIT - 0
+0.04 - 00007265 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.07 - 00007265 - EXIT - 0
+0.04 - 00007259 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.30 - 00007259 - EXIT - 0
+0.01 - 00007255 - CREATE - Command: ./simpledu TestDir --max-depth
+0.27 - 00007255 - EXIT - 0
+0.03 - 00007313 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007313 - EXIT - 0
+0.05 - 00007319 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.09 - 00007319 - EXIT - 0
+0.05 - 00007317 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.23 - 00007317 - EXIT - 0
+0.06 - 00007323 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00007323 - EXIT - 0
+0.05 - 00007315 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.39 - 00007315 - EXIT - 0
+0.01 - 00007311 - CREATE - Command: ./simpledu TestDir --max-depth
+0.32 - 00007311 - EXIT - 0
+0.03 - 00007364 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007364 - EXIT - 0
+0.05 - 00007370 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.09 - 00007370 - EXIT - 0
+0.09 - 00007368 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.28 - 00007368 - EXIT - 0
+0.05 - 00007372 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00007372 - EXIT - 0
+0.05 - 00007366 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.38 - 00007366 - EXIT - 0
+0.01 - 00007362 - CREATE - Command: ./simpledu TestDir --max-depth
+0.32 - 00007362 - EXIT - 0
+0.03 - 00007436 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007436 - EXIT - 0
+0.05 - 00007442 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.13 - 00007442 - EXIT - 0
+0.05 - 00007440 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.23 - 00007440 - EXIT - 0
+0.04 - 00007444 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.07 - 00007444 - EXIT - 0
+0.06 - 00007438 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.38 - 00007438 - EXIT - 0
+0.01 - 00007434 - CREATE - Command: ./simpledu TestDir --max-depth
+0.33 - 00007434 - EXIT - 0
+0.03 - 00007473 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007473 - EXIT - 0
+0.05 - 00007479 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.11 - 00007479 - EXIT - 0
+0.05 - 00007477 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.23 - 00007477 - EXIT - 0
+0.06 - 00007481 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00007481 - EXIT - 0
+0.06 - 00007475 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.40 - 00007475 - EXIT - 0
+0.01 - 00007471 - CREATE - Command: ./simpledu TestDir --max-depth
+0.32 - 00007471 - EXIT - 0
+0.03 - 00007541 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007541 - EXIT - 0
+0.04 - 00007547 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.07 - 00007547 - EXIT - 0
+0.04 - 00007545 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.21 - 00007545 - EXIT - 0
+0.05 - 00007550 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00007550 - EXIT - 0
+0.04 - 00007543 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.41 - 00007543 - EXIT - 0
+0.01 - 00007539 - CREATE - Command: ./simpledu TestDir --max-depth
+0.36 - 00007539 - EXIT - 0
+0.03 - 00007669 - CREATE - Command: ./simpledu TestDir/D2 -B 1024 --max-depth
+0.05 - 00007669 - EXIT - 0
+0.05 - 00007675 - CREATE - Command: ./simpledu TestDir/D1/Db/Dx -B 1024 --max-depth
+0.09 - 00007675 - EXIT - 0
+0.10 - 00007673 - CREATE - Command: ./simpledu TestDir/D1/Db -B 1024 --max-depth
+0.29 - 00007673 - EXIT - 0
+0.06 - 00007678 - CREATE - Command: ./simpledu TestDir/D1/Da -B 1024 --max-depth
+0.10 - 00007678 - EXIT - 0
+0.05 - 00007671 - CREATE - Command: ./simpledu TestDir/D1 -B 1024 --max-depth
+0.38 - 00007671 - EXIT - 0
+0.01 - 00007667 - CREATE - Command: ./simpledu TestDir --max-depth
+0.33 - 00007667 - EXIT - 0
