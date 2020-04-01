@@ -25,7 +25,6 @@ struct Args args = {0, 0, 1024, 0, 0, 0, -1};
 
 long folder_size = 0;
 
-
 // Check if 'element' is in 'arr' of size 'arr_size' (return indice)
 int check_in_array(char *arr[], int arr_size, char *element) {
     for(int i = 0; i < arr_size; i++) {
@@ -79,8 +78,7 @@ int activate_flag(char *arg, int num) {
     return 0;
 }
 
-int isNumber(char *number)
-{
+int isNumber(char *number) {
     int i = 0;
     for (; number[i] != 0; i++)
     {
@@ -270,7 +268,7 @@ void sigint_handler(int signo) {
     printf("Exiting SIG handler ...\n");  
 } 
 
-void sigchld_handler(int signo) {   
+void sigusr2_handler(int signo) {   
     printf("Entering SIGUSR2 handler, my pid is %d...\n",getpid());   
     pid_t pid;
     int status;
@@ -285,20 +283,20 @@ int main(int argc, char *argv[], char *envp[])
     sigemptyset(&action.sa_mask);  
     action.sa_flags = 0; 
 
-    struct sigaction action2;  
-    action2.sa_handler = sigchld_handler;  
+    /*struct sigaction action2;  
+    action2.sa_handler = sigusr2_handler;  
     sigemptyset(&action2.sa_mask);  
-    action2.sa_flags = 0;
+    action2.sa_flags = 0;*/
 
     if (sigaction(SIGINT,&action,NULL) < 0)  {   
         fprintf(stderr,"Unable to install SIGINT handler\n");        
         exit(1);  
     }
 
-    if (sigaction(SIGUSR2,&action2,NULL) < 0)  {        
+    /*if (sigaction(SIGUSR2,&action2,NULL) < 0)  {        
         fprintf(stderr,"Unable to install SIGUSR2 handler\n");        
         exit(1);  
-    } 
+    } */
 
     char parentPID[10];
     char myPID[10];
@@ -338,9 +336,10 @@ int main(int argc, char *argv[], char *envp[])
         logExit(0);
     }
     else{
-        int cp[2];
+        int my_pipe[2];
+        char buf[1024];
         long subFolderSize;
-        pipe(cp);
+        pipe(my_pipe);
 
         int num_dir = search_directory(args.path, directories);
 
@@ -353,6 +352,8 @@ int main(int argc, char *argv[], char *envp[])
                 logExit(-1);
             }
             else if (pid == 0){
+                dup2(my_pipe[WRITE], STDOUT_FILENO);
+                close(my_pipe[READ]);
                 if(directories[i]!=NULL){
                     build_command(directories[i], command);
                     execl("/bin/sh","/bin/sh","-c",command,(char*)0);
@@ -361,13 +362,13 @@ int main(int argc, char *argv[], char *envp[])
                 logExit(0);
             }
             else{
-                dup2(cp[READ],STDIN_FILENO);
-                close(cp[WRITE]);
+                close(my_pipe[WRITE]);
                 waitpid(pid, &status, 0);
                 sleep(1);
-                read(cp[READ],&subFolderSize, sizeof(long));
-                print_file(directories[i],subFolderSize);
-                folder_size+=subFolderSize;
+                while(read(my_pipe[READ],&buf, sizeof(buf)))
+                    printf(" ");
+                print_file(directories[i],folder_size);
+                //folder_size+=subFolderSize;
                 //printf("Parent -- FOLDER SIZE = %ld\n",folder_size );
             }
 
@@ -376,13 +377,6 @@ int main(int argc, char *argv[], char *envp[])
         }
 
         print_directory(args.path);
-
-        if (atoi(parentPID) != getpid()) {
-            dup2(cp[WRITE], STDOUT_FILENO);
-            close(cp[READ]);
-            printf("%ld\n",folder_size);
-            write(cp[WRITE],&folder_size,sizeof(long));
-        }
     }
 
     logExit(0);
