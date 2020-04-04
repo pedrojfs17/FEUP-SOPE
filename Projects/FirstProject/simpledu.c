@@ -226,37 +226,87 @@ void print_directory(char * path) {
     closedir(midir);
 }
 
-void build_command(char * path, char * command1){
-    char command[256];
+void build_command(char * path, char ** command1){
+    char **command=malloc(ARGS_SIZE*sizeof(char*));
     char buf[256];
-    strncpy(command,"./simpledu ", sizeof("./simpledu "));
-    strcat(command,path);
+    int i=0;
+    //strncpy(command,"./simpledu ", sizeof("./simpledu "));
+    //strcat(command,path);
+    command[i]="./simpledu";
+    i++;
+    command[i]=path;
+    //printf("Path in build command %s\n",command[i]);
+    i++;
     if(args.all){
-        strcat(command," -a");
+        //strcat(command," -a");
+        command[i]="-a";
+        i++;
     }
     if(args.bytes){
-        strcat(command," -b");
+        //strcat(command," -b");
+        command[i]="-b";
+        i++;
     }
     if(args.block_size){
-        strcat(command," -B ");
+        //strcat(command," -B ");
         sprintf(buf,"%d",args.block_size);
-        strcat(command, buf);
+        //strcat(command, buf);
+        command[i]="-B";
+        i++;
+        command[i]=buf;
+        i++;
     }
     if(args.countLinks){
-        strcat(command," -l");
+        //strcat(command," -l");
+        command[i]="-l";
+        i++;
     }
     if(args.deference){
-        strcat(command," -L");
+        //strcat(command," -L");
+        command[i]="-L";
+        i++;
     }
     if(args.separateDirs){
-        strcat(command," -S");
+        //strcat(command," -S");
+        command[i]="-S";
+        i++;
     }
     if(args.max_depth>0){
-        strcat(command," --max-depth=");
+        //strcat(command," --max-depth=");
         sprintf(buf,"%d",args.max_depth-1);
-        strcat(command, buf);
+        //strcat(command, buf);
+        command[i]="--max-depth=";
+        i++;
+        command[i]=buf;
+        i++;
     }
-    strcpy(command1,command);
+    //strcpy(command1,command);
+    command[i]=NULL;
+    for(i=0;command[i]!=NULL;i++){
+        command1[i]=command[i];
+    }
+}
+
+void getsubFolderSize(char * buf){
+    char * tok = strtok(buf,"\n\t");
+    int number;
+    char *endptr;
+    
+    number = strtol(tok,&endptr,10);
+    
+    while(tok!=NULL){
+        if(*endptr!='\0' || endptr==tok){
+            printf("%s contains letters\n",tok);
+        }
+        else{
+            printf("%s no letters\n", tok);
+            folder_size+=number;
+        }
+        tok=strtok(NULL,"\n\t");
+        number = strtol(tok,&endptr,10);
+    }
+
+
 }
 
 void sigint_handler(int signo) {   
@@ -331,7 +381,7 @@ int main(int argc, char *argv[], char *envp[])
 
     initLogs();
     char directories[1024][256];// = malloc(sizeof(char**));
-    char *command = malloc(sizeof(char*));
+    char **command = malloc(ARGS_SIZE*sizeof(char*));
 
     if (argc > MAX_NUM_COMMANDS || !check_args(argc, argv)) {
         fprintf(stderr, "Usage: %s -l [path] [-a] [-b] [-B size] [-L] [-S] [--max-depth=N]\n", argv[0]);
@@ -346,11 +396,12 @@ int main(int argc, char *argv[], char *envp[])
     //sleep(2);
     if(args.max_depth==0){
         print_directory(args.path);
+        print_path(args.path);
         logExit(0);
     }
     else{
         
-        char buf[1024];
+        char buf[2048];
         long subFolderSize;
 
         int num_dir = search_directory(args.path, directories);
@@ -368,37 +419,44 @@ int main(int argc, char *argv[], char *envp[])
                 close(my_pipe[READ]);
                 if(directories[i]!=NULL){
                     build_command(directories[i], command);
-                    execl("/bin/sh","/bin/sh","-c",command,(char*)0);
+                    execv("./simpledu",command);
                 }
-                //write(cp[WRITE],&folder_size,sizeof(long));
-                logExit(0);
+                logExit(-1);
             }
             else{
                 close(my_pipe[WRITE]);
-                waitpid(pid, &status, 0);
+                while(waitpid(pid, &status, 0)>0);
                 sleep(1);
                 ssize_t len;
                 while((len=read(my_pipe[READ],&buf, sizeof(buf)))){
                     printf("%s",buf);
+                    char * last_newline = strrchr(buf,'\n');
+                    char * last_line = last_newline+1;
+                    //printf("\nSize in last line - %s\n",last_line);
+                    char * tok = strtok(last_line," \t");
+                    subFolderSize= atol(tok);
+                    //printf("Size of subfolder (%s)- %ld\n",directories[i],subFolderSize);
+                    folder_size+=subFolderSize;
+                    
+                    
                 }
-                //buf[len]='\0';
-                char * last_newline = strrchr(buf,'\n');
-                char * last_line = last_newline+1;
-                printf("\nSize in last line - %s\n",last_line);
-                char * tok = strtok(last_line," \t\0");
-                subFolderSize= atol(tok);
-                printf("Size of subfolder - %ld\n",subFolderSize);
-                folder_size=subFolderSize;
+                //buf[len]='\0';      
+                printf("Printed subdir ");          
                 print_path(directories[i]);
-                //folder_size+=subFolderSize;
+                printf("Size of folder %s - %ld\n",args.path,folder_size);
                 //printf("Parent -- FOLDER SIZE = %ld\n",folder_size );
             }
 
             // PRINT THE FOLDER HERE
+            
 
         }
-
+        //printf("I get here (%s) with size - %ld\n",args.path, folder_size);
+        printf("Printing dir (%s)\n",args.path);
         print_directory(args.path);
+        if (atoi(parentPID) == getpid()) {
+            print_path(args.path);
+        }
     }
 
     logExit(0);
