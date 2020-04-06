@@ -648,3 +648,435 @@
 -0.25 - 00027439 - EXIT - 0
 0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
 0.18 - 00027432 - EXIT - 0
+0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.27 - 00028064 - EXIT - 0
+0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.23 - 00028063 - EXIT - 0
+0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.23 - 00028062 - EXIT - 0
+0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.26 - 00028067 - EXIT - 0
+0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.24 - 00028066 - EXIT - 0
+0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.25 - 00028065 - EXIT - 0
+0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.22 - 00028068 - EXIT - 0
+0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+0.17 - 00028061 - EXIT - 0
+0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.27 - 00028164 - EXIT - 0
+0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.24 - 00028163 - EXIT - 0
+0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.23 - 00028162 - EXIT - 0
+0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.26 - 00028167 - EXIT - 0
+0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.24 - 00028166 - EXIT - 0
+0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.24 - 00028165 - EXIT - 0
+0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+-0.24 - 00028168 - EXIT - 0
+0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
+0.18 - 00028161 - EXIT - 0
+0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028360 - EXIT - 0
+0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00028359 - EXIT - 0
+0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00028358 - EXIT - 0
+0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028363 - EXIT - 0
+0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00028362 - EXIT - 0
+0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00028361 - EXIT - 0
+0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028364 - EXIT - 0
+0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00028357 - EXIT - 0
+0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028458 - EXIT - 0
+0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00028457 - EXIT - 0
+0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.22 - 00028456 - EXIT - 0
+0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028461 - EXIT - 0
+0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00028460 - EXIT - 0
+0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00028459 - EXIT - 0
+0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028462 - EXIT - 0
+0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.18 - 00028455 - EXIT - 0
+0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00028499 - EXIT - 0
+0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028498 - EXIT - 0
+0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028497 - EXIT - 0
+0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00028502 - EXIT - 0
+0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028501 - EXIT - 0
+0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028500 - EXIT - 0
+0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028503 - EXIT - 0
+0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00028496 - EXIT - 0
+0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028554 - EXIT - 0
+0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028553 - EXIT - 0
+0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028552 - EXIT - 0
+0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028557 - EXIT - 0
+0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028556 - EXIT - 0
+0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028555 - EXIT - 0
+0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028558 - EXIT - 0
+0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.15 - 00028551 - EXIT - 0
+0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028669 - EXIT - 0
+0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028668 - EXIT - 0
+0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028667 - EXIT - 0
+0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028672 - EXIT - 0
+0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028671 - EXIT - 0
+0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028670 - EXIT - 0
+0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028673 - EXIT - 0
+0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.15 - 00028666 - EXIT - 0
+0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028738 - EXIT - 0
+0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028737 - EXIT - 0
+0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028736 - EXIT - 0
+0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028741 - EXIT - 0
+0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028740 - EXIT - 0
+0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028739 - EXIT - 0
+0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028742 - EXIT - 0
+0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.16 - 00028735 - EXIT - 0
+0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028781 - EXIT - 0
+0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028780 - EXIT - 0
+0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028779 - EXIT - 0
+0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028784 - EXIT - 0
+0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028783 - EXIT - 0
+0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028782 - EXIT - 0
+0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028785 - EXIT - 0
+0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.16 - 00028778 - EXIT - 0
+0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028850 - EXIT - 0
+0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00028849 - EXIT - 0
+0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00028848 - EXIT - 0
+0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028853 - EXIT - 0
+0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00028852 - EXIT - 0
+0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028851 - EXIT - 0
+0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028854 - EXIT - 0
+0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.16 - 00028847 - EXIT - 0
+0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028945 - EXIT - 0
+0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00028944 - EXIT - 0
+0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00028943 - EXIT - 0
+0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028948 - EXIT - 0
+0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00028947 - EXIT - 0
+0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00028946 - EXIT - 0
+0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00028949 - EXIT - 0
+0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00028942 - EXIT - 0
+0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028977 - EXIT - 0
+0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028976 - EXIT - 0
+0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028975 - EXIT - 0
+0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028980 - EXIT - 0
+0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028979 - EXIT - 0
+0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00028978 - EXIT - 0
+0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00028981 - EXIT - 0
+0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00028974 - EXIT - 0
+0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029143 - EXIT - 0
+0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00029142 - EXIT - 0
+0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00029141 - EXIT - 0
+0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029146 - EXIT - 0
+0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00029145 - EXIT - 0
+0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029144 - EXIT - 0
+0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029147 - EXIT - 0
+0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.16 - 00029140 - EXIT - 0
+0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.30 - 00029189 - EXIT - 0
+0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029188 - EXIT - 0
+0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029187 - EXIT - 0
+0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.31 - 00029192 - EXIT - 0
+0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00029191 - EXIT - 0
+0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029190 - EXIT - 0
+0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00029193 - EXIT - 0
+0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.15 - 00029186 - EXIT - 0
+0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
+-0.27 - 00029202 - EXIT - 0
+0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
+-0.24 - 00029201 - EXIT - 0
+0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
+-0.22 - 00029200 - EXIT - 0
+0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
+-0.27 - 00029205 - EXIT - 0
+0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
+-0.25 - 00029204 - EXIT - 0
+0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
+-0.23 - 00029203 - EXIT - 0
+0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
+-0.25 - 00029206 - EXIT - 0
+0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
+0.17 - 00029199 - EXIT - 0
+0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029234 - EXIT - 0
+0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029233 - EXIT - 0
+0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029232 - EXIT - 0
+0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029237 - EXIT - 0
+0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029236 - EXIT - 0
+0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00029235 - EXIT - 0
+0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029238 - EXIT - 0
+0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.16 - 00029231 - EXIT - 0
+0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029392 - EXIT - 0
+0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00029391 - EXIT - 0
+0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029390 - EXIT - 0
+0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029395 - EXIT - 0
+0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029394 - EXIT - 0
+0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00029393 - EXIT - 0
+0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029396 - EXIT - 0
+0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.15 - 00029389 - EXIT - 0
+0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.31 - 00029430 - EXIT - 0
+0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029429 - EXIT - 0
+0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029428 - EXIT - 0
+0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.31 - 00029433 - EXIT - 0
+0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029432 - EXIT - 0
+0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029431 - EXIT - 0
+0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.30 - 00029434 - EXIT - 0
+0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00029427 - EXIT - 0
+0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029490 - EXIT - 0
+0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029489 - EXIT - 0
+0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029488 - EXIT - 0
+0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029493 - EXIT - 0
+0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00029492 - EXIT - 0
+0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00029491 - EXIT - 0
+0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029494 - EXIT - 0
+0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.18 - 00029487 - EXIT - 0
+0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029535 - EXIT - 0
+0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00029534 - EXIT - 0
+0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029533 - EXIT - 0
+0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00029538 - EXIT - 0
+0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029537 - EXIT - 0
+0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029536 - EXIT - 0
+0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029539 - EXIT - 0
+0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00029532 - EXIT - 0
+0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029687 - EXIT - 0
+0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00029686 - EXIT - 0
+0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00029685 - EXIT - 0
+0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029690 - EXIT - 0
+0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029689 - EXIT - 0
+0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00029688 - EXIT - 0
+0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029691 - EXIT - 0
+0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.18 - 00029684 - EXIT - 0
+0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00029800 - EXIT - 0
+0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00029799 - EXIT - 0
+0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00029798 - EXIT - 0
+0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029803 - EXIT - 0
+0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029802 - EXIT - 0
+0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029801 - EXIT - 0
+0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00029804 - EXIT - 0
+0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.16 - 00029797 - EXIT - 0
+0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029965 - EXIT - 0
+0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029964 - EXIT - 0
+0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029963 - EXIT - 0
+0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00029968 - EXIT - 0
+0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.23 - 00029967 - EXIT - 0
+0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029966 - EXIT - 0
+0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00029969 - EXIT - 0
+0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00029962 - EXIT - 0
+0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00030172 - EXIT - 0
+0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00030171 - EXIT - 0
+0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00030170 - EXIT - 0
+0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00030175 - EXIT - 0
+0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00030174 - EXIT - 0
+0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00030173 - EXIT - 0
+0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.28 - 00030176 - EXIT - 0
+0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.16 - 00030169 - EXIT - 0
+0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00030361 - EXIT - 0
+0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00030360 - EXIT - 0
+0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00030359 - EXIT - 0
+0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.30 - 00030364 - EXIT - 0
+0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00030363 - EXIT - 0
+0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00030362 - EXIT - 0
+0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00030365 - EXIT - 0
+0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00030358 - EXIT - 0
+0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.27 - 00030520 - EXIT - 0
+0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00030519 - EXIT - 0
+0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00030518 - EXIT - 0
+0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00030523 - EXIT - 0
+0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00030522 - EXIT - 0
+0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.24 - 00030521 - EXIT - 0
+0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00030524 - EXIT - 0
+0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.16 - 00030517 - EXIT - 0
+0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00030591 - EXIT - 0
+0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.25 - 00030590 - EXIT - 0
+0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00030589 - EXIT - 0
+0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.30 - 00030594 - EXIT - 0
+0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00030593 - EXIT - 0
+0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.26 - 00030592 - EXIT - 0
+0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+-0.29 - 00030595 - EXIT - 0
+0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
+0.17 - 00030588 - EXIT - 0

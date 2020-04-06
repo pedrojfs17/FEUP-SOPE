@@ -155,8 +155,8 @@ int search_dir(char * path, int depth) {
     char fullpath[256];
     struct stat file_stat;
     
-    if(depth>-1){depth-=1;} //Depth flag (Not Working)
-
+    depth-=1;//Depth flag (Not Working)
+    //printf("DEPTH AT THE START: %d\n",depth);
     if ((midir=opendir(path)) == NULL) {
         perror("Error opening directory");
         logExit(1);
@@ -170,14 +170,15 @@ int search_dir(char * path, int depth) {
         //printf("IS '..' OR '.' (%s): %d\n",fullpath,check_folder_path);
         if(check_folder_path){continue;}
         checkDereference(fullpath,&file_stat);                                  //Checks deference flag
-
+        //printf("Going to print - %s\n",fullpath);
         long subSize;
         if(check_path(&file_stat)==0 || check_path(&file_stat)==2){
             subSize=calculate_file_size(&file_stat);                            //Calculates file/link size
             folderSize+=subSize;
-            if(args.all && depth>=-1)printf("%ld\t%s\n",subSize,fullpath);      //Prints if the depth is not exceeded (Not Working)
+            if(args.all && depth>=0)printf("%ld\t%s\n",subSize,fullpath);      //Prints if the depth is not exceeded (Not Working)
         }
         else if(check_path(&file_stat)==1){                                     //If the file is a directory
+            
             int my_pipe[2];
             pipe(my_pipe);            
             pid_t pid;
@@ -199,10 +200,13 @@ int search_dir(char * path, int depth) {
                 int subFolderSize;
                 if (read(my_pipe[READ], &subFolderSize, sizeof(long)))
                     folderSize += subFolderSize;
+                //printf("%s is a directory (depth: %d) with size = %ld\n",fullpath,depth, folderSize);
             }
+            printf("%s is a directory (depth: %d) with size = %ld\n",fullpath,depth, folderSize);
         }
     }
     if(depth>=-1)printf("%ld\t%s\n",folderSize,fullpath);                   //Prints the folder size if it hasn't exceeded depth
+    
     return folderSize;
 }
 
@@ -312,7 +316,7 @@ int main(int argc, char *argv[], char *envp[])
 
     logCreate(argc, argv); 
 
-    printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
+    //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
     
     search_dir(args.path, args.max_depth);
 
