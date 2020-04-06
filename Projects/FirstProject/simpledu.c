@@ -22,15 +22,7 @@
 // Argument struct
 struct Args args = {0, 0, 1024, 0, 0, 0, -1};
 
-
-// Check if 'element' is in 'arr' of size 'arr_size' (return indice)
-int check_in_array(char *arr[], int arr_size, char *element) {
-    for(int i = 0; i < arr_size; i++) {
-        if (!strcmp(arr[i], element))
-            return i;
-    }
-    return -1;
-}
+long subFolderSize;
 
 // Check if a path is valid (return -1), a directory (return 1) or a file (return 0)
 int check_path(const char *path) {
@@ -45,6 +37,146 @@ int check_path(const char *path) {
         return 2;
     else
         return -1;
+}
+
+void print_path(char * path, long pathSize) {
+    if (args.bytes)
+        printf("%ld\t", pathSize);
+    else
+        printf("%ld\t",pathSize % args.block_size == 0 ? pathSize / args.block_size : pathSize / args.block_size + 1 );
+    
+    printf("%s\n",path);
+        
+}
+
+long file_size(char * filename) {
+    struct stat fileStat;
+    char buf[1024];
+    ssize_t len;
+    if (stat(filename, &fileStat) < 0) {
+        printf("Error reading file stat.\n");
+        logExit(1);
+    }
+    if((check_path(filename)==2) && args.deference){
+        lstat(filename,&fileStat);
+        if((len=readlink(filename,buf,sizeof(buf)-1))!=-1){
+            buf[len]='\0';
+            strcat(filename,"/");
+            strcat(filename,buf);
+        }
+    }
+
+    return fileStat.st_size;
+}
+
+long print_directory(char * path) {
+    DIR * midir;
+    struct dirent * info_archivo;
+    char fullpath[256], temp[256];
+    long dirSize = 0;
+    long size = 0;
+    
+    if ((midir=opendir(path)) == NULL) {
+        perror("Error opening directory");
+        logExit(1);
+    }
+    
+    while ((info_archivo = readdir(midir)) != 0) {
+        strcpy (fullpath, path);
+        strcat (fullpath, "/");
+        strcat (fullpath, info_archivo->d_name);
+        
+        if (strcmp(info_archivo->d_name,"..")) {
+            strcpy(temp, fullpath);
+            size = file_size(fullpath);
+            if(check_path(temp)==2 || check_path(temp)==0) {
+                if (args.all) print_path(temp, size);
+                dirSize += size;
+            }
+            else if (!strcmp(info_archivo->d_name,"."))
+                dirSize += size;
+        }
+    }
+
+    closedir(midir);
+    return dirSize;
+}
+
+int folders_in_directory(char * path, char directories[1024][256]) {
+    DIR * midir;
+    struct dirent * info_archivo;
+    char fullpath[256];
+    
+    int i=0;
+    if ((midir=opendir(path)) == NULL) {
+        perror("Error opening directory");
+        logExit(1);
+    }
+    
+    while ((info_archivo = readdir(midir)) != 0) {
+        strcpy (fullpath, path);
+        strcat (fullpath, "/");
+        strcat (fullpath, info_archivo->d_name);
+        if(check_path(fullpath)==1 && strcmp(info_archivo->d_name,".") && strcmp(info_archivo->d_name,"..")){
+            strcpy(directories[i],fullpath);
+            i++;
+        }
+    }
+
+    closedir(midir);
+    return i;
+}
+
+// Searches in a directory and returns size in bytes
+int search_dir(char * path, int first) {
+    long folderSize = 0, subFolderSize;
+    char directories[1024][256];
+    int status;
+    int num_dir = folders_in_directory(path, directories);
+
+    int my_pipe[2];
+    pipe(my_pipe);
+
+    for(int i=0;i<num_dir;i++){
+        pid_t pid;
+        pid=fork(); 
+
+        if(pid<0){
+            printf("Fork failed\n");
+            logExit(-1);
+        }
+        else if (pid == 0){
+            folderSize += search_dir(directories[i], 0);
+            write(my_pipe[WRITE], &folderSize, sizeof(long));
+            close(my_pipe[WRITE]);
+            logExit(0);
+        }
+        else{
+            if (first) {close(my_pipe[WRITE]);}
+            wait(&status);
+            if (read(my_pipe[READ], &subFolderSize, sizeof(long)))
+                folderSize += subFolderSize;
+            if (i == num_dir - 1) {
+                close(my_pipe[READ]);
+            }
+        }
+
+    }
+
+    folderSize += print_directory(path);
+
+    print_path(path, folderSize);
+
+    return folderSize;
+}
+
+// Check if 'element' is in 'arr' of size 'arr_size' (return indice)
+int check_in_array(char *arr[], int arr_size, char *element) {
+    for(int i = 0; i < arr_size; i++) {
+        if (!strcmp(arr[i], element))
+            return i;
+    }
+    return -1;
 }
 
 // Activate the flag in args struct (return 0 if success, -1 otherwise)
@@ -133,114 +265,9 @@ int check_args(int argc, char *argv[]) {
     return 1;
 }
 
-int search_file(char * filename) {
-    struct stat fileStat;
-    char buf[1024];
-    ssize_t len;
-    if (stat(filename, &fileStat) < 0) {
-        printf("Error reading file stat.\n");
-        logExit(1);
-    }
-    if((check_path(filename)==2) && args.deference){
-        lstat(filename,&fileStat);
-        if((len=readlink(filename,buf,sizeof(buf)-1))!=-1){
-            buf[len]='\0';
-            strcat(filename,"/");
-            strcat(filename,buf);
-        }
-    }
-    printf("Bytes: %ld\t\t",fileStat.st_size); // Size in bytes
-    printf("Blocks: %ld\t->",fileStat.st_blocks); // Number of blocks
-    printf("%s\n",filename);
-
-    return 0;
-}
-
-int search_directory(char * path, char directories[1024][256]) {
-    DIR * midir;
-    struct dirent * info_archivo;
-    char fullpath[256];
-    
-    int i=0;
-    if ((midir=opendir(path)) == NULL) {
-        perror("Error opening directory");
-        logExit(1);
-    }
-    
-    while ((info_archivo = readdir(midir)) != 0) {
-        strcpy (fullpath, path);
-        strcat (fullpath, "/");
-        strcat (fullpath, info_archivo->d_name);
-        if(check_path(fullpath)==1 && strcmp(info_archivo->d_name,".") && strcmp(info_archivo->d_name,"..")){
-            strcpy(directories[i],fullpath);
-            i++;
-        }
-    }
-
-    closedir(midir);
-    return i;
-}
-
-void print_directory(char * path) {
-    DIR * midir;
-    struct dirent * info_archivo;
-    char fullpath[256];
-    
-    if ((midir=opendir(path)) == NULL) {
-        perror("Error opening directory");
-        logExit(1);
-    }
-    
-    while ((info_archivo = readdir(midir)) != 0) {
-        strcpy (fullpath, path);
-        strcat (fullpath, "/");
-        strcat (fullpath, info_archivo->d_name);
-        if(check_path(fullpath)==2 || check_path(fullpath)==0){
-            search_file(fullpath);
-        }
-    }
-
-    closedir(midir);
-}
-
-void build_command(char * path, char * command1){
-    char command[256];
-    char buf[256];
-    strncpy(command,"./simpledu ", sizeof("./simpledu "));
-    strcat(command,path);
-    if(args.all){
-        strcat(command," -a");
-    }
-    if(args.bytes){
-        strcat(command," -b");
-    }
-    if(args.block_size){
-        strcat(command," -B ");
-        sprintf(buf,"%d",args.block_size);
-        strcat(command, buf);
-    }
-    if(args.countLinks){
-        strcat(command," -l");
-    }
-    if(args.deference){
-        strcat(command," -L");
-    }
-    if(args.separateDirs){
-        strcat(command," -S");
-    }
-    if(args.max_depth>0){
-        strcat(command," --max-depth=");
-        sprintf(buf,"%d",args.max_depth-1);
-        strcat(command, buf);
-    }
-    strncpy(command1,command,sizeof(command));
-}
-
 int main(int argc, char *argv[], char *envp[])
 {
     initLogs();
-    char directories[1024][256];// = malloc(sizeof(char**));
-    char *command = malloc(sizeof(char*));
 
     if (argc > MAX_NUM_COMMANDS || !check_args(argc, argv)) {
         fprintf(stderr, "Usage: %s -l [path] [-a] [-b] [-B size] [-L] [-S] [--max-depth=N]\n", argv[0]);
@@ -251,38 +278,7 @@ int main(int argc, char *argv[], char *envp[])
 
     //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
     
-    int status;
-
-    if(args.max_depth==0){
-        print_directory(args.path);
-        logExit(0);
-    }
-    else{
-        int num_dir = search_directory(args.path, directories);
-
-        for(int i=0;i<num_dir;i++){
-            pid_t pid;
-            pid=fork(); 
-
-            if(pid<0){
-                printf("Fork failed\n");
-                logExit(-1);
-            }
-            else if (pid == 0){
-                if(directories[i]!=NULL){
-                    build_command(directories[i], command);
-                    execl("/bin/sh","/bin/sh","-c",command,(char*)0);
-                }
-                logExit(0);
-            }
-            else{
-                waitpid(pid, &status, 0);
-            }
-
-        }
-
-        print_directory(args.path);
-    }
+    search_dir(args.path, 1);
 
     logExit(0);
 }
