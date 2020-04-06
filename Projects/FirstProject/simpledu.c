@@ -25,6 +25,32 @@ struct Args args = {0, 0, 1024, 0, 0, 0, -1};
 
 long folder_size = 0;
 
+
+char * filter_buf(char buf[], int maxDepth) {
+    char * line = NULL;
+    char * sizePtr = NULL;
+    char size[256];
+
+    line = strtok(buf, "\n");
+
+    while (line != NULL) {
+        sizePtr = NULL;
+        printf("(%s)\n", line);
+        sizePtr = strchr(line, '\t');
+        if (sizePtr != NULL) {
+            memset(size, 0, 255);
+            strncpy(size, line, (int)(sizePtr - line));
+            printf("|Size = %s|\n",size);
+            folder_size += atol(size);
+            printf("Folder size = %ld\n",folder_size);
+        }
+        line = strtok(NULL, "\n");
+    }
+
+    return NULL;
+}
+
+
 // Check if 'element' is in 'arr' of size 'arr_size' (return indice)
 int check_in_array(char *arr[], int arr_size, char *element) {
     for(int i = 0; i < arr_size; i++) {
@@ -394,20 +420,21 @@ int main(int argc, char *argv[], char *envp[])
     
     int status;
     //sleep(2);
-    if(args.max_depth==0){
+    /*if(args.max_depth==0){
         print_directory(args.path);
         print_path(args.path);
         logExit(0);
     }
-    else{
+    else{*/
         
         char buf[2048];
         long subFolderSize;
 
         int num_dir = search_directory(args.path, directories);
 
+        pid_t pid = 1;
+
         for(int i=0;i<num_dir;i++){
-            pid_t pid;
             pid=fork(); 
 
             if(pid<0){
@@ -423,41 +450,46 @@ int main(int argc, char *argv[], char *envp[])
                 }
                 logExit(-1);
             }
-            else{
-                close(my_pipe[WRITE]);
-                while(waitpid(pid, &status, 0)>0);
-                sleep(1);
-                ssize_t len;
-                while((len=read(my_pipe[READ],&buf, sizeof(buf)))){
-                    printf("%s",buf);
-                    char * last_newline = strrchr(buf,'\n');
-                    char * last_line = last_newline+1;
-                    //printf("\nSize in last line - %s\n",last_line);
-                    char * tok = strtok(last_line," \t");
-                    subFolderSize= atol(tok);
-                    //printf("Size of subfolder (%s)- %ld\n",directories[i],subFolderSize);
-                    folder_size+=subFolderSize;
-                    
-                    
-                }
-                //buf[len]='\0';      
-                printf("Printed subdir ");          
-                print_path(directories[i]);
-                printf("Size of folder %s - %ld\n",args.path,folder_size);
                 //printf("Parent -- FOLDER SIZE = %ld\n",folder_size );
-            }
+        }
+
 
             // PRINT THE FOLDER HERE
             
-
+        if (pid > 0){
+            close(my_pipe[WRITE]);
+            while(waitpid(pid, &status, 0)>0);
+            sleep(1);
+            ssize_t len;
+            while((len=read(my_pipe[READ],&buf, sizeof(buf)))){
+                if (atoi(parentPID) != getpid())
+                    printf("%s",buf);
+                char * last_newline = strrchr(buf,'\n');
+                char * last_line = last_newline+1;
+                //printf("\nSize in last line - %s\n",last_line);
+                char * tok = strtok(last_line," \t");
+                subFolderSize= atol(tok);
+                //printf("Size of subfolder (%s)- %ld\n",directories[i],subFolderSize);
+                //folder_size+=subFolderSize;
+                
+                
+            }
+            //buf[len]='\0';     
+            if (atoi(parentPID) != getpid()) { 
+                //printf("Printed subdir ");          
+                //print_path(directories[i]);
+                //printf("Size of folder %s - %ld\n",args.path,folder_size);
+            }
         }
         //printf("I get here (%s) with size - %ld\n",args.path, folder_size);
-        printf("Printing dir (%s)\n",args.path);
+        if (atoi(parentPID) == getpid())
+            filter_buf(buf, 1);
+        printf("\nPrinting dir (%s)\n",args.path);
         print_directory(args.path);
         if (atoi(parentPID) == getpid()) {
             print_path(args.path);
         }
-    }
+    //}
 
     logExit(0);
 }
