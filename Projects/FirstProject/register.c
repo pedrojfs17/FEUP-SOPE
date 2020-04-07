@@ -64,6 +64,27 @@ void logExit(int exitStatus) {
     exit(exitStatus);
 }
 
+void logRecvPipe(int size){
+    Register reg; createRegister(&reg, RECV_PIPE);
+    sprintf(reg.info, "%d",size);
+    writeRegister(&reg);
+
+}
+
+void logSendPipe(int size){
+    Register reg; createRegister(&reg, SEND_PIPE);
+    sprintf(reg.info, "%d",size);
+    writeRegister(&reg);
+
+}
+
+void logEntry(char * message){
+    Register reg; createRegister(&reg, ENTRY);
+    char * tok=strtok(message,"\n");
+    sprintf(reg.info, "%s",tok);
+    writeRegister(&reg);
+}
+
 void logRecvSignal(int sig) {
     Register reg; createRegister(&reg, RECV_SIGNAL);
 

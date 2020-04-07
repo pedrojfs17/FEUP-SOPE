@@ -1590,3 +1590,416 @@
 -1.08 - 00007581 - EXIT - 0
 0.19 - 00007577 - CREATE - Command: ./simpledu test_dir -b -S
 0.84 - 00007577 - EXIT - 0
+0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
+-0.28 - 00004170 - EXIT - 0
+0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
+-0.24 - 00004169 - EXIT - 0
+0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
+-0.24 - 00004168 - EXIT - 0
+0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
+-0.28 - 00004173 - EXIT - 0
+0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
+-0.25 - 00004172 - EXIT - 0
+0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
+-0.26 - 00004171 - EXIT - 0
+0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
+0.15 - 00004167 - EXIT - 0
+0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
+-0.31 - 00004177 - EXIT - 0
+0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
+-0.27 - 00004176 - EXIT - 0
+0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
+-0.27 - 00004175 - EXIT - 0
+0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
+-0.30 - 00004180 - EXIT - 0
+0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
+-0.28 - 00004179 - EXIT - 0
+0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
+-0.28 - 00004178 - EXIT - 0
+0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
+0.15 - 00004174 - EXIT - 0
+0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
+-0.25 - 00004298 - EXIT - 0
+0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
+-0.22 - 00004297 - EXIT - 0
+0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
+-0.21 - 00004296 - EXIT - 0
+0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
+-0.25 - 00004301 - EXIT - 0
+0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
+-0.23 - 00004300 - EXIT - 0
+0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
+-0.22 - 00004299 - EXIT - 0
+0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
+0.15 - 00004295 - EXIT - 0
+0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
+-0.31 - 00005070 - SEND_PIPE - 1148
+-0.30 - 00005070 - EXIT - 0
+0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
+-0.28 - 00005069 - RECV_PIPE - 1148
+-0.27 - 00005069 - SEND_PIPE - 1556
+-0.27 - 00005069 - EXIT - 0
+0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
+-0.28 - 00005068 - RECV_PIPE - 1556
+-0.27 - 00005068 - SEND_PIPE - 288
+-0.27 - 00005068 - EXIT - 0
+0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
+0.09 - 00005067 - RECV_PIPE - 288
+-0.31 - 00005073 - SEND_PIPE - 8
+-0.30 - 00005073 - EXIT - 0
+0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
+0.09 - 00005067 - RECV_PIPE - 288
+-0.30 - 00005072 - RECV_PIPE - 8
+-0.28 - 00005072 - SEND_PIPE - 4
+-0.27 - 00005072 - EXIT - 0
+0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
+0.09 - 00005067 - RECV_PIPE - 288
+-0.30 - 00005071 - RECV_PIPE - 4
+-0.28 - 00005071 - SEND_PIPE - 4
+-0.28 - 00005071 - EXIT - 0
+0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
+0.09 - 00005067 - RECV_PIPE - 288
+0.13 - 00005067 - RECV_PIPE - 4
+0.14 - 00005067 - EXIT - 0
+0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
+-0.30 - 00005563 - SEND_PIPE - 1148
+-0.29 - 00005563 - EXIT - 0
+0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
+-0.27 - 00005562 - RECV_PIPE - 1148
+-0.26 - 00005562 - SEND_PIPE - 1556
+-0.26 - 00005562 - EXIT - 0
+0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
+-0.27 - 00005561 - RECV_PIPE - 1556
+-0.26 - 00005561 - SEND_PIPE - 288
+-0.26 - 00005561 - EXIT - 0
+0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
+0.10 - 00005560 - RECV_PIPE - 288
+-0.30 - 00005566 - SEND_PIPE - 8
+-0.29 - 00005566 - EXIT - 0
+0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
+0.10 - 00005560 - RECV_PIPE - 288
+-0.29 - 00005565 - RECV_PIPE - 8
+-0.27 - 00005565 - SEND_PIPE - 4
+-0.26 - 00005565 - EXIT - 0
+0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
+0.10 - 00005560 - RECV_PIPE - 288
+-0.29 - 00005564 - RECV_PIPE - 4
+-0.27 - 00005564 - SEND_PIPE - 4
+-0.27 - 00005564 - EXIT - 0
+0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
+0.10 - 00005560 - RECV_PIPE - 288
+0.13 - 00005560 - RECV_PIPE - 4
+0.15 - 00005560 - EXIT - 0
+0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
+-0.29 - 00005806 - SEND_PIPE - 1148
+-0.29 - 00005806 - EXIT - 0
+0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
+-0.27 - 00005805 - RECV_PIPE - 1148
+-0.25 - 00005805 - SEND_PIPE - 1556
+-0.25 - 00005805 - EXIT - 0
+0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
+-0.27 - 00005804 - RECV_PIPE - 1556
+-0.25 - 00005804 - SEND_PIPE - 288
+-0.25 - 00005804 - EXIT - 0
+0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
+0.10 - 00005803 - RECV_PIPE - 288
+-0.29 - 00005809 - SEND_PIPE - 8
+-0.28 - 00005809 - EXIT - 0
+0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
+0.10 - 00005803 - RECV_PIPE - 288
+-0.27 - 00005808 - RECV_PIPE - 8
+-0.25 - 00005808 - SEND_PIPE - 4
+-0.24 - 00005808 - EXIT - 0
+0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
+0.10 - 00005803 - RECV_PIPE - 288
+-0.28 - 00005807 - RECV_PIPE - 4
+-0.26 - 00005807 - SEND_PIPE - 4
+-0.26 - 00005807 - EXIT - 0
+0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
+0.10 - 00005803 - RECV_PIPE - 288
+0.13 - 00005803 - RECV_PIPE - 4
+0.15 - 00005803 - EXIT - 0
+0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
+-0.31 - 00006125 - SEND_PIPE - 1148
+-0.30 - 00006125 - EXIT - 0
+0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
+-0.28 - 00006124 - RECV_PIPE - 1148
+-0.27 - 00006124 - SEND_PIPE - 1556
+-0.27 - 00006124 - EXIT - 0
+0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
+-0.28 - 00006123 - RECV_PIPE - 1556
+-0.27 - 00006123 - SEND_PIPE - 288
+-0.26 - 00006123 - EXIT - 0
+0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
+0.09 - 00006122 - RECV_PIPE - 288
+-0.31 - 00006128 - SEND_PIPE - 8
+-0.30 - 00006128 - EXIT - 0
+0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
+0.09 - 00006122 - RECV_PIPE - 288
+-0.27 - 00006127 - RECV_PIPE - 8
+-0.25 - 00006127 - SEND_PIPE - 4
+-0.24 - 00006127 - EXIT - 0
+0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
+0.09 - 00006122 - RECV_PIPE - 288
+-0.30 - 00006126 - RECV_PIPE - 4
+-0.28 - 00006126 - SEND_PIPE - 4
+-0.28 - 00006126 - EXIT - 0
+0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
+0.09 - 00006122 - RECV_PIPE - 288
+0.13 - 00006122 - RECV_PIPE - 4
+0.14 - 00006122 - EXIT - 0
+0.04 - 00006254 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006254 - ENTRY - 0	test_dir/importante
+
+0.14 - 00006254 - ENTRY - 8	test_dir/praesentcursus.txt
+
+0.15 - 00006254 - ENTRY - 60	test_dir/big.txt
+
+0.15 - 00006254 - ENTRY - 4	test_dir/loremipsum.txt
+
+-0.22 - 00006258 - SEND_PIPE - 4
+-0.21 - 00006258 - EXIT - 0
+0.04 - 00006254 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006254 - ENTRY - 0	test_dir/importante
+
+0.14 - 00006254 - ENTRY - 8	test_dir/praesentcursus.txt
+
+0.15 - 00006254 - ENTRY - 60	test_dir/big.txt
+
+0.15 - 00006254 - ENTRY - 4	test_dir/loremipsum.txt
+
+-0.25 - 00006257 - RECV_PIPE - 4
+-0.24 - 00006257 - SEND_PIPE - 4
+-0.23 - 00006257 - EXIT - 0
+0.04 - 00006254 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006254 - ENTRY - 0	test_dir/importante
+
+0.14 - 00006254 - ENTRY - 8	test_dir/praesentcursus.txt
+
+0.15 - 00006254 - ENTRY - 60	test_dir/big.txt
+
+0.15 - 00006254 - ENTRY - 4	test_dir/loremipsum.txt
+
+0.20 - 00006254 - RECV_PIPE - 4
+0.21 - 00006254 - ENTRY - 0	test_dir/memorias
+
+0.22 - 00006254 - EXIT - 0
+0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006463 - ENTRY - 0	test_dir/importante
+-0.28 - 00006464 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.25 - 00006464 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.28 - 00006465 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
+-0.28 - 00006465 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
+-0.27 - 00006465 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
+-0.28 - 00006466 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
+-0.28 - 00006466 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
+-0.27 - 00006466 - ENTRY - 1148	test_dir/imagens/HQ/old
+-0.27 - 00006466 - SEND_PIPE - 1148
+-0.27 - 00006466 - EXIT - 0
+0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006463 - ENTRY - 0	test_dir/importante
+-0.28 - 00006464 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.25 - 00006464 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.28 - 00006465 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
+-0.28 - 00006465 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
+-0.27 - 00006465 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
+-0.24 - 00006465 - RECV_PIPE - 1148
+-0.23 - 00006465 - ENTRY - 1556	test_dir/imagens/HQ
+-0.23 - 00006465 - SEND_PIPE - 1556
+-0.23 - 00006465 - EXIT - 0
+0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006463 - ENTRY - 0	test_dir/importante
+-0.28 - 00006464 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.25 - 00006464 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.21 - 00006464 - RECV_PIPE - 1556
+-0.21 - 00006464 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
+-0.21 - 00006464 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
+-0.20 - 00006464 - ENTRY - 288	test_dir/imagens
+-0.20 - 00006464 - SEND_PIPE - 288
+-0.20 - 00006464 - EXIT - 0
+0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006463 - ENTRY - 0	test_dir/importante
+0.09 - 00006463 - RECV_PIPE - 288
+0.10 - 00006463 - ENTRY - 8	test_dir/praesentcursus.txt
+0.10 - 00006463 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006463 - ENTRY - 4	test_dir/loremipsum.txt
+-0.29 - 00006469 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
+-0.28 - 00006469 - ENTRY - 8	test_dir/pasta/copy/pasta
+-0.28 - 00006469 - SEND_PIPE - 8
+-0.28 - 00006469 - EXIT - 0
+0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006463 - ENTRY - 0	test_dir/importante
+0.09 - 00006463 - RECV_PIPE - 288
+0.10 - 00006463 - ENTRY - 8	test_dir/praesentcursus.txt
+0.10 - 00006463 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006463 - ENTRY - 4	test_dir/loremipsum.txt
+-0.27 - 00006468 - RECV_PIPE - 8
+-0.25 - 00006468 - ENTRY - 4	test_dir/pasta/copy
+-0.25 - 00006468 - SEND_PIPE - 4
+-0.24 - 00006468 - EXIT - 0
+0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006463 - ENTRY - 0	test_dir/importante
+0.09 - 00006463 - RECV_PIPE - 288
+0.10 - 00006463 - ENTRY - 8	test_dir/praesentcursus.txt
+0.10 - 00006463 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006463 - ENTRY - 4	test_dir/loremipsum.txt
+-0.27 - 00006467 - RECV_PIPE - 4
+-0.26 - 00006467 - ENTRY - 4	test_dir/pasta
+-0.25 - 00006467 - SEND_PIPE - 4
+-0.25 - 00006467 - EXIT - 0
+0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006463 - ENTRY - 0	test_dir/importante
+0.09 - 00006463 - RECV_PIPE - 288
+0.10 - 00006463 - ENTRY - 8	test_dir/praesentcursus.txt
+0.10 - 00006463 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006463 - ENTRY - 4	test_dir/loremipsum.txt
+0.14 - 00006463 - RECV_PIPE - 4
+0.14 - 00006463 - ENTRY - 0	test_dir/memorias
+0.15 - 00006463 - ENTRY - 76	test_dir
+0.15 - 00006463 - EXIT - 0
+0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006515 - ENTRY - 0	test_dir/importante
+-0.31 - 00006516 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.31 - 00006516 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.32 - 00006517 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
+-0.31 - 00006517 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
+-0.31 - 00006517 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
+-0.32 - 00006518 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
+-0.31 - 00006518 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
+-0.30 - 00006518 - ENTRY - 1148	test_dir/imagens/HQ/old
+-0.30 - 00006518 - SEND_PIPE - 1148
+-0.30 - 00006518 - EXIT - 0
+0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006515 - ENTRY - 0	test_dir/importante
+-0.31 - 00006516 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.31 - 00006516 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.32 - 00006517 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
+-0.31 - 00006517 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
+-0.31 - 00006517 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
+-0.27 - 00006517 - RECV_PIPE - 1148
+-0.26 - 00006517 - ENTRY - 1556	test_dir/imagens/HQ
+-0.26 - 00006517 - SEND_PIPE - 1556
+-0.26 - 00006517 - EXIT - 0
+0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006515 - ENTRY - 0	test_dir/importante
+-0.31 - 00006516 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.31 - 00006516 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.27 - 00006516 - RECV_PIPE - 1556
+-0.26 - 00006516 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
+-0.26 - 00006516 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
+-0.26 - 00006516 - ENTRY - 288	test_dir/imagens
+-0.25 - 00006516 - SEND_PIPE - 288
+-0.25 - 00006516 - EXIT - 0
+0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006515 - ENTRY - 0	test_dir/importante
+0.10 - 00006515 - RECV_PIPE - 288
+0.10 - 00006515 - ENTRY - 8	test_dir/praesentcursus.txt
+0.11 - 00006515 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006515 - ENTRY - 4	test_dir/loremipsum.txt
+-0.32 - 00006521 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
+-0.31 - 00006521 - ENTRY - 8	test_dir/pasta/copy/pasta
+-0.29 - 00006521 - SEND_PIPE - 8
+-0.29 - 00006521 - EXIT - 0
+0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006515 - ENTRY - 0	test_dir/importante
+0.10 - 00006515 - RECV_PIPE - 288
+0.10 - 00006515 - ENTRY - 8	test_dir/praesentcursus.txt
+0.11 - 00006515 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006515 - ENTRY - 4	test_dir/loremipsum.txt
+-0.30 - 00006520 - RECV_PIPE - 8
+-0.29 - 00006520 - ENTRY - 4	test_dir/pasta/copy
+-0.27 - 00006520 - SEND_PIPE - 4
+-0.26 - 00006520 - EXIT - 0
+0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006515 - ENTRY - 0	test_dir/importante
+0.10 - 00006515 - RECV_PIPE - 288
+0.10 - 00006515 - ENTRY - 8	test_dir/praesentcursus.txt
+0.11 - 00006515 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006515 - ENTRY - 4	test_dir/loremipsum.txt
+-0.30 - 00006519 - RECV_PIPE - 4
+-0.29 - 00006519 - ENTRY - 4	test_dir/pasta
+-0.27 - 00006519 - SEND_PIPE - 4
+-0.27 - 00006519 - EXIT - 0
+0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.07 - 00006515 - ENTRY - 0	test_dir/importante
+0.10 - 00006515 - RECV_PIPE - 288
+0.10 - 00006515 - ENTRY - 8	test_dir/praesentcursus.txt
+0.11 - 00006515 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006515 - ENTRY - 4	test_dir/loremipsum.txt
+0.14 - 00006515 - RECV_PIPE - 4
+0.14 - 00006515 - ENTRY - 0	test_dir/memorias
+0.15 - 00006515 - ENTRY - 76	test_dir
+0.16 - 00006515 - EXIT - 0
+0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006546 - ENTRY - 0	test_dir/importante
+-0.31 - 00006547 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.30 - 00006547 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.32 - 00006548 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
+-0.30 - 00006548 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
+-0.30 - 00006548 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
+-0.31 - 00006549 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
+-0.30 - 00006549 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
+-0.30 - 00006549 - ENTRY - 1148	test_dir/imagens/HQ/old
+-0.30 - 00006549 - SEND_PIPE - 1148
+-0.30 - 00006549 - EXIT - 0
+0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006546 - ENTRY - 0	test_dir/importante
+-0.31 - 00006547 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.30 - 00006547 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.32 - 00006548 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
+-0.30 - 00006548 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
+-0.30 - 00006548 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
+-0.26 - 00006548 - RECV_PIPE - 1148
+-0.26 - 00006548 - ENTRY - 1556	test_dir/imagens/HQ
+-0.25 - 00006548 - SEND_PIPE - 1556
+-0.25 - 00006548 - EXIT - 0
+0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006546 - ENTRY - 0	test_dir/importante
+-0.31 - 00006547 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+-0.30 - 00006547 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+-0.27 - 00006547 - RECV_PIPE - 1556
+-0.26 - 00006547 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
+-0.26 - 00006547 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
+-0.26 - 00006547 - ENTRY - 288	test_dir/imagens
+-0.26 - 00006547 - SEND_PIPE - 288
+-0.25 - 00006547 - EXIT - 0
+0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006546 - ENTRY - 0	test_dir/importante
+0.10 - 00006546 - RECV_PIPE - 288
+0.10 - 00006546 - ENTRY - 8	test_dir/praesentcursus.txt
+0.11 - 00006546 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006546 - ENTRY - 4	test_dir/loremipsum.txt
+-0.32 - 00006552 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
+-0.30 - 00006552 - ENTRY - 8	test_dir/pasta/copy/pasta
+-0.29 - 00006552 - SEND_PIPE - 8
+-0.29 - 00006552 - EXIT - 0
+0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006546 - ENTRY - 0	test_dir/importante
+0.10 - 00006546 - RECV_PIPE - 288
+0.10 - 00006546 - ENTRY - 8	test_dir/praesentcursus.txt
+0.11 - 00006546 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006546 - ENTRY - 4	test_dir/loremipsum.txt
+-0.30 - 00006551 - RECV_PIPE - 8
+-0.29 - 00006551 - ENTRY - 4	test_dir/pasta/copy
+-0.27 - 00006551 - SEND_PIPE - 4
+-0.27 - 00006551 - EXIT - 0
+0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006546 - ENTRY - 0	test_dir/importante
+0.10 - 00006546 - RECV_PIPE - 288
+0.10 - 00006546 - ENTRY - 8	test_dir/praesentcursus.txt
+0.11 - 00006546 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006546 - ENTRY - 4	test_dir/loremipsum.txt
+-0.30 - 00006550 - RECV_PIPE - 4
+-0.29 - 00006550 - ENTRY - 4	test_dir/pasta
+-0.28 - 00006550 - SEND_PIPE - 4
+-0.27 - 00006550 - EXIT - 0
+0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
+0.06 - 00006546 - ENTRY - 0	test_dir/importante
+0.10 - 00006546 - RECV_PIPE - 288
+0.10 - 00006546 - ENTRY - 8	test_dir/praesentcursus.txt
+0.11 - 00006546 - ENTRY - 60	test_dir/big.txt
+0.11 - 00006546 - ENTRY - 4	test_dir/loremipsum.txt
+0.14 - 00006546 - RECV_PIPE - 4
+0.15 - 00006546 - ENTRY - 0	test_dir/memorias
+0.16 - 00006546 - ENTRY - 76	test_dir
+0.17 - 00006546 - EXIT - 0

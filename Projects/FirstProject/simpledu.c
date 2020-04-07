@@ -89,7 +89,7 @@ int search_dir(char * path, int depth) {
     char fullpath[256];
     struct stat file_stat;
     
-    depth-=1;//Depth flag (Not Working)
+    depth-=1;//Depth flag
     if ((midir=opendir(path)) == NULL) {
         perror("Error opening directory");
         logExit(1);
@@ -100,14 +100,22 @@ int search_dir(char * path, int depth) {
         strcat (fullpath, "/");
         strcat (fullpath, info_archivo->d_name);
         check_folder_path = 0;
+
         folderSize+=verifyFolderPath(info_archivo,fullpath,&check_folder_path); //Adds size of folder
+
         if(check_folder_path){continue;}
         checkDereference(fullpath,&file_stat);                                  //Checks deference flag
+
         long subSize;
         if(check_path(&file_stat)==0 || check_path(&file_stat)==2){
             subSize=calculate_file_size(&file_stat);                            //Calculates file/link size
             folderSize+=subSize;
-            if(args.all && depth>=0)printf("%ld\t%s\n",subSize,fullpath);      //Prints if the depth is not exceeded (Not Working)
+            if(args.all && depth>=0){
+                char message[256];
+                sprintf(message,"%ld\t%s\n",subSize,fullpath);
+                logEntry(message);
+                printf("%s\n",message);      //Prints if the depth is not exceeded
+            }
         }
         else if(check_path(&file_stat)==1){                                     //If the file is a directory
             
@@ -118,11 +126,12 @@ int search_dir(char * path, int depth) {
 
             if(pid<0){
                 printf("Fork failed\n");
-                logExit(-1);
+                logExit(1);
             }
             else if (pid == 0){
                 close(my_pipe[READ]);
                 int send_size = search_dir(fullpath,depth);
+                logSendPipe(send_size);
                 write(my_pipe[WRITE], &send_size, sizeof(long));
                 logExit(0);
             }
@@ -130,12 +139,20 @@ int search_dir(char * path, int depth) {
                 close(my_pipe[WRITE]);
                 wait(&status);
                 int subFolderSize;
-                if (read(my_pipe[READ], &subFolderSize, sizeof(long)))
+                if (read(my_pipe[READ], &subFolderSize, sizeof(long))){
+                    logRecvPipe(subFolderSize);
                     if(!args.separateDirs) folderSize += subFolderSize;
+                }
+                    
             }
         }
     }
-    if (depth >= -1) printf("%ld\t%s\n", folderSize, path);                   //Prints the folder size if it hasn't exceeded depth
+    if (depth >= -1){
+        char folder_message[256];
+        sprintf(folder_message,"%ld\t%s\n",folderSize,path);
+        logEntry(folder_message);
+        printf("%s\n", folder_message);                   //Prints the folder size if it hasn't exceeded depth
+    } 
     
     return folderSize;
 }

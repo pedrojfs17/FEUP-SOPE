@@ -11,7 +11,7 @@ typedef struct {
     double instant;
     pid_t pid;
     Action action;
-    char info[256];
+    char info[512];
 } Register;
 
 const char* getAction(Action action);
@@ -32,9 +32,9 @@ void logRecvSignal(int sig);
 
 void logSendSignal(pid_t pid, int sig);
 
-void logRecvPipe();
+void logRecvPipe(int size);
 
-void logSendPipe();
+void logSendPipe(int size);
 
-void logEntry();
+void logEntry(char * message);
 
