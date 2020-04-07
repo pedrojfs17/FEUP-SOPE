@@ -20,74 +20,8 @@
 #define WRITE 1
 
 // Argument struct
-struct Args args = {0, 0, 1024, 0, 0, 0, -1};
+struct Args args = {0, 0, 1024, 0, 0, 0, __INT_MAX__};
 
-//long subFolderSize;
-/*
-void print_path(char * path, long pathSize) {
-    if (args.bytes)
-        printf("%ld\t", pathSize);
-    else
-        printf("%ld\t",pathSize % args.block_size == 0 ? pathSize / args.block_size : pathSize / args.block_size + 1 );
-    
-    printf("%s\n",path);
-        
-}
-
-long file_size(char * filename) {
-    struct stat fileStat;
-    char buf[1024];
-    ssize_t len;
-    if (stat(filename, &fileStat) < 0) {
-        printf("Error reading file stat.\n");
-        logExit(1);
-    }
-    if((check_path(filename)==2) && !args.deference){
-        lstat(filename,&fileStat);
-        if((len=readlink(filename,buf,sizeof(buf)-1))!=-1){
-            buf[len]='\0';
-            strcat(filename,"/");
-            strcat(filename,buf);
-        }
-    }
-
-    return fileStat.st_size;
-}
-
-long print_directory(char * path) {
-    DIR * midir;
-    struct dirent * info_archivo;
-    char fullpath[256], temp[256];
-    long dirSize = 0;
-    long size = 0;
-    
-    if ((midir=opendir(path)) == NULL) {
-        perror("Error opening directory");
-        logExit(1);
-    }
-    
-    
-    while ((info_archivo = readdir(midir)) != 0) {
-        strcpy (fullpath, path);
-        strcat (fullpath, "/");
-        strcat (fullpath, info_archivo->d_name);
-        
-        if (strcmp(info_archivo->d_name,"..")) {
-            strcpy(temp, fullpath);
-            size = file_size(fullpath);
-            if(check_path(temp)==2 || check_path(temp)==0) {
-                if (args.all) print_path(temp, size);
-                dirSize += size;
-            }
-            else if (!strcmp(info_archivo->d_name,"."))
-                dirSize += size;
-        }
-    }
-
-    closedir(midir);
-    return dirSize;
-}
-*/
 
 //Checks if the file exists
 int check_file(char * path){
@@ -116,8 +50,8 @@ int check_path(struct stat * path_stat) {
 
 // Calculates the size of a file (in bytes or blocks depending on the flag)
 long calculate_file_size(struct stat * file_stat) {
-    if(args.bytes){return file_stat->st_size;}
-    else{return file_stat->st_size%args.block_size == 0 ? file_stat->st_size/args.block_size : file_stat->st_size/args.block_size+1;}
+    if (args.bytes) return file_stat->st_size;
+    else return file_stat->st_blocks * 512 / args.block_size;
 }
 
 // Checks if the path is either '..' or '.'
@@ -156,7 +90,6 @@ int search_dir(char * path, int depth) {
     struct stat file_stat;
     
     depth-=1;//Depth flag (Not Working)
-    //printf("DEPTH AT THE START: %d\n",depth);
     if ((midir=opendir(path)) == NULL) {
         perror("Error opening directory");
         logExit(1);
@@ -166,11 +99,10 @@ int search_dir(char * path, int depth) {
         strcpy (fullpath, path);
         strcat (fullpath, "/");
         strcat (fullpath, info_archivo->d_name);
+        check_folder_path = 0;
         folderSize+=verifyFolderPath(info_archivo,fullpath,&check_folder_path); //Adds size of folder
-        //printf("IS '..' OR '.' (%s): %d\n",fullpath,check_folder_path);
         if(check_folder_path){continue;}
         checkDereference(fullpath,&file_stat);                                  //Checks deference flag
-        //printf("Going to print - %s\n",fullpath);
         long subSize;
         if(check_path(&file_stat)==0 || check_path(&file_stat)==2){
             subSize=calculate_file_size(&file_stat);                            //Calculates file/link size
@@ -199,13 +131,11 @@ int search_dir(char * path, int depth) {
                 wait(&status);
                 int subFolderSize;
                 if (read(my_pipe[READ], &subFolderSize, sizeof(long)))
-                    folderSize += subFolderSize;
-                //printf("%s is a directory (depth: %d) with size = %ld\n",fullpath,depth, folderSize);
+                    if(!args.separateDirs) folderSize += subFolderSize;
             }
-            printf("%s is a directory (depth: %d) with size = %ld\n",fullpath,depth, folderSize);
         }
     }
-    if(depth>=-1)printf("%ld\t%s\n",folderSize,fullpath);                   //Prints the folder size if it hasn't exceeded depth
+    if (depth >= -1) printf("%ld\t%s\n", folderSize, path);                   //Prints the folder size if it hasn't exceeded depth
     
     return folderSize;
 }
@@ -228,7 +158,7 @@ int activate_flag(char *arg, int num) {
         if (args.bytes == 1) return -1;
         else args.bytes = 1;
     else if (!strcmp(ARGS[4], arg) || !strcmp(ARGS[5], arg))
-        if (args.block_size != 1024) return -1;
+        if (args.block_size != 1024 || num < 0) return -1;
         else args.block_size = num;
     else if (!strcmp(ARGS[6], arg) || !strcmp(ARGS[7], arg))
         if (args.countLinks == 1) return -1;
@@ -240,7 +170,7 @@ int activate_flag(char *arg, int num) {
         if (args.separateDirs == 1) return -1;
         else args.separateDirs = 1;
     else if (!strcmp(ARGS[12], arg))
-        if (args.max_depth != -1) return -1; 
+        if (args.max_depth != __INT_MAX__ || num < 0) return -1; 
         else args.max_depth = num;
     else
         return -1;
@@ -288,6 +218,7 @@ int check_args(int argc, char *argv[]) {
             if (!path_found && check_file(argv[i]) >= 0) {
                 path_found = 1;
                 strncpy(args.path, argv[i], sizeof(args.path));
+                if (args.path[strlen(args.path) - 1] == '/') { strtok(args.path, "/"); }
             }
             else {
                 printf("O argumento que falhou: %s\n", argv[i]);
