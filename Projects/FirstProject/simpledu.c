@@ -57,7 +57,6 @@ int search_dir(char * path, int depth) {
                 logExit(1);
             }
             else if (pid == 0){
-                initLogs();
                 logCreateFork(fullpath, args,depth);
                 change_signal_handlers(0);
                 if (getpgrp() == ParentPGID)

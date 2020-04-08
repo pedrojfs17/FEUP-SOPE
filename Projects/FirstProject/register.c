@@ -1,6 +1,6 @@
 #include "register.h"
 
-clock_t beginTime;
+struct timespec beginTime;
 FILE * logFile;
 
 const char* getAction(Action action) {
@@ -29,7 +29,7 @@ const char* getSignal(int signo) {
 }
 
 void initLogs() {
-    beginTime = clock();
+    clock_gettime(CLOCK_MONOTONIC, &beginTime);
 
     setenv("LOG_FILENAME", "log.txt", 0);
 
@@ -40,10 +40,18 @@ void initLogs() {
     }
 }
 
-void createRegister(Register * reg, Action action) {
-    clock_t currentTime = clock();
+double elapsed_time() {
+    struct timespec currentTime;
+    clock_gettime(CLOCK_MONOTONIC, &currentTime);
 
-    reg->instant = (currentTime - beginTime)/(CLOCKS_PER_SEC / (double) 1000.0);
+    double elapsed = (currentTime.tv_sec - beginTime.tv_sec) * 1e9;
+    elapsed = (elapsed + (currentTime.tv_nsec - beginTime.tv_nsec)) * 1e-6;
+
+    return elapsed;
+}
+
+void createRegister(Register * reg, Action action) {
+    reg->instant = elapsed_time();
     reg->pid = getpid();
     reg->action = action;
     strncpy(reg->info,"Command: ", sizeof("Command: "));
