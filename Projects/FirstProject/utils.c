@@ -134,7 +134,6 @@ int check_args(int argc, char *argv[]) {
             if (!path_found && check_file(argv[i]) >= 0) {
                 path_found = 1;
                 strncpy(args.path, argv[i], sizeof(args.path));
-                if (args.path[strlen(args.path) - 1] == '/') { strtok(args.path, "/"); }
             }
             else {
                 printf("O argumento que falhou: %s\n", argv[i]);

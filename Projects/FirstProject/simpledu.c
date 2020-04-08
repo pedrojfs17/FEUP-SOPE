@@ -12,7 +12,7 @@ int search_dir(char * path, int depth) {
     char fullpath[256];
     struct stat file_stat;
 
-    sleep(2);
+    //sleep(2);
     
     depth-=1;//Depth flag
     if ((midir=opendir(path)) == NULL) {
@@ -22,7 +22,7 @@ int search_dir(char * path, int depth) {
     
     while ((info_archivo = readdir(midir)) != 0) {
         strcpy (fullpath, path);
-        strcat (fullpath, "/");
+        if (fullpath[strlen(fullpath) - 1] != '/') strcat (fullpath, "/");
         strcat (fullpath, info_archivo->d_name);
         check_folder_path = 0;
 
