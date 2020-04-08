@@ -17,6 +17,17 @@ const char* getAction(Action action) {
    }
 }
 
+const char* getSignal(int signo) {
+   switch (signo) 
+   {
+      case SIGINT: return "SIGINT";
+      case SIGTSTP: return "SIGTSTP";
+      case SIGCONT: return "SIGCONT";
+      case SIGTERM: return "SIGTERM";
+      default: return "SIG";
+   }
+}
+
 void initLogs() {
     beginTime = clock();
 
@@ -98,7 +109,7 @@ void logEntry(char * message){
 void logRecvSignal(int sig) {
     Register reg; createRegister(&reg, RECV_SIGNAL);
 
-    sprintf(reg.info, "%d", sig);
+    sprintf(reg.info, "%s", getSignal(sig));
 
     writeRegister(&reg);
 }
@@ -106,7 +117,7 @@ void logRecvSignal(int sig) {
 void logSendSignal(pid_t pid, int sig) {
     Register reg; createRegister(&reg, SEND_SIGNAL);
 
-    sprintf(reg.info, "Sent %d to process %d", sig, pid);
+    sprintf(reg.info, "Sent %s to process %d", getSignal(sig), pid);
 
     writeRegister(&reg);
 }
