@@ -6,7 +6,6 @@
 #include <ctype.h>
 
 #include "signals.h"
-#include "args.h"
 
 #define COMMAND_SIZE 200
 #define MAX_NUM_COMMANDS 10

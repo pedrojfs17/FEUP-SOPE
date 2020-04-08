@@ -58,7 +58,7 @@ int search_dir(char * path, int depth) {
             }
             else if (pid == 0){
                 initLogs();
-                logCreateFork(fullpath);
+                logCreateFork(fullpath, args,depth);
                 change_signal_handlers(0);
                 if (getpgrp() == ParentPGID)
                     setpgid(pid, getpid()); // Child process in it's own process group
@@ -96,13 +96,12 @@ int search_dir(char * path, int depth) {
 int main(int argc, char *argv[], char *envp[])
 {
     initLogs();
+    logCreate(argc, argv); 
 
     if (argc > MAX_NUM_COMMANDS || !check_args(argc, argv)) {
         fprintf(stderr, "Usage: %s -l [path] [-a] [-b] [-B size] [-L] [-S] [--max-depth=N]\n", argv[0]);
-        exit(1);
+        logExit(1);
     }
-
-    logCreate(argc, argv); 
 
     ParentPGID = getpgrp();
 

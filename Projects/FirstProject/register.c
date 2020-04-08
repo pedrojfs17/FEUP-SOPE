@@ -66,11 +66,33 @@ void logCreate(int argc, char *argv[]) {
     writeRegister(&reg);
 }
 
-void logCreateFork(char * path) {
+void logCreateFork(char * path, struct Args args, int maxdepth) {
     Register reg; createRegister(&reg, CREATE);
+
+    char temp[64];
 
     strcat(reg.info, "./simpledu ");
     strcat(reg.info, path);
+    if (args.all)
+        strcat(reg.info, " -a");
+    if (args.bytes)
+        strcat(reg.info, " -b");
+    if (args.countLinks)
+        strcat(reg.info, " -l");
+    if (args.deference)
+        strcat(reg.info, " -L");
+    if (args.separateDirs)
+        strcat(reg.info, " -S");
+    if (args.block_size != 1024) {
+        strcat(reg.info, " -B ");
+        sprintf(temp, "%d", args.block_size);
+        strcat(reg.info, temp);
+    }
+    if (args.max_depth != __INT_MAX__) {
+        strcat(reg.info, " --max-depth=");
+        sprintf(temp, "%d", maxdepth);
+        strcat(reg.info, temp);
+    }
 
     writeRegister(&reg);
 }

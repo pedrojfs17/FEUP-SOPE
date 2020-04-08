@@ -6,6 +6,8 @@
 #include <string.h>
 #include <signal.h>
 
+#include "args.h"
+
 typedef enum {CREATE, EXIT, RECV_SIGNAL, SEND_SIGNAL, RECV_PIPE, SEND_PIPE, ENTRY} Action;
 
 typedef struct {
@@ -27,7 +29,7 @@ void writeRegister(Register * reg);
 
 void logCreate(int argc, char *argv[]);
 
-void logCreateFork(char * path);
+void logCreateFork(char * path, struct Args args, int maxdepth);
 
 void logExit(int exitStatus);
 
