@@ -2,6 +2,8 @@
 #include <sys/wait.h>
 #include "utils.h"
 
+pid_t ParentPGID;
+
 // Searches in a directory and returns size in bytes
 int search_dir(char * path, int depth) {
     long folderSize = 0;
@@ -58,7 +60,8 @@ int search_dir(char * path, int depth) {
                 initLogs();
                 logCreateFork(fullpath);
                 change_signal_handlers(0);
-                setpgid(pid, getpid()); // Child process in it's own process group
+                if (getpgrp() == ParentPGID)
+                    setpgid(pid, getpid()); // Child process in it's own process group
                 close(my_pipe[READ]);
                 int send_size = search_dir(fullpath,depth);
                 logSendPipe(send_size);
@@ -77,6 +80,7 @@ int search_dir(char * path, int depth) {
                     
             }
         }
+        save_children_pid(0);
     }
     if (depth >= -1){
         char folder_message[256];
@@ -99,6 +103,8 @@ int main(int argc, char *argv[], char *envp[])
     }
 
     logCreate(argc, argv); 
+
+    ParentPGID = getpgrp();
 
     //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
 

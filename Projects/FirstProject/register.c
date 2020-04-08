@@ -21,7 +21,7 @@ const char* getSignal(int signo) {
    switch (signo) 
    {
       case SIGINT: return "SIGINT";
-      case SIGTSTP: return "SIGTSTP";
+      case SIGSTOP: return "SIGSTOP";
       case SIGCONT: return "SIGCONT";
       case SIGTERM: return "SIGTERM";
       default: return "SIG";
