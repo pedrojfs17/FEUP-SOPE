@@ -11,6 +11,8 @@ int search_dir(char * path, int depth) {
     struct dirent * info_archivo;
     char fullpath[256];
     struct stat file_stat;
+
+    sleep(2);
     
     depth-=1;//Depth flag
     if ((midir=opendir(path)) == NULL) {
@@ -38,6 +40,7 @@ int search_dir(char * path, int depth) {
                 sprintf(message,"%ld\t%s\n",subSize,fullpath);
                 logEntry(message);
                 printf("%s\n",message);      //Prints if the depth is not exceeded
+                fflush(stdout);
             }
         }
         else if(check_path(&file_stat)==1){                                     //If the file is a directory
@@ -52,6 +55,10 @@ int search_dir(char * path, int depth) {
                 logExit(1);
             }
             else if (pid == 0){
+                initLogs();
+                logCreateFork(fullpath);
+                change_signal_handlers(0);
+                setpgid(pid, getpid()); // Child process in it's own process group
                 close(my_pipe[READ]);
                 int send_size = search_dir(fullpath,depth);
                 logSendPipe(send_size);
@@ -59,6 +66,7 @@ int search_dir(char * path, int depth) {
                 logExit(0);
             }
             else{
+                save_children_pid(pid);
                 close(my_pipe[WRITE]);
                 wait(&status);
                 int subFolderSize;
@@ -75,6 +83,7 @@ int search_dir(char * path, int depth) {
         sprintf(folder_message,"%ld\t%s\n",folderSize,path);
         logEntry(folder_message);
         printf("%s\n", folder_message);                   //Prints the folder size if it hasn't exceeded depth
+        fflush(stdout);
     } 
     
     return folderSize;
@@ -92,7 +101,9 @@ int main(int argc, char *argv[], char *envp[])
     logCreate(argc, argv); 
 
     //printf("ARGS = {%d, %d, %d, %d, %d, %d, %d}\n", args.all, args.bytes, args.block_size, args.countLinks, args.deference, args.separateDirs, args.max_depth);
-    
+
+    change_signal_handlers(1);
+
     search_dir(args.path, args.max_depth);
 
     logExit(0);

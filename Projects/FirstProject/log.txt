@@ -1,2443 +1,298 @@
-0.04 - 00015484 - CREATE - Command: ./simpledu test_dir/
--0.25 - 00015487 - EXIT - 0
-0.04 - 00015484 - CREATE - Command: ./simpledu test_dir/
--0.21 - 00015486 - EXIT - 0
-0.04 - 00015484 - CREATE - Command: ./simpledu test_dir/
--0.21 - 00015485 - EXIT - 0
-0.04 - 00015484 - CREATE - Command: ./simpledu test_dir/
--0.25 - 00015490 - EXIT - 0
-0.04 - 00015484 - CREATE - Command: ./simpledu test_dir/
--0.22 - 00015489 - EXIT - 0
-0.04 - 00015484 - CREATE - Command: ./simpledu test_dir/
--0.22 - 00015488 - EXIT - 0
-0.04 - 00015484 - CREATE - Command: ./simpledu test_dir/
-0.15 - 00015484 - EXIT - 0
-0.03 - 00015491 - CREATE - Command: ./simpledu test_dir
--0.29 - 00015494 - EXIT - 0
-0.03 - 00015491 - CREATE - Command: ./simpledu test_dir
--0.25 - 00015493 - EXIT - 0
-0.03 - 00015491 - CREATE - Command: ./simpledu test_dir
--0.25 - 00015492 - EXIT - 0
-0.03 - 00015491 - CREATE - Command: ./simpledu test_dir
--0.29 - 00015497 - EXIT - 0
-0.03 - 00015491 - CREATE - Command: ./simpledu test_dir
--0.27 - 00015496 - EXIT - 0
-0.03 - 00015491 - CREATE - Command: ./simpledu test_dir
--0.27 - 00015495 - EXIT - 0
-0.03 - 00015491 - CREATE - Command: ./simpledu test_dir
-0.14 - 00015491 - EXIT - 0
-0.03 - 00015513 - CREATE - Command: ./simpledu -l test_dir -a
--0.25 - 00015516 - EXIT - 0
-0.03 - 00015513 - CREATE - Command: ./simpledu -l test_dir -a
--0.22 - 00015515 - EXIT - 0
-0.03 - 00015513 - CREATE - Command: ./simpledu -l test_dir -a
--0.22 - 00015514 - EXIT - 0
-0.03 - 00015513 - CREATE - Command: ./simpledu -l test_dir -a
--0.25 - 00015519 - EXIT - 0
-0.03 - 00015513 - CREATE - Command: ./simpledu -l test_dir -a
--0.21 - 00015518 - EXIT - 0
-0.03 - 00015513 - CREATE - Command: ./simpledu -l test_dir -a
--0.23 - 00015517 - EXIT - 0
-0.03 - 00015513 - CREATE - Command: ./simpledu -l test_dir -a
-0.17 - 00015513 - EXIT - 0
-0.04 - 00015550 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.29 - 00015553 - EXIT - 0
-0.04 - 00015550 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.24 - 00015552 - EXIT - 0
-0.04 - 00015550 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.24 - 00015551 - EXIT - 0
-0.04 - 00015550 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.27 - 00015556 - EXIT - 0
-0.04 - 00015550 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.20 - 00015555 - EXIT - 0
-0.04 - 00015550 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.25 - 00015554 - EXIT - 0
-0.04 - 00015550 - CREATE - Command: ./simpledu -l test_dir -a -L
-0.19 - 00015550 - EXIT - 0
-0.04 - 00015886 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.35 - 00015889 - EXIT - 0
-0.04 - 00015886 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.30 - 00015888 - EXIT - 0
-0.04 - 00015886 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.25 - 00015887 - EXIT - 0
-0.04 - 00015886 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.36 - 00015892 - EXIT - 0
-0.04 - 00015886 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.33 - 00015891 - EXIT - 0
-0.04 - 00015886 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.33 - 00015890 - EXIT - 0
-0.04 - 00015886 - CREATE - Command: ./simpledu -l test_dir -a -L
-0.20 - 00015886 - EXIT - 0
-0.04 - 00016547 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.26 - 00016550 - EXIT - 0
-0.04 - 00016547 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.21 - 00016549 - EXIT - 0
-0.04 - 00016547 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.19 - 00016548 - EXIT - 0
-0.04 - 00016547 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.26 - 00016553 - EXIT - 0
-0.04 - 00016547 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.23 - 00016552 - EXIT - 0
-0.04 - 00016547 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.23 - 00016551 - EXIT - 0
-0.04 - 00016547 - CREATE - Command: ./simpledu -l test_dir -a -L
-0.18 - 00016547 - EXIT - 0
-0.04 - 00017177 - CREATE - Command: ./simpledu -l test_dir -a
--0.29 - 00017180 - EXIT - 0
-0.04 - 00017177 - CREATE - Command: ./simpledu -l test_dir -a
--0.25 - 00017179 - EXIT - 0
-0.04 - 00017177 - CREATE - Command: ./simpledu -l test_dir -a
--0.20 - 00017178 - EXIT - 0
-0.04 - 00017177 - CREATE - Command: ./simpledu -l test_dir -a
--0.29 - 00017183 - EXIT - 0
-0.04 - 00017177 - CREATE - Command: ./simpledu -l test_dir -a
--0.26 - 00017182 - EXIT - 0
-0.04 - 00017177 - CREATE - Command: ./simpledu -l test_dir -a
--0.27 - 00017181 - EXIT - 0
-0.04 - 00017177 - CREATE - Command: ./simpledu -l test_dir -a
-0.26 - 00017177 - EXIT - 0
-0.06 - 00017321 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.33 - 00017324 - EXIT - 0
-0.06 - 00017321 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.25 - 00017323 - EXIT - 0
-0.06 - 00017321 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.25 - 00017322 - EXIT - 0
-0.06 - 00017321 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.33 - 00017327 - EXIT - 0
-0.06 - 00017321 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.30 - 00017326 - EXIT - 0
-0.06 - 00017321 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.31 - 00017325 - EXIT - 0
-0.06 - 00017321 - CREATE - Command: ./simpledu -l test_dir -a -L
-0.21 - 00017321 - EXIT - 0
-0.04 - 00017397 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.25 - 00017400 - EXIT - 0
-0.04 - 00017397 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.21 - 00017399 - EXIT - 0
-0.04 - 00017397 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.21 - 00017398 - EXIT - 0
-0.04 - 00017397 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.21 - 00017403 - EXIT - 0
-0.04 - 00017397 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.23 - 00017402 - EXIT - 0
-0.04 - 00017397 - CREATE - Command: ./simpledu -l test_dir -a -L
--0.23 - 00017401 - EXIT - 0
-0.04 - 00017397 - CREATE - Command: ./simpledu -l test_dir -a -L
-0.17 - 00017397 - EXIT - 0
-0.04 - 00023608 - CREATE - Command: ./simpledu -l test_dir -a -L
-0.07 - 00023608 - EXIT - 0
-0.04 - 00023625 - CREATE - Command: ./simpledu -l test_dir -a -L
-0.07 - 00023625 - EXIT - 0
-0.04 - 00023629 - CREATE - Command: ./simpledu -l test_dir -a
-0.07 - 00023629 - EXIT - 0
-0.04 - 00023640 - CREATE - Command: ./simpledu test_dir/
--0.27 - 00023641 - EXIT - 1
-0.04 - 00023640 - CREATE - Command: ./simpledu test_dir/
--0.27 - 00023642 - EXIT - 0
-0.04 - 00023640 - CREATE - Command: ./simpledu test_dir/
--0.28 - 00023643 - EXIT - 1
-0.04 - 00023640 - CREATE - Command: ./simpledu test_dir/
--0.28 - 00023644 - EXIT - 1
-0.04 - 00023640 - CREATE - Command: ./simpledu test_dir/
--0.28 - 00023645 - EXIT - 1
-0.04 - 00023640 - CREATE - Command: ./simpledu test_dir/
--0.26 - 00023646 - EXIT - 0
-0.04 - 00023640 - CREATE - Command: ./simpledu test_dir/
--0.26 - 00023647 - EXIT - 0
-0.04 - 00023640 - CREATE - Command: ./simpledu test_dir/
-0.24 - 00023640 - EXIT - 0
-0.04 - 00023649 - CREATE - Command: ./simpledu test_dir
-0.07 - 00023649 - EXIT - 0
-0.04 - 00023655 - CREATE - Command: ./simpledu test_dir
-0.07 - 00023655 - EXIT - 0
-0.04 - 00023717 - CREATE - Command: ./simpledu test_dir
-0.07 - 00023717 - EXIT - 0
-0.04 - 00024127 - CREATE - Command: ./simpledu test_dir
--0.27 - 00024130 - EXIT - 0
-0.04 - 00024127 - CREATE - Command: ./simpledu test_dir
--0.23 - 00024129 - EXIT - 0
-0.04 - 00024127 - CREATE - Command: ./simpledu test_dir
--0.23 - 00024128 - EXIT - 0
-0.04 - 00024127 - CREATE - Command: ./simpledu test_dir
--0.27 - 00024133 - EXIT - 0
-0.04 - 00024127 - CREATE - Command: ./simpledu test_dir
--0.24 - 00024132 - EXIT - 0
-0.04 - 00024127 - CREATE - Command: ./simpledu test_dir
--0.24 - 00024131 - EXIT - 0
-0.04 - 00024127 - CREATE - Command: ./simpledu test_dir
-0.15 - 00024127 - EXIT - 0
-0.04 - 00024185 - CREATE - Command: ./simpledu test_dir
--0.28 - 00024188 - EXIT - 0
-0.04 - 00024185 - CREATE - Command: ./simpledu test_dir
--0.24 - 00024187 - EXIT - 0
-0.04 - 00024185 - CREATE - Command: ./simpledu test_dir
--0.23 - 00024186 - EXIT - 0
-0.04 - 00024185 - CREATE - Command: ./simpledu test_dir
--0.27 - 00024191 - EXIT - 0
-0.04 - 00024185 - CREATE - Command: ./simpledu test_dir
--0.25 - 00024190 - EXIT - 0
-0.04 - 00024185 - CREATE - Command: ./simpledu test_dir
--0.25 - 00024189 - EXIT - 0
-0.04 - 00024185 - CREATE - Command: ./simpledu test_dir
-0.14 - 00024185 - EXIT - 0
-0.04 - 00024679 - CREATE - Command: ./simpledu test_dir
--0.27 - 00024682 - EXIT - 0
-0.04 - 00024679 - CREATE - Command: ./simpledu test_dir
--0.24 - 00024681 - EXIT - 0
-0.04 - 00024679 - CREATE - Command: ./simpledu test_dir
--0.24 - 00024680 - EXIT - 0
-0.04 - 00024679 - CREATE - Command: ./simpledu test_dir
--0.27 - 00024685 - EXIT - 0
-0.04 - 00024679 - CREATE - Command: ./simpledu test_dir
--0.25 - 00024684 - EXIT - 0
-0.04 - 00024679 - CREATE - Command: ./simpledu test_dir
--0.26 - 00024683 - EXIT - 0
-0.04 - 00024679 - CREATE - Command: ./simpledu test_dir
-0.11 - 00024679 - EXIT - 0
-0.04 - 00024692 - CREATE - Command: ./simpledu test_dir --max-depth
--0.27 - 00024695 - EXIT - 0
-0.04 - 00024692 - CREATE - Command: ./simpledu test_dir --max-depth
--0.24 - 00024694 - EXIT - 0
-0.04 - 00024692 - CREATE - Command: ./simpledu test_dir --max-depth
--0.25 - 00024693 - EXIT - 0
-0.04 - 00024692 - CREATE - Command: ./simpledu test_dir --max-depth
--0.28 - 00024698 - EXIT - 0
-0.04 - 00024692 - CREATE - Command: ./simpledu test_dir --max-depth
--0.26 - 00024697 - EXIT - 0
-0.04 - 00024692 - CREATE - Command: ./simpledu test_dir --max-depth
--0.25 - 00024696 - EXIT - 0
-0.04 - 00024692 - CREATE - Command: ./simpledu test_dir --max-depth
-0.13 - 00024692 - EXIT - 0
-0.04 - 00024747 - CREATE - Command: ./simpledu test_dir --max-depth
--0.27 - 00024750 - EXIT - 0
-0.04 - 00024747 - CREATE - Command: ./simpledu test_dir --max-depth
--0.22 - 00024749 - EXIT - 0
-0.04 - 00024747 - CREATE - Command: ./simpledu test_dir --max-depth
--0.24 - 00024748 - EXIT - 0
-0.04 - 00024747 - CREATE - Command: ./simpledu test_dir --max-depth
--0.27 - 00024753 - EXIT - 0
-0.04 - 00024747 - CREATE - Command: ./simpledu test_dir --max-depth
--0.24 - 00024752 - EXIT - 0
-0.04 - 00024747 - CREATE - Command: ./simpledu test_dir --max-depth
--0.24 - 00024751 - EXIT - 0
-0.04 - 00024747 - CREATE - Command: ./simpledu test_dir --max-depth
-0.13 - 00024747 - EXIT - 0
-0.04 - 00024776 - CREATE - Command: ./simpledu test_dir --max-depth
--0.31 - 00024779 - EXIT - 0
-0.04 - 00024776 - CREATE - Command: ./simpledu test_dir --max-depth
--0.27 - 00024778 - EXIT - 0
-0.04 - 00024776 - CREATE - Command: ./simpledu test_dir --max-depth
--0.28 - 00024777 - EXIT - 0
-0.04 - 00024776 - CREATE - Command: ./simpledu test_dir --max-depth
--0.31 - 00024782 - EXIT - 0
-0.04 - 00024776 - CREATE - Command: ./simpledu test_dir --max-depth
--0.29 - 00024781 - EXIT - 0
-0.04 - 00024776 - CREATE - Command: ./simpledu test_dir --max-depth
--0.29 - 00024780 - EXIT - 0
-0.04 - 00024776 - CREATE - Command: ./simpledu test_dir --max-depth
-0.12 - 00024776 - EXIT - 0
-0.04 - 00024785 - CREATE - Command: ./simpledu test_dir --max-depth
--0.26 - 00024788 - EXIT - 0
-0.04 - 00024785 - CREATE - Command: ./simpledu test_dir --max-depth
--0.23 - 00024787 - EXIT - 0
-0.04 - 00024785 - CREATE - Command: ./simpledu test_dir --max-depth
--0.24 - 00024786 - EXIT - 0
-0.04 - 00024785 - CREATE - Command: ./simpledu test_dir --max-depth
--0.26 - 00024791 - EXIT - 0
-0.04 - 00024785 - CREATE - Command: ./simpledu test_dir --max-depth
--0.24 - 00024790 - EXIT - 0
-0.04 - 00024785 - CREATE - Command: ./simpledu test_dir --max-depth
--0.24 - 00024789 - EXIT - 0
-0.04 - 00024785 - CREATE - Command: ./simpledu test_dir --max-depth
-0.12 - 00024785 - EXIT - 0
-0.04 - 00024795 - CREATE - Command: ./simpledu test_dir --max-depth -a
--0.26 - 00024798 - EXIT - 0
-0.04 - 00024795 - CREATE - Command: ./simpledu test_dir --max-depth -a
--0.22 - 00024797 - EXIT - 0
-0.04 - 00024795 - CREATE - Command: ./simpledu test_dir --max-depth -a
--0.23 - 00024796 - EXIT - 0
-0.04 - 00024795 - CREATE - Command: ./simpledu test_dir --max-depth -a
--0.26 - 00024801 - EXIT - 0
-0.04 - 00024795 - CREATE - Command: ./simpledu test_dir --max-depth -a
--0.23 - 00024800 - EXIT - 0
-0.04 - 00024795 - CREATE - Command: ./simpledu test_dir --max-depth -a
--0.23 - 00024799 - EXIT - 0
-0.04 - 00024795 - CREATE - Command: ./simpledu test_dir --max-depth -a
-0.14 - 00024795 - EXIT - 0
-0.04 - 00024807 - CREATE - Command: ./simpledu test_dir --max-depth -a -L
--0.26 - 00024810 - EXIT - 0
-0.04 - 00024807 - CREATE - Command: ./simpledu test_dir --max-depth -a -L
--0.22 - 00024809 - EXIT - 0
-0.04 - 00024807 - CREATE - Command: ./simpledu test_dir --max-depth -a -L
--0.21 - 00024808 - EXIT - 0
-0.04 - 00024807 - CREATE - Command: ./simpledu test_dir --max-depth -a -L
--0.26 - 00024813 - EXIT - 0
-0.04 - 00024807 - CREATE - Command: ./simpledu test_dir --max-depth -a -L
--0.24 - 00024812 - EXIT - 0
-0.04 - 00024807 - CREATE - Command: ./simpledu test_dir --max-depth -a -L
--0.24 - 00024811 - EXIT - 0
-0.04 - 00024807 - CREATE - Command: ./simpledu test_dir --max-depth -a -L
--0.25 - 00024814 - EXIT - 0
-0.04 - 00024807 - CREATE - Command: ./simpledu test_dir --max-depth -a -L
-0.15 - 00024807 - EXIT - 0
-0.04 - 00024828 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b
--0.26 - 00024831 - EXIT - 0
-0.04 - 00024828 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b
--0.23 - 00024830 - EXIT - 0
-0.04 - 00024828 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b
--0.23 - 00024829 - EXIT - 0
-0.04 - 00024828 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b
--0.26 - 00024834 - EXIT - 0
-0.04 - 00024828 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b
--0.24 - 00024833 - EXIT - 0
-0.04 - 00024828 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b
--0.24 - 00024832 - EXIT - 0
-0.04 - 00024828 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b
--0.26 - 00024835 - EXIT - 0
-0.04 - 00024828 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b
-0.17 - 00024828 - EXIT - 0
-0.04 - 00024842 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.28 - 00024845 - EXIT - 0
-0.04 - 00024842 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.24 - 00024844 - EXIT - 0
-0.04 - 00024842 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.23 - 00024843 - EXIT - 0
-0.04 - 00024842 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.28 - 00024848 - EXIT - 0
-0.04 - 00024842 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00024847 - EXIT - 0
-0.04 - 00024842 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00024846 - EXIT - 0
-0.04 - 00024842 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.27 - 00024849 - EXIT - 0
-0.04 - 00024842 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
-0.15 - 00024842 - EXIT - 0
-0.04 - 00024880 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.27 - 00024883 - EXIT - 0
-0.04 - 00024880 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.24 - 00024882 - EXIT - 0
-0.04 - 00024880 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.23 - 00024881 - EXIT - 0
-0.04 - 00024880 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.27 - 00024886 - EXIT - 0
-0.04 - 00024880 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.25 - 00024885 - EXIT - 0
-0.04 - 00024880 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.23 - 00024884 - EXIT - 0
-0.04 - 00024880 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00024887 - EXIT - 0
-0.04 - 00024880 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
-0.15 - 00024880 - EXIT - 0
-0.04 - 00024943 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.28 - 00024946 - EXIT - 0
-0.04 - 00024943 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.24 - 00024945 - EXIT - 0
-0.04 - 00024943 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.25 - 00024944 - EXIT - 0
-0.04 - 00024943 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.28 - 00024949 - EXIT - 0
-0.04 - 00024943 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00024948 - EXIT - 0
-0.04 - 00024943 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00024947 - EXIT - 0
-0.04 - 00024943 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.28 - 00024950 - EXIT - 0
-0.04 - 00024943 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
-0.15 - 00024943 - EXIT - 0
-0.04 - 00025085 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.28 - 00025088 - EXIT - 0
-0.04 - 00025085 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.23 - 00025087 - EXIT - 0
-0.04 - 00025085 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.23 - 00025086 - EXIT - 0
-0.04 - 00025085 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.27 - 00025091 - EXIT - 0
-0.04 - 00025085 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.25 - 00025090 - EXIT - 0
-0.04 - 00025085 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.25 - 00025089 - EXIT - 0
-0.04 - 00025085 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.27 - 00025092 - EXIT - 0
-0.04 - 00025085 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
-0.16 - 00025085 - EXIT - 0
-0.04 - 00025118 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.30 - 00025121 - EXIT - 0
-0.04 - 00025118 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00025120 - EXIT - 0
-0.04 - 00025118 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00025119 - EXIT - 0
-0.04 - 00025118 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.30 - 00025124 - EXIT - 0
-0.04 - 00025118 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.28 - 00025123 - EXIT - 0
-0.04 - 00025118 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.28 - 00025122 - EXIT - 0
-0.04 - 00025118 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.30 - 00025125 - EXIT - 0
-0.04 - 00025118 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
-0.16 - 00025118 - EXIT - 0
-0.04 - 00025168 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.27 - 00025171 - EXIT - 0
-0.04 - 00025168 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.23 - 00025170 - EXIT - 0
-0.04 - 00025168 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.22 - 00025169 - EXIT - 0
-0.04 - 00025168 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00025174 - EXIT - 0
-0.04 - 00025168 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.24 - 00025173 - EXIT - 0
-0.04 - 00025168 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.24 - 00025172 - EXIT - 0
-0.04 - 00025168 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00025175 - EXIT - 0
-0.04 - 00025168 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
-0.16 - 00025168 - EXIT - 0
-0.04 - 00025200 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.26 - 00025203 - EXIT - 0
-0.04 - 00025200 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.23 - 00025202 - EXIT - 0
-0.04 - 00025200 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.20 - 00025201 - EXIT - 0
-0.04 - 00025200 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.24 - 00025206 - EXIT - 0
-0.04 - 00025200 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.21 - 00025205 - EXIT - 0
-0.04 - 00025200 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.20 - 00025204 - EXIT - 0
-0.04 - 00025200 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
--0.25 - 00025207 - EXIT - 0
-0.04 - 00025200 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024
-0.23 - 00025200 - EXIT - 0
-0.04 - 00025215 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.28 - 00025218 - EXIT - 0
-0.04 - 00025215 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.24 - 00025217 - EXIT - 0
-0.04 - 00025215 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.25 - 00025216 - EXIT - 0
-0.04 - 00025215 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.28 - 00025221 - EXIT - 0
-0.04 - 00025215 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.26 - 00025220 - EXIT - 0
-0.04 - 00025215 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.26 - 00025219 - EXIT - 0
-0.04 - 00025215 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.27 - 00025222 - EXIT - 0
-0.04 - 00025215 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
-0.16 - 00025215 - EXIT - 0
-0.04 - 00025272 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.29 - 00025275 - EXIT - 0
-0.04 - 00025272 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.21 - 00025274 - EXIT - 0
-0.04 - 00025272 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.26 - 00025273 - EXIT - 0
-0.04 - 00025272 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.29 - 00025278 - EXIT - 0
-0.04 - 00025272 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.27 - 00025277 - EXIT - 0
-0.04 - 00025272 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.27 - 00025276 - EXIT - 0
-0.04 - 00025272 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.27 - 00025279 - EXIT - 0
-0.04 - 00025272 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
-0.16 - 00025272 - EXIT - 0
-0.04 - 00025497 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.27 - 00025500 - EXIT - 0
-0.04 - 00025497 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.23 - 00025499 - EXIT - 0
-0.04 - 00025497 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.23 - 00025498 - EXIT - 0
-0.04 - 00025497 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.26 - 00025503 - EXIT - 0
-0.04 - 00025497 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.23 - 00025502 - EXIT - 0
-0.04 - 00025497 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.24 - 00025501 - EXIT - 0
-0.04 - 00025497 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.25 - 00025504 - EXIT - 0
-0.04 - 00025497 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
-0.18 - 00025497 - EXIT - 0
-0.04 - 00025667 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.28 - 00025670 - EXIT - 0
-0.04 - 00025667 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.24 - 00025669 - EXIT - 0
-0.04 - 00025667 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.23 - 00025668 - EXIT - 0
-0.04 - 00025667 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.26 - 00025673 - EXIT - 0
-0.04 - 00025667 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.24 - 00025672 - EXIT - 0
-0.04 - 00025667 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.24 - 00025671 - EXIT - 0
-0.04 - 00025667 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
--0.27 - 00025674 - EXIT - 0
-0.04 - 00025667 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -B 1024 -l
-0.19 - 00025667 - EXIT - 0
-0.04 - 00025690 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.29 - 00025693 - EXIT - 0
-0.04 - 00025690 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.25 - 00025692 - EXIT - 0
-0.04 - 00025690 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.26 - 00025691 - EXIT - 0
-0.04 - 00025690 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.28 - 00025696 - EXIT - 0
-0.04 - 00025690 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.26 - 00025695 - EXIT - 0
-0.04 - 00025690 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.27 - 00025694 - EXIT - 0
-0.04 - 00025690 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.28 - 00025697 - EXIT - 0
-0.04 - 00025690 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
-0.17 - 00025690 - EXIT - 0
-0.04 - 00025883 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.28 - 00025886 - EXIT - 0
-0.04 - 00025883 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.24 - 00025885 - EXIT - 0
-0.04 - 00025883 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.23 - 00025884 - EXIT - 0
-0.04 - 00025883 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.27 - 00025889 - EXIT - 0
-0.04 - 00025883 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.25 - 00025888 - EXIT - 0
-0.04 - 00025883 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.25 - 00025887 - EXIT - 0
-0.04 - 00025883 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.27 - 00025890 - EXIT - 0
-0.04 - 00025883 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
-0.16 - 00025883 - EXIT - 0
-0.04 - 00025988 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.29 - 00025991 - EXIT - 0
-0.04 - 00025988 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.25 - 00025990 - EXIT - 0
-0.04 - 00025988 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.25 - 00025989 - EXIT - 0
-0.04 - 00025988 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.28 - 00025994 - EXIT - 0
-0.04 - 00025988 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.26 - 00025993 - EXIT - 0
-0.04 - 00025988 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.26 - 00025992 - EXIT - 0
-0.04 - 00025988 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.27 - 00025995 - EXIT - 0
-0.04 - 00025988 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
-0.17 - 00025988 - EXIT - 0
-0.04 - 00025998 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.29 - 00026001 - EXIT - 0
-0.04 - 00025998 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.25 - 00026000 - EXIT - 0
-0.04 - 00025998 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.26 - 00025999 - EXIT - 0
-0.04 - 00025998 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.30 - 00026004 - EXIT - 0
-0.04 - 00025998 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.27 - 00026003 - EXIT - 0
-0.04 - 00025998 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.27 - 00026002 - EXIT - 0
-0.04 - 00025998 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.28 - 00026005 - EXIT - 0
-0.04 - 00025998 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
-0.16 - 00025998 - EXIT - 0
-0.04 - 00026008 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.27 - 00026011 - EXIT - 0
-0.04 - 00026008 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.24 - 00026010 - EXIT - 0
-0.04 - 00026008 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.24 - 00026009 - EXIT - 0
-0.04 - 00026008 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.27 - 00026014 - EXIT - 0
-0.04 - 00026008 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.25 - 00026013 - EXIT - 0
-0.04 - 00026008 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.25 - 00026012 - EXIT - 0
-0.04 - 00026008 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
--0.26 - 00026015 - EXIT - 0
-0.04 - 00026008 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -b -l
-0.17 - 00026008 - EXIT - 0
-0.04 - 00026022 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.28 - 00026025 - EXIT - 0
-0.04 - 00026022 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.25 - 00026024 - EXIT - 0
-0.04 - 00026022 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.25 - 00026023 - EXIT - 0
-0.04 - 00026022 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.28 - 00026028 - EXIT - 0
-0.04 - 00026022 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.23 - 00026027 - EXIT - 0
-0.04 - 00026022 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.26 - 00026026 - EXIT - 0
-0.04 - 00026022 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.27 - 00026029 - EXIT - 0
-0.04 - 00026022 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
-0.16 - 00026022 - EXIT - 0
-0.04 - 00026401 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.28 - 00026404 - EXIT - 0
-0.04 - 00026401 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.24 - 00026403 - EXIT - 0
-0.04 - 00026401 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.23 - 00026402 - EXIT - 0
-0.04 - 00026401 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.27 - 00026407 - EXIT - 0
-0.04 - 00026401 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.25 - 00026406 - EXIT - 0
-0.04 - 00026401 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.25 - 00026405 - EXIT - 0
-0.04 - 00026401 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
--0.27 - 00026408 - EXIT - 0
-0.04 - 00026401 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l
-0.17 - 00026401 - EXIT - 0
-0.04 - 00026524 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.31 - 00026527 - EXIT - 0
-0.04 - 00026524 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.27 - 00026526 - EXIT - 0
-0.04 - 00026524 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.25 - 00026525 - EXIT - 0
-0.04 - 00026524 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.30 - 00026530 - EXIT - 0
-0.04 - 00026524 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.28 - 00026529 - EXIT - 0
-0.04 - 00026524 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.28 - 00026528 - EXIT - 0
-0.04 - 00026524 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.29 - 00026531 - EXIT - 0
-0.04 - 00026524 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
-0.21 - 00026524 - EXIT - 0
-0.04 - 00026760 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.27 - 00026763 - EXIT - 0
-0.04 - 00026760 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00026762 - EXIT - 0
-0.04 - 00026760 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00026761 - EXIT - 0
-0.04 - 00026760 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.26 - 00026766 - EXIT - 0
-0.04 - 00026760 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00026765 - EXIT - 0
-0.04 - 00026760 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.24 - 00026764 - EXIT - 0
-0.04 - 00026760 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00026767 - EXIT - 0
-0.04 - 00026760 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
-0.20 - 00026760 - EXIT - 0
-0.04 - 00026923 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.27 - 00026926 - EXIT - 0
-0.04 - 00026923 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00026925 - EXIT - 0
-0.04 - 00026923 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00026924 - EXIT - 0
-0.04 - 00026923 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.27 - 00026929 - EXIT - 0
-0.04 - 00026923 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.25 - 00026928 - EXIT - 0
-0.04 - 00026923 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.25 - 00026927 - EXIT - 0
-0.04 - 00026923 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.26 - 00026930 - EXIT - 0
-0.04 - 00026923 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
-0.16 - 00026923 - EXIT - 0
-0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.27 - 00027435 - EXIT - 0
-0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00027434 - EXIT - 0
-0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00027433 - EXIT - 0
-0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.26 - 00027438 - EXIT - 0
-0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00027437 - EXIT - 0
-0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.24 - 00027436 - EXIT - 0
-0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.25 - 00027439 - EXIT - 0
-0.05 - 00027432 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
-0.18 - 00027432 - EXIT - 0
-0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.27 - 00028064 - EXIT - 0
-0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00028063 - EXIT - 0
-0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00028062 - EXIT - 0
-0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.26 - 00028067 - EXIT - 0
-0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.24 - 00028066 - EXIT - 0
-0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.25 - 00028065 - EXIT - 0
-0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.22 - 00028068 - EXIT - 0
-0.04 - 00028061 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
-0.17 - 00028061 - EXIT - 0
-0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.27 - 00028164 - EXIT - 0
-0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.24 - 00028163 - EXIT - 0
-0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.23 - 00028162 - EXIT - 0
-0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.26 - 00028167 - EXIT - 0
-0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.24 - 00028166 - EXIT - 0
-0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.24 - 00028165 - EXIT - 0
-0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
--0.24 - 00028168 - EXIT - 0
-0.04 - 00028161 - CREATE - Command: ./simpledu test_dir --max-depth -a -L -l -b
-0.18 - 00028161 - EXIT - 0
-0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028360 - EXIT - 0
-0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00028359 - EXIT - 0
-0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00028358 - EXIT - 0
-0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028363 - EXIT - 0
-0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00028362 - EXIT - 0
-0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00028361 - EXIT - 0
-0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028364 - EXIT - 0
-0.04 - 00028357 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00028357 - EXIT - 0
-0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028458 - EXIT - 0
-0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00028457 - EXIT - 0
-0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.22 - 00028456 - EXIT - 0
-0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028461 - EXIT - 0
-0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00028460 - EXIT - 0
-0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00028459 - EXIT - 0
-0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028462 - EXIT - 0
-0.04 - 00028455 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.18 - 00028455 - EXIT - 0
-0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00028499 - EXIT - 0
-0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028498 - EXIT - 0
-0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028497 - EXIT - 0
-0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00028502 - EXIT - 0
-0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028501 - EXIT - 0
-0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028500 - EXIT - 0
-0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028503 - EXIT - 0
-0.04 - 00028496 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00028496 - EXIT - 0
-0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028554 - EXIT - 0
-0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028553 - EXIT - 0
-0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028552 - EXIT - 0
-0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028557 - EXIT - 0
-0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028556 - EXIT - 0
-0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028555 - EXIT - 0
-0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028558 - EXIT - 0
-0.04 - 00028551 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.15 - 00028551 - EXIT - 0
-0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028669 - EXIT - 0
-0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028668 - EXIT - 0
-0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028667 - EXIT - 0
-0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028672 - EXIT - 0
-0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028671 - EXIT - 0
-0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028670 - EXIT - 0
-0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028673 - EXIT - 0
-0.04 - 00028666 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.15 - 00028666 - EXIT - 0
-0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028738 - EXIT - 0
-0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028737 - EXIT - 0
-0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028736 - EXIT - 0
-0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028741 - EXIT - 0
-0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028740 - EXIT - 0
-0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028739 - EXIT - 0
-0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028742 - EXIT - 0
-0.04 - 00028735 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.16 - 00028735 - EXIT - 0
-0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028781 - EXIT - 0
-0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028780 - EXIT - 0
-0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028779 - EXIT - 0
-0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028784 - EXIT - 0
-0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028783 - EXIT - 0
-0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028782 - EXIT - 0
-0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028785 - EXIT - 0
-0.04 - 00028778 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.16 - 00028778 - EXIT - 0
-0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028850 - EXIT - 0
-0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00028849 - EXIT - 0
-0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00028848 - EXIT - 0
-0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028853 - EXIT - 0
-0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00028852 - EXIT - 0
-0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028851 - EXIT - 0
-0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028854 - EXIT - 0
-0.04 - 00028847 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.16 - 00028847 - EXIT - 0
-0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028945 - EXIT - 0
-0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00028944 - EXIT - 0
-0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00028943 - EXIT - 0
-0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028948 - EXIT - 0
-0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00028947 - EXIT - 0
-0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00028946 - EXIT - 0
-0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00028949 - EXIT - 0
-0.04 - 00028942 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00028942 - EXIT - 0
-0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028977 - EXIT - 0
-0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028976 - EXIT - 0
-0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028975 - EXIT - 0
-0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028980 - EXIT - 0
-0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028979 - EXIT - 0
-0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00028978 - EXIT - 0
-0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00028981 - EXIT - 0
-0.04 - 00028974 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00028974 - EXIT - 0
-0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029143 - EXIT - 0
-0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00029142 - EXIT - 0
-0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00029141 - EXIT - 0
-0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029146 - EXIT - 0
-0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00029145 - EXIT - 0
-0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029144 - EXIT - 0
-0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029147 - EXIT - 0
-0.04 - 00029140 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.16 - 00029140 - EXIT - 0
-0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.30 - 00029189 - EXIT - 0
-0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029188 - EXIT - 0
-0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029187 - EXIT - 0
-0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.31 - 00029192 - EXIT - 0
-0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00029191 - EXIT - 0
-0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029190 - EXIT - 0
-0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00029193 - EXIT - 0
-0.04 - 00029186 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.15 - 00029186 - EXIT - 0
-0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
--0.27 - 00029202 - EXIT - 0
-0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
--0.24 - 00029201 - EXIT - 0
-0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
--0.22 - 00029200 - EXIT - 0
-0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
--0.27 - 00029205 - EXIT - 0
-0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
--0.25 - 00029204 - EXIT - 0
-0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
--0.23 - 00029203 - EXIT - 0
-0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
--0.25 - 00029206 - EXIT - 0
-0.04 - 00029199 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b -a
-0.17 - 00029199 - EXIT - 0
-0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029234 - EXIT - 0
-0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029233 - EXIT - 0
-0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029232 - EXIT - 0
-0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029237 - EXIT - 0
-0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029236 - EXIT - 0
-0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00029235 - EXIT - 0
-0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029238 - EXIT - 0
-0.04 - 00029231 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.16 - 00029231 - EXIT - 0
-0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029392 - EXIT - 0
-0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00029391 - EXIT - 0
-0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029390 - EXIT - 0
-0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029395 - EXIT - 0
-0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029394 - EXIT - 0
-0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00029393 - EXIT - 0
-0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029396 - EXIT - 0
-0.04 - 00029389 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.15 - 00029389 - EXIT - 0
-0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.31 - 00029430 - EXIT - 0
-0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029429 - EXIT - 0
-0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029428 - EXIT - 0
-0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.31 - 00029433 - EXIT - 0
-0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029432 - EXIT - 0
-0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029431 - EXIT - 0
-0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.30 - 00029434 - EXIT - 0
-0.04 - 00029427 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00029427 - EXIT - 0
-0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029490 - EXIT - 0
-0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029489 - EXIT - 0
-0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029488 - EXIT - 0
-0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029493 - EXIT - 0
-0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00029492 - EXIT - 0
-0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00029491 - EXIT - 0
-0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029494 - EXIT - 0
-0.04 - 00029487 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.18 - 00029487 - EXIT - 0
-0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029535 - EXIT - 0
-0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00029534 - EXIT - 0
-0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029533 - EXIT - 0
-0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00029538 - EXIT - 0
-0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029537 - EXIT - 0
-0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029536 - EXIT - 0
-0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029539 - EXIT - 0
-0.04 - 00029532 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00029532 - EXIT - 0
-0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029687 - EXIT - 0
-0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00029686 - EXIT - 0
-0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00029685 - EXIT - 0
-0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029690 - EXIT - 0
-0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029689 - EXIT - 0
-0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00029688 - EXIT - 0
-0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029691 - EXIT - 0
-0.04 - 00029684 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.18 - 00029684 - EXIT - 0
-0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00029800 - EXIT - 0
-0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00029799 - EXIT - 0
-0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00029798 - EXIT - 0
-0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029803 - EXIT - 0
-0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029802 - EXIT - 0
-0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029801 - EXIT - 0
-0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00029804 - EXIT - 0
-0.04 - 00029797 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.16 - 00029797 - EXIT - 0
-0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029965 - EXIT - 0
-0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029964 - EXIT - 0
-0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029963 - EXIT - 0
-0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00029968 - EXIT - 0
-0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.23 - 00029967 - EXIT - 0
-0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029966 - EXIT - 0
-0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00029969 - EXIT - 0
-0.04 - 00029962 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00029962 - EXIT - 0
-0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00030172 - EXIT - 0
-0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00030171 - EXIT - 0
-0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00030170 - EXIT - 0
-0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00030175 - EXIT - 0
-0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00030174 - EXIT - 0
-0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00030173 - EXIT - 0
-0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.28 - 00030176 - EXIT - 0
-0.04 - 00030169 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.16 - 00030169 - EXIT - 0
-0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00030361 - EXIT - 0
-0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00030360 - EXIT - 0
-0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00030359 - EXIT - 0
-0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.30 - 00030364 - EXIT - 0
-0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00030363 - EXIT - 0
-0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00030362 - EXIT - 0
-0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00030365 - EXIT - 0
-0.04 - 00030358 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00030358 - EXIT - 0
-0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.27 - 00030520 - EXIT - 0
-0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00030519 - EXIT - 0
-0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00030518 - EXIT - 0
-0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00030523 - EXIT - 0
-0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00030522 - EXIT - 0
-0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.24 - 00030521 - EXIT - 0
-0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00030524 - EXIT - 0
-0.04 - 00030517 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.16 - 00030517 - EXIT - 0
-0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00030591 - EXIT - 0
-0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.25 - 00030590 - EXIT - 0
-0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00030589 - EXIT - 0
-0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.30 - 00030594 - EXIT - 0
-0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00030593 - EXIT - 0
-0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.26 - 00030592 - EXIT - 0
-0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
--0.29 - 00030595 - EXIT - 0
-0.04 - 00030588 - CREATE - Command: ./simpledu test_dir --max-depth -L -l -b
-0.17 - 00030588 - EXIT - 0
-0.20 - 00002318 - CREATE - Command: ./simpledu test_dir/
--1.21 - 00002319 - EXIT - 0
-0.20 - 00002318 - CREATE - Command: ./simpledu test_dir/
-0.67 - 00002318 - EXIT - 0
-0.20 - 00002372 - CREATE - Command: ./simpledu test_dir/
--1.37 - 00002373 - EXIT - 0
-0.20 - 00002372 - CREATE - Command: ./simpledu test_dir/
-0.62 - 00002372 - EXIT - 0
-0.21 - 00002401 - CREATE - Command: ./simpledu test_dir/
--1.22 - 00002402 - EXIT - 0
-0.21 - 00002401 - CREATE - Command: ./simpledu test_dir/
-0.60 - 00002401 - EXIT - 0
-0.20 - 00002450 - CREATE - Command: ./simpledu test_dir/ -a
--1.20 - 00002451 - EXIT - 0
-0.20 - 00002450 - CREATE - Command: ./simpledu test_dir/ -a
-0.63 - 00002450 - EXIT - 0
-0.20 - 00002501 - CREATE - Command: ./simpledu test_dir/ -a
--1.09 - 00002504 - EXIT - 0
-0.20 - 00002501 - CREATE - Command: ./simpledu test_dir/ -a
--0.76 - 00002503 - EXIT - 0
-0.20 - 00002501 - CREATE - Command: ./simpledu test_dir/ -a
--0.70 - 00002502 - EXIT - 0
-0.20 - 00002501 - CREATE - Command: ./simpledu test_dir/ -a
--1.13 - 00002507 - EXIT - 0
-0.20 - 00002501 - CREATE - Command: ./simpledu test_dir/ -a
--0.81 - 00002506 - EXIT - 0
-0.20 - 00002501 - CREATE - Command: ./simpledu test_dir/ -a
--0.95 - 00002505 - EXIT - 0
-0.20 - 00002501 - CREATE - Command: ./simpledu test_dir/ -a
-0.85 - 00002501 - EXIT - 0
-0.19 - 00002510 - CREATE - Command: ./simpledu test_dir/
--1.13 - 00002513 - EXIT - 0
-0.19 - 00002510 - CREATE - Command: ./simpledu test_dir/
--0.79 - 00002512 - EXIT - 0
-0.19 - 00002510 - CREATE - Command: ./simpledu test_dir/
--0.67 - 00002511 - EXIT - 0
-0.19 - 00002510 - CREATE - Command: ./simpledu test_dir/
--1.19 - 00002516 - EXIT - 0
-0.19 - 00002510 - CREATE - Command: ./simpledu test_dir/
--0.77 - 00002515 - EXIT - 0
-0.19 - 00002510 - CREATE - Command: ./simpledu test_dir/
--0.80 - 00002514 - EXIT - 0
-0.19 - 00002510 - CREATE - Command: ./simpledu test_dir/
-1.09 - 00002510 - EXIT - 0
-0.20 - 00002540 - CREATE - Command: ./simpledu test_dir -a
--1.22 - 00002543 - EXIT - 0
-0.20 - 00002540 - CREATE - Command: ./simpledu test_dir -a
--0.73 - 00002542 - EXIT - 0
-0.20 - 00002540 - CREATE - Command: ./simpledu test_dir -a
--1.11 - 00002541 - EXIT - 0
-0.20 - 00002540 - CREATE - Command: ./simpledu test_dir -a
--1.53 - 00002546 - EXIT - 0
-0.20 - 00002540 - CREATE - Command: ./simpledu test_dir -a
--1.46 - 00002545 - EXIT - 0
-0.20 - 00002540 - CREATE - Command: ./simpledu test_dir -a
--1.38 - 00002544 - EXIT - 0
-0.20 - 00002540 - CREATE - Command: ./simpledu test_dir -a
-0.73 - 00002540 - EXIT - 0
-0.20 - 00002581 - CREATE - Command: ./simpledu test_dir -a -b
--1.27 - 00002584 - EXIT - 0
-0.20 - 00002581 - CREATE - Command: ./simpledu test_dir -a -b
--0.88 - 00002583 - EXIT - 0
-0.20 - 00002581 - CREATE - Command: ./simpledu test_dir -a -b
--0.77 - 00002582 - EXIT - 0
-0.20 - 00002581 - CREATE - Command: ./simpledu test_dir -a -b
--1.27 - 00002587 - EXIT - 0
-0.20 - 00002581 - CREATE - Command: ./simpledu test_dir -a -b
--1.11 - 00002586 - EXIT - 0
-0.20 - 00002581 - CREATE - Command: ./simpledu test_dir -a -b
--1.03 - 00002585 - EXIT - 0
-0.20 - 00002581 - CREATE - Command: ./simpledu test_dir -a -b
-1.05 - 00002581 - EXIT - 0
-0.21 - 00004177 - CREATE - Command: ./simpledu test_dir -a -b
--1.19 - 00004178 - EXIT - 0
-0.21 - 00004177 - CREATE - Command: ./simpledu test_dir -a -b
-0.61 - 00004177 - EXIT - 0
-0.23 - 00004237 - CREATE - Command: ./simpledu test_dir -a -b
--1.16 - 00004238 - EXIT - 0
-0.23 - 00004237 - CREATE - Command: ./simpledu test_dir -a -b
-0.74 - 00004237 - EXIT - 0
-0.21 - 00004367 - CREATE - Command: ./simpledu test_dir -a -b
--1.31 - 00004368 - EXIT - 0
-0.21 - 00004367 - CREATE - Command: ./simpledu test_dir -a -b
-0.69 - 00004367 - EXIT - 0
-0.05 - 00004422 - CREATE - Command: ./simpledu test_dir -a -b
--0.40 - 00004425 - EXIT - 0
-0.05 - 00004422 - CREATE - Command: ./simpledu test_dir -a -b
--0.34 - 00004424 - EXIT - 0
-0.05 - 00004422 - CREATE - Command: ./simpledu test_dir -a -b
--0.22 - 00004423 - EXIT - 0
-0.05 - 00004422 - CREATE - Command: ./simpledu test_dir -a -b
--0.41 - 00004428 - EXIT - 0
-0.05 - 00004422 - CREATE - Command: ./simpledu test_dir -a -b
--0.32 - 00004427 - EXIT - 0
-0.05 - 00004422 - CREATE - Command: ./simpledu test_dir -a -b
--0.33 - 00004426 - EXIT - 0
-0.05 - 00004422 - CREATE - Command: ./simpledu test_dir -a -b
-0.33 - 00004422 - EXIT - 0
-0.21 - 00004454 - CREATE - Command: ./simpledu test_dir -a -b
--1.27 - 00004457 - EXIT - 0
-0.21 - 00004454 - CREATE - Command: ./simpledu test_dir -a -b
--0.91 - 00004456 - EXIT - 0
-0.21 - 00004454 - CREATE - Command: ./simpledu test_dir -a -b
--0.97 - 00004455 - EXIT - 0
-0.21 - 00004454 - CREATE - Command: ./simpledu test_dir -a -b
--1.32 - 00004460 - EXIT - 0
-0.21 - 00004454 - CREATE - Command: ./simpledu test_dir -a -b
--1.09 - 00004459 - EXIT - 0
-0.21 - 00004454 - CREATE - Command: ./simpledu test_dir -a -b
--1.12 - 00004458 - EXIT - 0
-0.21 - 00004454 - CREATE - Command: ./simpledu test_dir -a -b
-1.04 - 00004454 - EXIT - 0
-0.20 - 00004491 - CREATE - Command: ./simpledu test_dir -a -b
--1.20 - 00004494 - EXIT - 0
-0.20 - 00004491 - CREATE - Command: ./simpledu test_dir -a -b
--0.77 - 00004493 - EXIT - 0
-0.20 - 00004491 - CREATE - Command: ./simpledu test_dir -a -b
--0.80 - 00004492 - EXIT - 0
-0.20 - 00004491 - CREATE - Command: ./simpledu test_dir -a -b
--1.08 - 00004497 - EXIT - 0
-0.20 - 00004491 - CREATE - Command: ./simpledu test_dir -a -b
--0.89 - 00004496 - EXIT - 0
-0.20 - 00004491 - CREATE - Command: ./simpledu test_dir -a -b
--0.87 - 00004495 - EXIT - 0
-0.20 - 00004491 - CREATE - Command: ./simpledu test_dir -a -b
-0.91 - 00004491 - EXIT - 0
-0.20 - 00004586 - CREATE - Command: ./simpledu test_dir -a -b
--0.97 - 00004589 - EXIT - 0
-0.20 - 00004586 - CREATE - Command: ./simpledu test_dir -a -b
--0.75 - 00004588 - EXIT - 0
-0.20 - 00004586 - CREATE - Command: ./simpledu test_dir -a -b
--0.76 - 00004587 - EXIT - 0
-0.20 - 00004586 - CREATE - Command: ./simpledu test_dir -a -b
--1.03 - 00004592 - EXIT - 0
-0.20 - 00004586 - CREATE - Command: ./simpledu test_dir -a -b
--0.83 - 00004591 - EXIT - 0
-0.20 - 00004586 - CREATE - Command: ./simpledu test_dir -a -b
--0.81 - 00004590 - EXIT - 0
-0.20 - 00004586 - CREATE - Command: ./simpledu test_dir -a -b
-0.80 - 00004586 - EXIT - 0
-0.21 - 00004605 - CREATE - Command: ./simpledu test_dir -a -b
--1.12 - 00004608 - EXIT - 0
-0.21 - 00004605 - CREATE - Command: ./simpledu test_dir -a -b
--0.80 - 00004607 - EXIT - 0
-0.21 - 00004605 - CREATE - Command: ./simpledu test_dir -a -b
--0.82 - 00004606 - EXIT - 0
-0.21 - 00004605 - CREATE - Command: ./simpledu test_dir -a -b
--1.07 - 00004611 - EXIT - 0
-0.21 - 00004605 - CREATE - Command: ./simpledu test_dir -a -b
--0.87 - 00004610 - EXIT - 0
-0.21 - 00004605 - CREATE - Command: ./simpledu test_dir -a -b
--0.91 - 00004609 - EXIT - 0
-0.21 - 00004605 - CREATE - Command: ./simpledu test_dir -a -b
-0.97 - 00004605 - EXIT - 0
-0.18 - 00004654 - CREATE - Command: ./simpledu test_dir -a
--1.16 - 00004657 - EXIT - 0
-0.18 - 00004654 - CREATE - Command: ./simpledu test_dir -a
--0.77 - 00004656 - EXIT - 0
-0.18 - 00004654 - CREATE - Command: ./simpledu test_dir -a
--0.94 - 00004655 - EXIT - 0
-0.18 - 00004654 - CREATE - Command: ./simpledu test_dir -a
--1.25 - 00004660 - EXIT - 0
-0.18 - 00004654 - CREATE - Command: ./simpledu test_dir -a
--0.98 - 00004659 - EXIT - 0
-0.18 - 00004654 - CREATE - Command: ./simpledu test_dir -a
--1.09 - 00004658 - EXIT - 0
-0.18 - 00004654 - CREATE - Command: ./simpledu test_dir -a
-0.91 - 00004654 - EXIT - 0
-0.18 - 00004769 - CREATE - Command: ./simpledu test_dir -a
--1.29 - 00004772 - EXIT - 0
-0.18 - 00004769 - CREATE - Command: ./simpledu test_dir -a
--0.91 - 00004771 - EXIT - 0
-0.18 - 00004769 - CREATE - Command: ./simpledu test_dir -a
--0.92 - 00004770 - EXIT - 0
-0.18 - 00004769 - CREATE - Command: ./simpledu test_dir -a
--1.30 - 00004775 - EXIT - 0
-0.18 - 00004769 - CREATE - Command: ./simpledu test_dir -a
--1.03 - 00004774 - EXIT - 0
-0.18 - 00004769 - CREATE - Command: ./simpledu test_dir -a
--1.07 - 00004773 - EXIT - 0
-0.18 - 00004769 - CREATE - Command: ./simpledu test_dir -a
-0.90 - 00004769 - EXIT - 0
-0.21 - 00004980 - CREATE - Command: ./simpledu test_dir -a
--1.21 - 00004983 - EXIT - 0
-0.21 - 00004980 - CREATE - Command: ./simpledu test_dir -a
--0.86 - 00004982 - EXIT - 0
-0.21 - 00004980 - CREATE - Command: ./simpledu test_dir -a
--0.94 - 00004981 - EXIT - 0
-0.21 - 00004980 - CREATE - Command: ./simpledu test_dir -a
--1.26 - 00004986 - EXIT - 0
-0.21 - 00004980 - CREATE - Command: ./simpledu test_dir -a
--1.03 - 00004985 - EXIT - 0
-0.21 - 00004980 - CREATE - Command: ./simpledu test_dir -a
--0.98 - 00004984 - EXIT - 0
-0.21 - 00004980 - CREATE - Command: ./simpledu test_dir -a
-1.04 - 00004980 - EXIT - 0
-0.20 - 00005019 - CREATE - Command: ./simpledu test_dir -a
--1.28 - 00005022 - EXIT - 0
-0.20 - 00005019 - CREATE - Command: ./simpledu test_dir -a
--0.91 - 00005021 - EXIT - 0
-0.20 - 00005019 - CREATE - Command: ./simpledu test_dir -a
--0.98 - 00005020 - EXIT - 0
-0.20 - 00005019 - CREATE - Command: ./simpledu test_dir -a
--1.32 - 00005025 - EXIT - 0
-0.20 - 00005019 - CREATE - Command: ./simpledu test_dir -a
--1.10 - 00005024 - EXIT - 0
-0.20 - 00005019 - CREATE - Command: ./simpledu test_dir -a
--1.12 - 00005023 - EXIT - 0
-0.20 - 00005019 - CREATE - Command: ./simpledu test_dir -a
-0.97 - 00005019 - EXIT - 0
-0.20 - 00005064 - CREATE - Command: ./simpledu test_dir -a
--1.19 - 00005067 - EXIT - 0
-0.20 - 00005064 - CREATE - Command: ./simpledu test_dir -a
--0.86 - 00005066 - EXIT - 0
-0.20 - 00005064 - CREATE - Command: ./simpledu test_dir -a
--0.91 - 00005065 - EXIT - 0
-0.20 - 00005064 - CREATE - Command: ./simpledu test_dir -a
--1.19 - 00005070 - EXIT - 0
-0.20 - 00005064 - CREATE - Command: ./simpledu test_dir -a
--0.95 - 00005069 - EXIT - 0
-0.20 - 00005064 - CREATE - Command: ./simpledu test_dir -a
--0.96 - 00005068 - EXIT - 0
-0.20 - 00005064 - CREATE - Command: ./simpledu test_dir -a
-0.97 - 00005064 - EXIT - 0
-0.19 - 00005111 - CREATE - Command: ./simpledu test_dir -a
--1.21 - 00005114 - EXIT - 0
-0.19 - 00005111 - CREATE - Command: ./simpledu test_dir -a
--0.84 - 00005113 - EXIT - 0
-0.19 - 00005111 - CREATE - Command: ./simpledu test_dir -a
--0.84 - 00005112 - EXIT - 0
-0.19 - 00005111 - CREATE - Command: ./simpledu test_dir -a
--1.16 - 00005117 - EXIT - 0
-0.19 - 00005111 - CREATE - Command: ./simpledu test_dir -a
--0.96 - 00005116 - EXIT - 0
-0.19 - 00005111 - CREATE - Command: ./simpledu test_dir -a
--1.02 - 00005115 - EXIT - 0
-0.19 - 00005111 - CREATE - Command: ./simpledu test_dir -a
-0.97 - 00005111 - EXIT - 0
-0.19 - 00005172 - CREATE - Command: ./simpledu test_dir -a
--1.26 - 00005175 - EXIT - 0
-0.19 - 00005172 - CREATE - Command: ./simpledu test_dir -a
--0.76 - 00005174 - EXIT - 0
-0.19 - 00005172 - CREATE - Command: ./simpledu test_dir -a
--0.84 - 00005173 - EXIT - 0
-0.19 - 00005172 - CREATE - Command: ./simpledu test_dir -a
--1.25 - 00005178 - EXIT - 0
-0.19 - 00005172 - CREATE - Command: ./simpledu test_dir -a
--1.00 - 00005177 - EXIT - 0
-0.19 - 00005172 - CREATE - Command: ./simpledu test_dir -a
--0.99 - 00005176 - EXIT - 0
-0.19 - 00005172 - CREATE - Command: ./simpledu test_dir -a
-0.94 - 00005172 - EXIT - 0
-0.20 - 00005216 - CREATE - Command: ./simpledu test_dir -a
--1.23 - 00005219 - EXIT - 0
-0.20 - 00005216 - CREATE - Command: ./simpledu test_dir -a
--0.87 - 00005218 - EXIT - 0
-0.20 - 00005216 - CREATE - Command: ./simpledu test_dir -a
--0.85 - 00005217 - EXIT - 0
-0.20 - 00005216 - CREATE - Command: ./simpledu test_dir -a
--1.27 - 00005222 - EXIT - 0
-0.20 - 00005216 - CREATE - Command: ./simpledu test_dir -a
--0.96 - 00005221 - EXIT - 0
-0.20 - 00005216 - CREATE - Command: ./simpledu test_dir -a
--0.99 - 00005220 - EXIT - 0
-0.20 - 00005216 - CREATE - Command: ./simpledu test_dir -a
-0.98 - 00005216 - EXIT - 0
-0.21 - 00005265 - CREATE - Command: ./simpledu test_dir -a
--1.18 - 00005268 - EXIT - 0
-0.21 - 00005265 - CREATE - Command: ./simpledu test_dir -a
--0.81 - 00005267 - EXIT - 0
-0.21 - 00005265 - CREATE - Command: ./simpledu test_dir -a
--0.78 - 00005266 - EXIT - 0
-0.21 - 00005265 - CREATE - Command: ./simpledu test_dir -a
--1.12 - 00005271 - EXIT - 0
-0.21 - 00005265 - CREATE - Command: ./simpledu test_dir -a
--0.95 - 00005270 - EXIT - 0
-0.21 - 00005265 - CREATE - Command: ./simpledu test_dir -a
--0.92 - 00005269 - EXIT - 0
-0.21 - 00005265 - CREATE - Command: ./simpledu test_dir -a
-0.88 - 00005265 - EXIT - 0
-0.20 - 00005313 - CREATE - Command: ./simpledu test_dir -a
--1.12 - 00005316 - EXIT - 0
-0.20 - 00005313 - CREATE - Command: ./simpledu test_dir -a
--0.78 - 00005315 - EXIT - 0
-0.20 - 00005313 - CREATE - Command: ./simpledu test_dir -a
--0.90 - 00005314 - EXIT - 0
-0.20 - 00005313 - CREATE - Command: ./simpledu test_dir -a
--1.14 - 00005319 - EXIT - 0
-0.20 - 00005313 - CREATE - Command: ./simpledu test_dir -a
--0.91 - 00005318 - EXIT - 0
-0.20 - 00005313 - CREATE - Command: ./simpledu test_dir -a
--1.00 - 00005317 - EXIT - 0
-0.20 - 00005313 - CREATE - Command: ./simpledu test_dir -a
-0.96 - 00005313 - EXIT - 0
-0.21 - 00005369 - CREATE - Command: ./simpledu test_dir -a
--1.17 - 00005372 - EXIT - 0
-0.21 - 00005369 - CREATE - Command: ./simpledu test_dir -a
--0.86 - 00005371 - EXIT - 0
-0.21 - 00005369 - CREATE - Command: ./simpledu test_dir -a
--0.85 - 00005370 - EXIT - 0
-0.21 - 00005369 - CREATE - Command: ./simpledu test_dir -a
--1.15 - 00005375 - EXIT - 0
-0.21 - 00005369 - CREATE - Command: ./simpledu test_dir -a
--0.94 - 00005374 - EXIT - 0
-0.21 - 00005369 - CREATE - Command: ./simpledu test_dir -a
--0.95 - 00005373 - EXIT - 0
-0.21 - 00005369 - CREATE - Command: ./simpledu test_dir -a
-1.05 - 00005369 - EXIT - 0
-0.18 - 00005524 - CREATE - Command: ./simpledu test_dir -a -b
--1.35 - 00005527 - EXIT - 0
-0.18 - 00005524 - CREATE - Command: ./simpledu test_dir -a -b
--1.01 - 00005526 - EXIT - 0
-0.18 - 00005524 - CREATE - Command: ./simpledu test_dir -a -b
--1.00 - 00005525 - EXIT - 0
-0.18 - 00005524 - CREATE - Command: ./simpledu test_dir -a -b
--1.35 - 00005530 - EXIT - 0
-0.18 - 00005524 - CREATE - Command: ./simpledu test_dir -a -b
--1.08 - 00005529 - EXIT - 0
-0.18 - 00005524 - CREATE - Command: ./simpledu test_dir -a -b
--1.20 - 00005528 - EXIT - 0
-0.18 - 00005524 - CREATE - Command: ./simpledu test_dir -a -b
-0.89 - 00005524 - EXIT - 0
-0.24 - 00005754 - CREATE - Command: ./simpledu test_dir -a -b
--1.32 - 00005757 - EXIT - 0
-0.24 - 00005754 - CREATE - Command: ./simpledu test_dir -a -b
--1.00 - 00005756 - EXIT - 0
-0.24 - 00005754 - CREATE - Command: ./simpledu test_dir -a -b
--0.96 - 00005755 - EXIT - 0
-0.24 - 00005754 - CREATE - Command: ./simpledu test_dir -a -b
--1.28 - 00005760 - EXIT - 0
-0.24 - 00005754 - CREATE - Command: ./simpledu test_dir -a -b
--1.01 - 00005759 - EXIT - 0
-0.24 - 00005754 - CREATE - Command: ./simpledu test_dir -a -b
--1.15 - 00005758 - EXIT - 0
-0.24 - 00005754 - CREATE - Command: ./simpledu test_dir -a -b
-1.05 - 00005754 - EXIT - 0
-0.18 - 00005764 - CREATE - Command: ./simpledu test_dir -a
--1.16 - 00005767 - EXIT - 0
-0.18 - 00005764 - CREATE - Command: ./simpledu test_dir -a
--0.83 - 00005766 - EXIT - 0
-0.18 - 00005764 - CREATE - Command: ./simpledu test_dir -a
--0.81 - 00005765 - EXIT - 0
-0.18 - 00005764 - CREATE - Command: ./simpledu test_dir -a
--1.11 - 00005770 - EXIT - 0
-0.18 - 00005764 - CREATE - Command: ./simpledu test_dir -a
--0.84 - 00005769 - EXIT - 0
-0.18 - 00005764 - CREATE - Command: ./simpledu test_dir -a
--0.92 - 00005768 - EXIT - 0
-0.18 - 00005764 - CREATE - Command: ./simpledu test_dir -a
-1.05 - 00005764 - EXIT - 0
-0.20 - 00005881 - CREATE - Command: ./simpledu test_dir -a
--1.23 - 00005884 - EXIT - 0
-0.20 - 00005881 - CREATE - Command: ./simpledu test_dir -a
--0.89 - 00005883 - EXIT - 0
-0.20 - 00005881 - CREATE - Command: ./simpledu test_dir -a
--0.88 - 00005882 - EXIT - 0
-0.20 - 00005881 - CREATE - Command: ./simpledu test_dir -a
--1.17 - 00005887 - EXIT - 0
-0.20 - 00005881 - CREATE - Command: ./simpledu test_dir -a
--0.93 - 00005886 - EXIT - 0
-0.20 - 00005881 - CREATE - Command: ./simpledu test_dir -a
--0.95 - 00005885 - EXIT - 0
-0.20 - 00005881 - CREATE - Command: ./simpledu test_dir -a
-1.24 - 00005881 - EXIT - 0
-0.24 - 00005939 - CREATE - Command: ./simpledu test_dir -a
--1.21 - 00005942 - EXIT - 0
-0.24 - 00005939 - CREATE - Command: ./simpledu test_dir -a
--0.87 - 00005941 - EXIT - 0
-0.24 - 00005939 - CREATE - Command: ./simpledu test_dir -a
--0.85 - 00005940 - EXIT - 0
-0.24 - 00005939 - CREATE - Command: ./simpledu test_dir -a
--1.13 - 00005945 - EXIT - 0
-0.24 - 00005939 - CREATE - Command: ./simpledu test_dir -a
--0.93 - 00005944 - EXIT - 0
-0.24 - 00005939 - CREATE - Command: ./simpledu test_dir -a
--0.99 - 00005943 - EXIT - 0
-0.24 - 00005939 - CREATE - Command: ./simpledu test_dir -a
-1.03 - 00005939 - EXIT - 0
-0.21 - 00005946 - CREATE - Command: ./simpledu test_dir -a -b
--1.24 - 00005949 - EXIT - 0
-0.21 - 00005946 - CREATE - Command: ./simpledu test_dir -a -b
--0.88 - 00005948 - EXIT - 0
-0.21 - 00005946 - CREATE - Command: ./simpledu test_dir -a -b
--0.86 - 00005947 - EXIT - 0
-0.21 - 00005946 - CREATE - Command: ./simpledu test_dir -a -b
--1.22 - 00005952 - EXIT - 0
-0.21 - 00005946 - CREATE - Command: ./simpledu test_dir -a -b
--0.97 - 00005951 - EXIT - 0
-0.21 - 00005946 - CREATE - Command: ./simpledu test_dir -a -b
--0.96 - 00005950 - EXIT - 0
-0.21 - 00005946 - CREATE - Command: ./simpledu test_dir -a -b
-0.97 - 00005946 - EXIT - 0
-0.22 - 00005953 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--1.20 - 00005956 - EXIT - 0
-0.22 - 00005953 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--0.97 - 00005955 - EXIT - 0
-0.22 - 00005953 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--0.98 - 00005954 - EXIT - 0
-0.22 - 00005953 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--1.21 - 00005959 - EXIT - 0
-0.22 - 00005953 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--1.02 - 00005958 - EXIT - 0
-0.22 - 00005953 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--1.00 - 00005957 - EXIT - 0
-0.22 - 00005953 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
-0.84 - 00005953 - EXIT - 0
-0.22 - 00005961 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--1.20 - 00005964 - EXIT - 0
-0.22 - 00005961 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--0.96 - 00005963 - EXIT - 0
-0.22 - 00005961 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--0.83 - 00005962 - EXIT - 0
-0.22 - 00005961 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--1.27 - 00005967 - EXIT - 0
-0.22 - 00005961 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--1.05 - 00005966 - EXIT - 0
-0.22 - 00005961 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
--0.96 - 00005965 - EXIT - 0
-0.22 - 00005961 - CREATE - Command: ./simpledu test_dir -a -b --max-depth
-0.95 - 00005961 - EXIT - 0
-0.21 - 00006452 - CREATE - Command: ./simpledu test_dir -b -S
--1.25 - 00006455 - EXIT - 0
-0.21 - 00006452 - CREATE - Command: ./simpledu test_dir -b -S
--1.01 - 00006454 - EXIT - 0
-0.21 - 00006452 - CREATE - Command: ./simpledu test_dir -b -S
--1.01 - 00006453 - EXIT - 0
-0.21 - 00006452 - CREATE - Command: ./simpledu test_dir -b -S
--1.33 - 00006458 - EXIT - 0
-0.21 - 00006452 - CREATE - Command: ./simpledu test_dir -b -S
--1.11 - 00006457 - EXIT - 0
-0.21 - 00006452 - CREATE - Command: ./simpledu test_dir -b -S
--1.02 - 00006456 - EXIT - 0
-0.21 - 00006452 - CREATE - Command: ./simpledu test_dir -b -S
-0.79 - 00006452 - EXIT - 0
-0.20 - 00006852 - CREATE - Command: ./simpledu test_dir -b -S
--1.06 - 00006855 - EXIT - 0
-0.20 - 00006852 - CREATE - Command: ./simpledu test_dir -b -S
--0.91 - 00006854 - EXIT - 0
-0.20 - 00006852 - CREATE - Command: ./simpledu test_dir -b -S
--0.79 - 00006853 - EXIT - 0
-0.20 - 00006852 - CREATE - Command: ./simpledu test_dir -b -S
--1.25 - 00006858 - EXIT - 0
-0.20 - 00006852 - CREATE - Command: ./simpledu test_dir -b -S
--1.03 - 00006857 - EXIT - 0
-0.20 - 00006852 - CREATE - Command: ./simpledu test_dir -b -S
--1.07 - 00006856 - EXIT - 0
-0.20 - 00006852 - CREATE - Command: ./simpledu test_dir -b -S
-0.88 - 00006852 - EXIT - 0
-0.18 - 00006902 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.30 - 00006905 - EXIT - 0
-0.18 - 00006902 - CREATE - Command: ./simpledu test_dir/ -b -S
--0.97 - 00006904 - EXIT - 0
-0.18 - 00006902 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.02 - 00006903 - EXIT - 0
-0.18 - 00006902 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.27 - 00006908 - EXIT - 0
-0.18 - 00006902 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.06 - 00006907 - EXIT - 0
-0.18 - 00006902 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.12 - 00006906 - EXIT - 0
-0.18 - 00006902 - CREATE - Command: ./simpledu test_dir/ -b -S
-0.91 - 00006902 - EXIT - 0
-0.18 - 00007115 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.36 - 00007118 - EXIT - 0
-0.18 - 00007115 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.09 - 00007117 - EXIT - 0
-0.18 - 00007115 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.10 - 00007116 - EXIT - 0
-0.18 - 00007115 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.36 - 00007121 - EXIT - 0
-0.18 - 00007115 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.14 - 00007120 - EXIT - 0
-0.18 - 00007115 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.15 - 00007119 - EXIT - 0
-0.18 - 00007115 - CREATE - Command: ./simpledu test_dir/ -b -S
-0.84 - 00007115 - EXIT - 0
-0.05 - 00007150 - CREATE - Command: ./simpledu test_dir/ -b -S
--0.39 - 00007151 - EXIT - 1
-0.05 - 00007150 - CREATE - Command: ./simpledu test_dir/ -b -S
--0.39 - 00007152 - EXIT - 1
-0.05 - 00007150 - CREATE - Command: ./simpledu test_dir/ -b -S
-0.33 - 00007150 - EXIT - 0
-0.20 - 00007560 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.28 - 00007563 - EXIT - 0
-0.20 - 00007560 - CREATE - Command: ./simpledu test_dir/ -b -S
--0.96 - 00007562 - EXIT - 0
-0.20 - 00007560 - CREATE - Command: ./simpledu test_dir/ -b -S
--0.97 - 00007561 - EXIT - 0
-0.20 - 00007560 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.28 - 00007566 - EXIT - 0
-0.20 - 00007560 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.01 - 00007565 - EXIT - 0
-0.20 - 00007560 - CREATE - Command: ./simpledu test_dir/ -b -S
--1.08 - 00007564 - EXIT - 0
-0.20 - 00007560 - CREATE - Command: ./simpledu test_dir/ -b -S
-0.85 - 00007560 - EXIT - 0
-0.19 - 00007577 - CREATE - Command: ./simpledu test_dir -b -S
--1.27 - 00007580 - EXIT - 0
-0.19 - 00007577 - CREATE - Command: ./simpledu test_dir -b -S
--1.01 - 00007579 - EXIT - 0
-0.19 - 00007577 - CREATE - Command: ./simpledu test_dir -b -S
--1.07 - 00007578 - EXIT - 0
-0.19 - 00007577 - CREATE - Command: ./simpledu test_dir -b -S
--1.26 - 00007583 - EXIT - 0
-0.19 - 00007577 - CREATE - Command: ./simpledu test_dir -b -S
--1.03 - 00007582 - EXIT - 0
-0.19 - 00007577 - CREATE - Command: ./simpledu test_dir -b -S
--1.08 - 00007581 - EXIT - 0
-0.19 - 00007577 - CREATE - Command: ./simpledu test_dir -b -S
-0.84 - 00007577 - EXIT - 0
-0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
--0.28 - 00004170 - EXIT - 0
-0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
--0.24 - 00004169 - EXIT - 0
-0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
--0.24 - 00004168 - EXIT - 0
-0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
--0.28 - 00004173 - EXIT - 0
-0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
--0.25 - 00004172 - EXIT - 0
-0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
--0.26 - 00004171 - EXIT - 0
-0.05 - 00004167 - CREATE - Command: ./simpledu test_dir
-0.15 - 00004167 - EXIT - 0
-0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
--0.31 - 00004177 - EXIT - 0
-0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
--0.27 - 00004176 - EXIT - 0
-0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
--0.27 - 00004175 - EXIT - 0
-0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
--0.30 - 00004180 - EXIT - 0
-0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
--0.28 - 00004179 - EXIT - 0
-0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
--0.28 - 00004178 - EXIT - 0
-0.04 - 00004174 - CREATE - Command: ./simpledu test_dir/
-0.15 - 00004174 - EXIT - 0
-0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
--0.25 - 00004298 - EXIT - 0
-0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
--0.22 - 00004297 - EXIT - 0
-0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
--0.21 - 00004296 - EXIT - 0
-0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
--0.25 - 00004301 - EXIT - 0
-0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
--0.23 - 00004300 - EXIT - 0
-0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
--0.22 - 00004299 - EXIT - 0
-0.04 - 00004295 - CREATE - Command: ./simpledu test_dir/ -S
-0.15 - 00004295 - EXIT - 0
-0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
--0.31 - 00005070 - SEND_PIPE - 1148
--0.30 - 00005070 - EXIT - 0
-0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
--0.28 - 00005069 - RECV_PIPE - 1148
--0.27 - 00005069 - SEND_PIPE - 1556
--0.27 - 00005069 - EXIT - 0
-0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
--0.28 - 00005068 - RECV_PIPE - 1556
--0.27 - 00005068 - SEND_PIPE - 288
--0.27 - 00005068 - EXIT - 0
-0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
-0.09 - 00005067 - RECV_PIPE - 288
--0.31 - 00005073 - SEND_PIPE - 8
--0.30 - 00005073 - EXIT - 0
-0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
-0.09 - 00005067 - RECV_PIPE - 288
--0.30 - 00005072 - RECV_PIPE - 8
--0.28 - 00005072 - SEND_PIPE - 4
--0.27 - 00005072 - EXIT - 0
-0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
-0.09 - 00005067 - RECV_PIPE - 288
--0.30 - 00005071 - RECV_PIPE - 4
--0.28 - 00005071 - SEND_PIPE - 4
--0.28 - 00005071 - EXIT - 0
-0.04 - 00005067 - CREATE - Command: ./simpledu test_dir/ -S
-0.09 - 00005067 - RECV_PIPE - 288
-0.13 - 00005067 - RECV_PIPE - 4
-0.14 - 00005067 - EXIT - 0
-0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
--0.30 - 00005563 - SEND_PIPE - 1148
--0.29 - 00005563 - EXIT - 0
-0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
--0.27 - 00005562 - RECV_PIPE - 1148
--0.26 - 00005562 - SEND_PIPE - 1556
--0.26 - 00005562 - EXIT - 0
-0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
--0.27 - 00005561 - RECV_PIPE - 1556
--0.26 - 00005561 - SEND_PIPE - 288
--0.26 - 00005561 - EXIT - 0
-0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
-0.10 - 00005560 - RECV_PIPE - 288
--0.30 - 00005566 - SEND_PIPE - 8
--0.29 - 00005566 - EXIT - 0
-0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
-0.10 - 00005560 - RECV_PIPE - 288
--0.29 - 00005565 - RECV_PIPE - 8
--0.27 - 00005565 - SEND_PIPE - 4
--0.26 - 00005565 - EXIT - 0
-0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
-0.10 - 00005560 - RECV_PIPE - 288
--0.29 - 00005564 - RECV_PIPE - 4
--0.27 - 00005564 - SEND_PIPE - 4
--0.27 - 00005564 - EXIT - 0
-0.04 - 00005560 - CREATE - Command: ./simpledu test_dir/ -S
-0.10 - 00005560 - RECV_PIPE - 288
-0.13 - 00005560 - RECV_PIPE - 4
-0.15 - 00005560 - EXIT - 0
-0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
--0.29 - 00005806 - SEND_PIPE - 1148
--0.29 - 00005806 - EXIT - 0
-0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
--0.27 - 00005805 - RECV_PIPE - 1148
--0.25 - 00005805 - SEND_PIPE - 1556
--0.25 - 00005805 - EXIT - 0
-0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
--0.27 - 00005804 - RECV_PIPE - 1556
--0.25 - 00005804 - SEND_PIPE - 288
--0.25 - 00005804 - EXIT - 0
-0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
-0.10 - 00005803 - RECV_PIPE - 288
--0.29 - 00005809 - SEND_PIPE - 8
--0.28 - 00005809 - EXIT - 0
-0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
-0.10 - 00005803 - RECV_PIPE - 288
--0.27 - 00005808 - RECV_PIPE - 8
--0.25 - 00005808 - SEND_PIPE - 4
--0.24 - 00005808 - EXIT - 0
-0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
-0.10 - 00005803 - RECV_PIPE - 288
--0.28 - 00005807 - RECV_PIPE - 4
--0.26 - 00005807 - SEND_PIPE - 4
--0.26 - 00005807 - EXIT - 0
-0.04 - 00005803 - CREATE - Command: ./simpledu test_dir/ -S
-0.10 - 00005803 - RECV_PIPE - 288
-0.13 - 00005803 - RECV_PIPE - 4
-0.15 - 00005803 - EXIT - 0
-0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
--0.31 - 00006125 - SEND_PIPE - 1148
--0.30 - 00006125 - EXIT - 0
-0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
--0.28 - 00006124 - RECV_PIPE - 1148
--0.27 - 00006124 - SEND_PIPE - 1556
--0.27 - 00006124 - EXIT - 0
-0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
--0.28 - 00006123 - RECV_PIPE - 1556
--0.27 - 00006123 - SEND_PIPE - 288
--0.26 - 00006123 - EXIT - 0
-0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
-0.09 - 00006122 - RECV_PIPE - 288
--0.31 - 00006128 - SEND_PIPE - 8
--0.30 - 00006128 - EXIT - 0
-0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
-0.09 - 00006122 - RECV_PIPE - 288
--0.27 - 00006127 - RECV_PIPE - 8
--0.25 - 00006127 - SEND_PIPE - 4
--0.24 - 00006127 - EXIT - 0
-0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
-0.09 - 00006122 - RECV_PIPE - 288
--0.30 - 00006126 - RECV_PIPE - 4
--0.28 - 00006126 - SEND_PIPE - 4
--0.28 - 00006126 - EXIT - 0
-0.04 - 00006122 - CREATE - Command: ./simpledu test_dir/ -S
-0.09 - 00006122 - RECV_PIPE - 288
-0.13 - 00006122 - RECV_PIPE - 4
-0.14 - 00006122 - EXIT - 0
-0.04 - 00006254 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006254 - ENTRY - 0	test_dir/importante
-
-0.14 - 00006254 - ENTRY - 8	test_dir/praesentcursus.txt
-
-0.15 - 00006254 - ENTRY - 60	test_dir/big.txt
-
-0.15 - 00006254 - ENTRY - 4	test_dir/loremipsum.txt
-
--0.22 - 00006258 - SEND_PIPE - 4
--0.21 - 00006258 - EXIT - 0
-0.04 - 00006254 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006254 - ENTRY - 0	test_dir/importante
-
-0.14 - 00006254 - ENTRY - 8	test_dir/praesentcursus.txt
-
-0.15 - 00006254 - ENTRY - 60	test_dir/big.txt
-
-0.15 - 00006254 - ENTRY - 4	test_dir/loremipsum.txt
-
--0.25 - 00006257 - RECV_PIPE - 4
--0.24 - 00006257 - SEND_PIPE - 4
--0.23 - 00006257 - EXIT - 0
-0.04 - 00006254 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006254 - ENTRY - 0	test_dir/importante
-
-0.14 - 00006254 - ENTRY - 8	test_dir/praesentcursus.txt
-
-0.15 - 00006254 - ENTRY - 60	test_dir/big.txt
-
-0.15 - 00006254 - ENTRY - 4	test_dir/loremipsum.txt
-
-0.20 - 00006254 - RECV_PIPE - 4
-0.21 - 00006254 - ENTRY - 0	test_dir/memorias
-
-0.22 - 00006254 - EXIT - 0
-0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006463 - ENTRY - 0	test_dir/importante
--0.28 - 00006464 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.25 - 00006464 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.28 - 00006465 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.28 - 00006465 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.27 - 00006465 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.28 - 00006466 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.28 - 00006466 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.27 - 00006466 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.27 - 00006466 - SEND_PIPE - 1148
--0.27 - 00006466 - EXIT - 0
-0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006463 - ENTRY - 0	test_dir/importante
--0.28 - 00006464 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.25 - 00006464 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.28 - 00006465 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.28 - 00006465 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.27 - 00006465 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.24 - 00006465 - RECV_PIPE - 1148
--0.23 - 00006465 - ENTRY - 1556	test_dir/imagens/HQ
--0.23 - 00006465 - SEND_PIPE - 1556
--0.23 - 00006465 - EXIT - 0
-0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006463 - ENTRY - 0	test_dir/importante
--0.28 - 00006464 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.25 - 00006464 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.21 - 00006464 - RECV_PIPE - 1556
--0.21 - 00006464 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.21 - 00006464 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.20 - 00006464 - ENTRY - 288	test_dir/imagens
--0.20 - 00006464 - SEND_PIPE - 288
--0.20 - 00006464 - EXIT - 0
-0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006463 - ENTRY - 0	test_dir/importante
-0.09 - 00006463 - RECV_PIPE - 288
-0.10 - 00006463 - ENTRY - 8	test_dir/praesentcursus.txt
-0.10 - 00006463 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006463 - ENTRY - 4	test_dir/loremipsum.txt
--0.29 - 00006469 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.28 - 00006469 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.28 - 00006469 - SEND_PIPE - 8
--0.28 - 00006469 - EXIT - 0
-0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006463 - ENTRY - 0	test_dir/importante
-0.09 - 00006463 - RECV_PIPE - 288
-0.10 - 00006463 - ENTRY - 8	test_dir/praesentcursus.txt
-0.10 - 00006463 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006463 - ENTRY - 4	test_dir/loremipsum.txt
--0.27 - 00006468 - RECV_PIPE - 8
--0.25 - 00006468 - ENTRY - 4	test_dir/pasta/copy
--0.25 - 00006468 - SEND_PIPE - 4
--0.24 - 00006468 - EXIT - 0
-0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006463 - ENTRY - 0	test_dir/importante
-0.09 - 00006463 - RECV_PIPE - 288
-0.10 - 00006463 - ENTRY - 8	test_dir/praesentcursus.txt
-0.10 - 00006463 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006463 - ENTRY - 4	test_dir/loremipsum.txt
--0.27 - 00006467 - RECV_PIPE - 4
--0.26 - 00006467 - ENTRY - 4	test_dir/pasta
--0.25 - 00006467 - SEND_PIPE - 4
--0.25 - 00006467 - EXIT - 0
-0.04 - 00006463 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006463 - ENTRY - 0	test_dir/importante
-0.09 - 00006463 - RECV_PIPE - 288
-0.10 - 00006463 - ENTRY - 8	test_dir/praesentcursus.txt
-0.10 - 00006463 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006463 - ENTRY - 4	test_dir/loremipsum.txt
-0.14 - 00006463 - RECV_PIPE - 4
-0.14 - 00006463 - ENTRY - 0	test_dir/memorias
-0.15 - 00006463 - ENTRY - 76	test_dir
-0.15 - 00006463 - EXIT - 0
-0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006515 - ENTRY - 0	test_dir/importante
--0.31 - 00006516 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.31 - 00006516 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.32 - 00006517 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.31 - 00006517 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.31 - 00006517 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.32 - 00006518 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.31 - 00006518 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.30 - 00006518 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.30 - 00006518 - SEND_PIPE - 1148
--0.30 - 00006518 - EXIT - 0
-0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006515 - ENTRY - 0	test_dir/importante
--0.31 - 00006516 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.31 - 00006516 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.32 - 00006517 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.31 - 00006517 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.31 - 00006517 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.27 - 00006517 - RECV_PIPE - 1148
--0.26 - 00006517 - ENTRY - 1556	test_dir/imagens/HQ
--0.26 - 00006517 - SEND_PIPE - 1556
--0.26 - 00006517 - EXIT - 0
-0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006515 - ENTRY - 0	test_dir/importante
--0.31 - 00006516 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.31 - 00006516 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.27 - 00006516 - RECV_PIPE - 1556
--0.26 - 00006516 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.26 - 00006516 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.26 - 00006516 - ENTRY - 288	test_dir/imagens
--0.25 - 00006516 - SEND_PIPE - 288
--0.25 - 00006516 - EXIT - 0
-0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006515 - ENTRY - 0	test_dir/importante
-0.10 - 00006515 - RECV_PIPE - 288
-0.10 - 00006515 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00006515 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006515 - ENTRY - 4	test_dir/loremipsum.txt
--0.32 - 00006521 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.31 - 00006521 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.29 - 00006521 - SEND_PIPE - 8
--0.29 - 00006521 - EXIT - 0
-0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006515 - ENTRY - 0	test_dir/importante
-0.10 - 00006515 - RECV_PIPE - 288
-0.10 - 00006515 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00006515 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006515 - ENTRY - 4	test_dir/loremipsum.txt
--0.30 - 00006520 - RECV_PIPE - 8
--0.29 - 00006520 - ENTRY - 4	test_dir/pasta/copy
--0.27 - 00006520 - SEND_PIPE - 4
--0.26 - 00006520 - EXIT - 0
-0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006515 - ENTRY - 0	test_dir/importante
-0.10 - 00006515 - RECV_PIPE - 288
-0.10 - 00006515 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00006515 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006515 - ENTRY - 4	test_dir/loremipsum.txt
--0.30 - 00006519 - RECV_PIPE - 4
--0.29 - 00006519 - ENTRY - 4	test_dir/pasta
--0.27 - 00006519 - SEND_PIPE - 4
--0.27 - 00006519 - EXIT - 0
-0.04 - 00006515 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00006515 - ENTRY - 0	test_dir/importante
-0.10 - 00006515 - RECV_PIPE - 288
-0.10 - 00006515 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00006515 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006515 - ENTRY - 4	test_dir/loremipsum.txt
-0.14 - 00006515 - RECV_PIPE - 4
-0.14 - 00006515 - ENTRY - 0	test_dir/memorias
-0.15 - 00006515 - ENTRY - 76	test_dir
-0.16 - 00006515 - EXIT - 0
-0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006546 - ENTRY - 0	test_dir/importante
--0.31 - 00006547 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.30 - 00006547 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.32 - 00006548 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.30 - 00006548 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.30 - 00006548 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.31 - 00006549 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.30 - 00006549 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.30 - 00006549 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.30 - 00006549 - SEND_PIPE - 1148
--0.30 - 00006549 - EXIT - 0
-0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006546 - ENTRY - 0	test_dir/importante
--0.31 - 00006547 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.30 - 00006547 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.32 - 00006548 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.30 - 00006548 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.30 - 00006548 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.26 - 00006548 - RECV_PIPE - 1148
--0.26 - 00006548 - ENTRY - 1556	test_dir/imagens/HQ
--0.25 - 00006548 - SEND_PIPE - 1556
--0.25 - 00006548 - EXIT - 0
-0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006546 - ENTRY - 0	test_dir/importante
--0.31 - 00006547 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.30 - 00006547 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.27 - 00006547 - RECV_PIPE - 1556
--0.26 - 00006547 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.26 - 00006547 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.26 - 00006547 - ENTRY - 288	test_dir/imagens
--0.26 - 00006547 - SEND_PIPE - 288
--0.25 - 00006547 - EXIT - 0
-0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006546 - ENTRY - 0	test_dir/importante
-0.10 - 00006546 - RECV_PIPE - 288
-0.10 - 00006546 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00006546 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006546 - ENTRY - 4	test_dir/loremipsum.txt
--0.32 - 00006552 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.30 - 00006552 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.29 - 00006552 - SEND_PIPE - 8
--0.29 - 00006552 - EXIT - 0
-0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006546 - ENTRY - 0	test_dir/importante
-0.10 - 00006546 - RECV_PIPE - 288
-0.10 - 00006546 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00006546 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006546 - ENTRY - 4	test_dir/loremipsum.txt
--0.30 - 00006551 - RECV_PIPE - 8
--0.29 - 00006551 - ENTRY - 4	test_dir/pasta/copy
--0.27 - 00006551 - SEND_PIPE - 4
--0.27 - 00006551 - EXIT - 0
-0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006546 - ENTRY - 0	test_dir/importante
-0.10 - 00006546 - RECV_PIPE - 288
-0.10 - 00006546 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00006546 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006546 - ENTRY - 4	test_dir/loremipsum.txt
--0.30 - 00006550 - RECV_PIPE - 4
--0.29 - 00006550 - ENTRY - 4	test_dir/pasta
--0.28 - 00006550 - SEND_PIPE - 4
--0.27 - 00006550 - EXIT - 0
-0.04 - 00006546 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00006546 - ENTRY - 0	test_dir/importante
-0.10 - 00006546 - RECV_PIPE - 288
-0.10 - 00006546 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00006546 - ENTRY - 60	test_dir/big.txt
-0.11 - 00006546 - ENTRY - 4	test_dir/loremipsum.txt
-0.14 - 00006546 - RECV_PIPE - 4
-0.15 - 00006546 - ENTRY - 0	test_dir/memorias
-0.16 - 00006546 - ENTRY - 76	test_dir
-0.17 - 00006546 - EXIT - 0
-0.04 - 00009641 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00009641 - ENTRY - 0	test_dir/importante
--0.31 - 00009642 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.30 - 00009642 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.32 - 00009643 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.30 - 00009643 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.30 - 00009643 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.31 - 00009644 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.30 - 00009644 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.30 - 00009644 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.30 - 00009644 - SEND_PIPE - 1148
--0.30 - 00009644 - EXIT - 0
-0.04 - 00009641 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00009641 - ENTRY - 0	test_dir/importante
--0.31 - 00009642 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.30 - 00009642 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.32 - 00009643 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.30 - 00009643 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.30 - 00009643 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.27 - 00009643 - RECV_PIPE - 1148
--0.26 - 00009643 - ENTRY - 1556	test_dir/imagens/HQ
--0.26 - 00009643 - SEND_PIPE - 1556
--0.26 - 00009643 - EXIT - 0
-0.04 - 00009641 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00009641 - ENTRY - 0	test_dir/importante
--0.31 - 00009642 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.30 - 00009642 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.27 - 00009642 - RECV_PIPE - 1556
--0.26 - 00009642 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.25 - 00009642 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.25 - 00009642 - ENTRY - 288	test_dir/imagens
--0.25 - 00009642 - SEND_PIPE - 288
--0.25 - 00009642 - EXIT - 0
-0.04 - 00009641 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00009641 - ENTRY - 0	test_dir/importante
-0.10 - 00009641 - RECV_PIPE - 288
-0.10 - 00009641 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00009641 - ENTRY - 60	test_dir/big.txt
-0.12 - 00009641 - ENTRY - 4	test_dir/loremipsum.txt
--0.32 - 00009647 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.30 - 00009647 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.29 - 00009647 - SEND_PIPE - 8
--0.29 - 00009647 - EXIT - 0
-0.04 - 00009641 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00009641 - ENTRY - 0	test_dir/importante
-0.10 - 00009641 - RECV_PIPE - 288
-0.10 - 00009641 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00009641 - ENTRY - 60	test_dir/big.txt
-0.12 - 00009641 - ENTRY - 4	test_dir/loremipsum.txt
--0.30 - 00009646 - RECV_PIPE - 8
--0.28 - 00009646 - ENTRY - 4	test_dir/pasta/copy
--0.28 - 00009646 - SEND_PIPE - 4
--0.27 - 00009646 - EXIT - 0
-0.04 - 00009641 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00009641 - ENTRY - 0	test_dir/importante
-0.10 - 00009641 - RECV_PIPE - 288
-0.10 - 00009641 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00009641 - ENTRY - 60	test_dir/big.txt
-0.12 - 00009641 - ENTRY - 4	test_dir/loremipsum.txt
--0.27 - 00009645 - RECV_PIPE - 4
--0.26 - 00009645 - ENTRY - 4	test_dir/pasta
--0.25 - 00009645 - SEND_PIPE - 4
--0.25 - 00009645 - EXIT - 0
-0.04 - 00009641 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00009641 - ENTRY - 0	test_dir/importante
-0.10 - 00009641 - RECV_PIPE - 288
-0.10 - 00009641 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00009641 - ENTRY - 60	test_dir/big.txt
-0.12 - 00009641 - ENTRY - 4	test_dir/loremipsum.txt
-0.15 - 00009641 - RECV_PIPE - 4
-0.16 - 00009641 - ENTRY - 0	test_dir/memorias
-0.17 - 00009641 - ENTRY - 76	test_dir
-0.17 - 00009641 - EXIT - 0
-0.04 - 00009904 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009904 - ENTRY - 0	test_dir/importante
--0.29 - 00009905 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.28 - 00009905 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.30 - 00009906 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.29 - 00009906 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.28 - 00009906 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.29 - 00009907 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.29 - 00009907 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.28 - 00009907 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.28 - 00009907 - SEND_PIPE - 1148
--0.28 - 00009907 - EXIT - 0
-0.04 - 00009904 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009904 - ENTRY - 0	test_dir/importante
--0.29 - 00009905 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.28 - 00009905 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.30 - 00009906 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.29 - 00009906 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.28 - 00009906 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.25 - 00009906 - RECV_PIPE - 1148
--0.24 - 00009906 - ENTRY - 1556	test_dir/imagens/HQ
--0.24 - 00009906 - SEND_PIPE - 1556
--0.24 - 00009906 - EXIT - 0
-0.04 - 00009904 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009904 - ENTRY - 0	test_dir/importante
--0.29 - 00009905 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.28 - 00009905 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.25 - 00009905 - RECV_PIPE - 1556
--0.25 - 00009905 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.24 - 00009905 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.24 - 00009905 - ENTRY - 288	test_dir/imagens
--0.24 - 00009905 - SEND_PIPE - 288
--0.24 - 00009905 - EXIT - 0
-0.04 - 00009904 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009904 - ENTRY - 0	test_dir/importante
-0.10 - 00009904 - RECV_PIPE - 288
-0.11 - 00009904 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00009904 - ENTRY - 60	test_dir/big.txt
-0.13 - 00009904 - ENTRY - 4	test_dir/loremipsum.txt
--0.30 - 00009910 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.28 - 00009910 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.28 - 00009910 - SEND_PIPE - 8
--0.27 - 00009910 - EXIT - 0
-0.04 - 00009904 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009904 - ENTRY - 0	test_dir/importante
-0.10 - 00009904 - RECV_PIPE - 288
-0.11 - 00009904 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00009904 - ENTRY - 60	test_dir/big.txt
-0.13 - 00009904 - ENTRY - 4	test_dir/loremipsum.txt
--0.28 - 00009909 - RECV_PIPE - 8
--0.27 - 00009909 - ENTRY - 4	test_dir/pasta/copy
--0.25 - 00009909 - SEND_PIPE - 4
--0.25 - 00009909 - EXIT - 0
-0.04 - 00009904 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009904 - ENTRY - 0	test_dir/importante
-0.10 - 00009904 - RECV_PIPE - 288
-0.11 - 00009904 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00009904 - ENTRY - 60	test_dir/big.txt
-0.13 - 00009904 - ENTRY - 4	test_dir/loremipsum.txt
--0.28 - 00009908 - RECV_PIPE - 4
--0.27 - 00009908 - ENTRY - 4	test_dir/pasta
--0.26 - 00009908 - SEND_PIPE - 4
--0.25 - 00009908 - EXIT - 0
-0.04 - 00009904 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009904 - ENTRY - 0	test_dir/importante
-0.10 - 00009904 - RECV_PIPE - 288
-0.11 - 00009904 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00009904 - ENTRY - 60	test_dir/big.txt
-0.13 - 00009904 - ENTRY - 4	test_dir/loremipsum.txt
-0.16 - 00009904 - RECV_PIPE - 4
-0.17 - 00009904 - ENTRY - 0	test_dir/memorias
-0.18 - 00009904 - ENTRY - 76	test_dir
-0.18 - 00009904 - EXIT - 0
-0.04 - 00009992 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009992 - ENTRY - 0	test_dir/importante
--0.30 - 00009993 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00009993 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.30 - 00009994 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.29 - 00009994 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.29 - 00009994 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.30 - 00009995 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.29 - 00009995 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.29 - 00009995 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.28 - 00009995 - SEND_PIPE - 1148
--0.28 - 00009995 - EXIT - 0
-0.04 - 00009992 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009992 - ENTRY - 0	test_dir/importante
--0.30 - 00009993 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00009993 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.30 - 00009994 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.29 - 00009994 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.29 - 00009994 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.25 - 00009994 - RECV_PIPE - 1148
--0.24 - 00009994 - ENTRY - 1556	test_dir/imagens/HQ
--0.24 - 00009994 - SEND_PIPE - 1556
--0.24 - 00009994 - EXIT - 0
-0.04 - 00009992 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009992 - ENTRY - 0	test_dir/importante
--0.30 - 00009993 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00009993 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.26 - 00009993 - RECV_PIPE - 1556
--0.25 - 00009993 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.25 - 00009993 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.25 - 00009993 - ENTRY - 288	test_dir/imagens
--0.24 - 00009993 - SEND_PIPE - 288
--0.24 - 00009993 - EXIT - 0
-0.04 - 00009992 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009992 - ENTRY - 0	test_dir/importante
-0.10 - 00009992 - RECV_PIPE - 288
-0.10 - 00009992 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00009992 - ENTRY - 60	test_dir/big.txt
-0.12 - 00009992 - ENTRY - 4	test_dir/loremipsum.txt
--0.30 - 00009998 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.29 - 00009998 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.28 - 00009998 - SEND_PIPE - 8
--0.28 - 00009998 - EXIT - 0
-0.04 - 00009992 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009992 - ENTRY - 0	test_dir/importante
-0.10 - 00009992 - RECV_PIPE - 288
-0.10 - 00009992 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00009992 - ENTRY - 60	test_dir/big.txt
-0.12 - 00009992 - ENTRY - 4	test_dir/loremipsum.txt
--0.28 - 00009997 - RECV_PIPE - 8
--0.27 - 00009997 - ENTRY - 4	test_dir/pasta/copy
--0.26 - 00009997 - SEND_PIPE - 4
--0.26 - 00009997 - EXIT - 0
-0.04 - 00009992 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009992 - ENTRY - 0	test_dir/importante
-0.10 - 00009992 - RECV_PIPE - 288
-0.10 - 00009992 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00009992 - ENTRY - 60	test_dir/big.txt
-0.12 - 00009992 - ENTRY - 4	test_dir/loremipsum.txt
--0.28 - 00009996 - RECV_PIPE - 4
--0.27 - 00009996 - ENTRY - 4	test_dir/pasta
--0.26 - 00009996 - SEND_PIPE - 4
--0.26 - 00009996 - EXIT - 0
-0.04 - 00009992 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00009992 - ENTRY - 0	test_dir/importante
-0.10 - 00009992 - RECV_PIPE - 288
-0.10 - 00009992 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00009992 - ENTRY - 60	test_dir/big.txt
-0.12 - 00009992 - ENTRY - 4	test_dir/loremipsum.txt
-0.16 - 00009992 - RECV_PIPE - 4
-0.16 - 00009992 - ENTRY - 0	test_dir/memorias
-0.17 - 00009992 - ENTRY - 76	test_dir
-0.18 - 00009992 - EXIT - 0
-0.04 - 00010059 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00010059 - ENTRY - 0	test_dir/importante
--0.33 - 00010060 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.32 - 00010060 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.33 - 00010061 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.32 - 00010061 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.32 - 00010061 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.33 - 00010062 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.32 - 00010062 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.32 - 00010062 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.32 - 00010062 - SEND_PIPE - 1148
--0.31 - 00010062 - EXIT - 0
-0.04 - 00010059 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00010059 - ENTRY - 0	test_dir/importante
--0.33 - 00010060 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.32 - 00010060 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.33 - 00010061 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.32 - 00010061 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.32 - 00010061 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.28 - 00010061 - RECV_PIPE - 1148
--0.27 - 00010061 - ENTRY - 1556	test_dir/imagens/HQ
--0.27 - 00010061 - SEND_PIPE - 1556
--0.27 - 00010061 - EXIT - 0
-0.04 - 00010059 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00010059 - ENTRY - 0	test_dir/importante
--0.33 - 00010060 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.32 - 00010060 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.28 - 00010060 - RECV_PIPE - 1556
--0.28 - 00010060 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.28 - 00010060 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.27 - 00010060 - ENTRY - 288	test_dir/imagens
--0.27 - 00010060 - SEND_PIPE - 288
--0.27 - 00010060 - EXIT - 0
-0.04 - 00010059 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00010059 - ENTRY - 0	test_dir/importante
-0.10 - 00010059 - RECV_PIPE - 288
-0.11 - 00010059 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00010059 - ENTRY - 60	test_dir/big.txt
-0.13 - 00010059 - ENTRY - 4	test_dir/loremipsum.txt
--0.33 - 00010065 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.32 - 00010065 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.31 - 00010065 - SEND_PIPE - 8
--0.31 - 00010065 - EXIT - 0
-0.04 - 00010059 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00010059 - ENTRY - 0	test_dir/importante
-0.10 - 00010059 - RECV_PIPE - 288
-0.11 - 00010059 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00010059 - ENTRY - 60	test_dir/big.txt
-0.13 - 00010059 - ENTRY - 4	test_dir/loremipsum.txt
--0.31 - 00010064 - RECV_PIPE - 8
--0.30 - 00010064 - ENTRY - 4	test_dir/pasta/copy
--0.29 - 00010064 - SEND_PIPE - 4
--0.28 - 00010064 - EXIT - 0
-0.04 - 00010059 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00010059 - ENTRY - 0	test_dir/importante
-0.10 - 00010059 - RECV_PIPE - 288
-0.11 - 00010059 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00010059 - ENTRY - 60	test_dir/big.txt
-0.13 - 00010059 - ENTRY - 4	test_dir/loremipsum.txt
--0.29 - 00010063 - RECV_PIPE - 4
--0.28 - 00010063 - ENTRY - 4	test_dir/pasta
--0.27 - 00010063 - SEND_PIPE - 4
--0.27 - 00010063 - EXIT - 0
-0.04 - 00010059 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.07 - 00010059 - ENTRY - 0	test_dir/importante
-0.10 - 00010059 - RECV_PIPE - 288
-0.11 - 00010059 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00010059 - ENTRY - 60	test_dir/big.txt
-0.13 - 00010059 - ENTRY - 4	test_dir/loremipsum.txt
-0.17 - 00010059 - RECV_PIPE - 4
-0.17 - 00010059 - ENTRY - 0	test_dir/memorias
-0.18 - 00010059 - ENTRY - 76	test_dir
-0.19 - 00010059 - EXIT - 0
-0.04 - 00010108 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010108 - ENTRY - 0	test_dir/importante
--0.30 - 00010109 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00010109 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.27 - 00010110 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.26 - 00010110 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.26 - 00010110 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.30 - 00010111 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.29 - 00010111 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.29 - 00010111 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.29 - 00010111 - SEND_PIPE - 1148
--0.28 - 00010111 - EXIT - 0
-0.04 - 00010108 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010108 - ENTRY - 0	test_dir/importante
--0.30 - 00010109 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00010109 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.27 - 00010110 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.26 - 00010110 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.26 - 00010110 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.23 - 00010110 - RECV_PIPE - 1148
--0.22 - 00010110 - ENTRY - 1556	test_dir/imagens/HQ
--0.22 - 00010110 - SEND_PIPE - 1556
--0.21 - 00010110 - EXIT - 0
-0.04 - 00010108 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010108 - ENTRY - 0	test_dir/importante
--0.30 - 00010109 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00010109 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.25 - 00010109 - RECV_PIPE - 1556
--0.24 - 00010109 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.24 - 00010109 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.24 - 00010109 - ENTRY - 288	test_dir/imagens
--0.24 - 00010109 - SEND_PIPE - 288
--0.23 - 00010109 - EXIT - 0
-0.04 - 00010108 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010108 - ENTRY - 0	test_dir/importante
-0.10 - 00010108 - RECV_PIPE - 288
-0.10 - 00010108 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00010108 - ENTRY - 60	test_dir/big.txt
-0.12 - 00010108 - ENTRY - 4	test_dir/loremipsum.txt
--0.30 - 00010114 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.28 - 00010114 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.28 - 00010114 - SEND_PIPE - 8
--0.28 - 00010114 - EXIT - 0
-0.04 - 00010108 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010108 - ENTRY - 0	test_dir/importante
-0.10 - 00010108 - RECV_PIPE - 288
-0.10 - 00010108 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00010108 - ENTRY - 60	test_dir/big.txt
-0.12 - 00010108 - ENTRY - 4	test_dir/loremipsum.txt
--0.28 - 00010113 - RECV_PIPE - 8
--0.27 - 00010113 - ENTRY - 4	test_dir/pasta/copy
--0.26 - 00010113 - SEND_PIPE - 4
--0.25 - 00010113 - EXIT - 0
-0.04 - 00010108 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010108 - ENTRY - 0	test_dir/importante
-0.10 - 00010108 - RECV_PIPE - 288
-0.10 - 00010108 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00010108 - ENTRY - 60	test_dir/big.txt
-0.12 - 00010108 - ENTRY - 4	test_dir/loremipsum.txt
--0.28 - 00010112 - RECV_PIPE - 4
--0.27 - 00010112 - ENTRY - 4	test_dir/pasta
--0.26 - 00010112 - SEND_PIPE - 4
--0.25 - 00010112 - EXIT - 0
-0.04 - 00010108 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010108 - ENTRY - 0	test_dir/importante
-0.10 - 00010108 - RECV_PIPE - 288
-0.10 - 00010108 - ENTRY - 8	test_dir/praesentcursus.txt
-0.11 - 00010108 - ENTRY - 60	test_dir/big.txt
-0.12 - 00010108 - ENTRY - 4	test_dir/loremipsum.txt
-0.15 - 00010108 - RECV_PIPE - 4
-0.16 - 00010108 - ENTRY - 0	test_dir/memorias
-0.17 - 00010108 - ENTRY - 76	test_dir
-0.18 - 00010108 - EXIT - 0
-0.04 - 00010161 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010161 - ENTRY - 0	test_dir/importante
--0.30 - 00010162 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00010162 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.30 - 00010163 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.29 - 00010163 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.29 - 00010163 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.30 - 00010164 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
--0.29 - 00010164 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
--0.28 - 00010164 - ENTRY - 1148	test_dir/imagens/HQ/old
--0.28 - 00010164 - SEND_PIPE - 1148
--0.28 - 00010164 - EXIT - 0
-0.04 - 00010161 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010161 - ENTRY - 0	test_dir/importante
--0.30 - 00010162 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00010162 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.30 - 00010163 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
--0.29 - 00010163 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
--0.29 - 00010163 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
--0.22 - 00010163 - RECV_PIPE - 1148
--0.21 - 00010163 - ENTRY - 1556	test_dir/imagens/HQ
--0.21 - 00010163 - SEND_PIPE - 1556
--0.20 - 00010163 - EXIT - 0
-0.04 - 00010161 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010161 - ENTRY - 0	test_dir/importante
--0.30 - 00010162 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
--0.29 - 00010162 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
--0.26 - 00010162 - RECV_PIPE - 1556
--0.25 - 00010162 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
--0.24 - 00010162 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
--0.24 - 00010162 - ENTRY - 288	test_dir/imagens
--0.24 - 00010162 - SEND_PIPE - 288
--0.24 - 00010162 - EXIT - 0
-0.04 - 00010161 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010161 - ENTRY - 0	test_dir/importante
-0.10 - 00010161 - RECV_PIPE - 288
-0.11 - 00010161 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00010161 - ENTRY - 60	test_dir/big.txt
-0.12 - 00010161 - ENTRY - 4	test_dir/loremipsum.txt
--0.31 - 00010167 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
--0.29 - 00010167 - ENTRY - 8	test_dir/pasta/copy/pasta
--0.29 - 00010167 - SEND_PIPE - 8
--0.29 - 00010167 - EXIT - 0
-0.04 - 00010161 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010161 - ENTRY - 0	test_dir/importante
-0.10 - 00010161 - RECV_PIPE - 288
-0.11 - 00010161 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00010161 - ENTRY - 60	test_dir/big.txt
-0.12 - 00010161 - ENTRY - 4	test_dir/loremipsum.txt
--0.29 - 00010166 - RECV_PIPE - 8
--0.27 - 00010166 - ENTRY - 4	test_dir/pasta/copy
--0.26 - 00010166 - SEND_PIPE - 4
--0.25 - 00010166 - EXIT - 0
-0.04 - 00010161 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010161 - ENTRY - 0	test_dir/importante
-0.10 - 00010161 - RECV_PIPE - 288
-0.11 - 00010161 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00010161 - ENTRY - 60	test_dir/big.txt
-0.12 - 00010161 - ENTRY - 4	test_dir/loremipsum.txt
--0.28 - 00010165 - RECV_PIPE - 4
--0.27 - 00010165 - ENTRY - 4	test_dir/pasta
--0.26 - 00010165 - SEND_PIPE - 4
--0.26 - 00010165 - EXIT - 0
-0.04 - 00010161 - CREATE - Command: ./simpledu test_dir/ -S -a
-0.06 - 00010161 - ENTRY - 0	test_dir/importante
-0.10 - 00010161 - RECV_PIPE - 288
-0.11 - 00010161 - ENTRY - 8	test_dir/praesentcursus.txt
-0.12 - 00010161 - ENTRY - 60	test_dir/big.txt
-0.12 - 00010161 - ENTRY - 4	test_dir/loremipsum.txt
-0.16 - 00010161 - RECV_PIPE - 4
-0.16 - 00010161 - ENTRY - 0	test_dir/memorias
-0.17 - 00010161 - ENTRY - 76	test_dir
-0.17 - 00010161 - EXIT - 0
+0.25 - 00014009 - CREATE - Command: ./simpledu test_dir
+0.17 - 00014013 - CREATE - Command: ./simpledu test_dir/imagens
+0.06 - 00014014 - CREATE - Command: ./simpledu test_dir/imagens/HQ
+0.15 - 00014015 - CREATE - Command: ./simpledu test_dir/imagens/HQ/old
+0.47 - 00014015 - ENTRY - 1148	test_dir/imagens/HQ/old
+0.58 - 00014015 - SEND_PIPE - 1148
+0.63 - 00014015 - EXIT - 0
+0.55 - 00014014 - RECV_PIPE - 1148
+0.70 - 00014014 - ENTRY - 2704	test_dir/imagens/HQ
+0.78 - 00014014 - SEND_PIPE - 2704
+0.80 - 00014014 - EXIT - 0
+0.62 - 00014013 - RECV_PIPE - 2704
+0.73 - 00014013 - ENTRY - 2992	test_dir/imagens
+0.80 - 00014013 - SEND_PIPE - 2992
+0.83 - 00014013 - EXIT - 0
+0.81 - 00014009 - RECV_PIPE - 2992
+0.17 - 00014016 - CREATE - Command: ./simpledu test_dir/pasta
+0.19 - 00014017 - CREATE - Command: ./simpledu test_dir/pasta/copy
+0.16 - 00014026 - CREATE - Command: ./simpledu test_dir/pasta/copy/pasta
+0.38 - 00014026 - ENTRY - 8	test_dir/pasta/copy/pasta
+0.42 - 00014026 - SEND_PIPE - 8
+0.43 - 00014026 - EXIT - 0
+0.72 - 00014017 - RECV_PIPE - 8
+0.75 - 00014017 - ENTRY - 12	test_dir/pasta/copy
+0.79 - 00014017 - SEND_PIPE - 12
+0.80 - 00014017 - EXIT - 0
+0.63 - 00014016 - RECV_PIPE - 12
+0.66 - 00014016 - ENTRY - 16	test_dir/pasta
+0.68 - 00014016 - SEND_PIPE - 16
+0.69 - 00014016 - EXIT - 0
+1.13 - 00014009 - RECV_PIPE - 16
+1.16 - 00014009 - ENTRY - 3084	test_dir
+1.19 - 00014009 - EXIT - 0
+0.08 - 00014041 - CREATE - Command: ./simpledu test_dir -l
+0.16 - 00014049 - CREATE - Command: ./simpledu test_dir/imagens
+0.18 - 00014050 - CREATE - Command: ./simpledu test_dir/imagens/HQ
+0.15 - 00014058 - CREATE - Command: ./simpledu test_dir/imagens/HQ/old
+0.47 - 00014058 - ENTRY - 1148	test_dir/imagens/HQ/old
+0.56 - 00014058 - SEND_PIPE - 1148
+0.59 - 00014058 - EXIT - 0
+0.74 - 00014050 - RECV_PIPE - 1148
+0.88 - 00014050 - ENTRY - 2704	test_dir/imagens/HQ
+0.97 - 00014050 - SEND_PIPE - 2704
+1.02 - 00014050 - EXIT - 0
+0.73 - 00014049 - RECV_PIPE - 2704
+0.90 - 00014049 - ENTRY - 2992	test_dir/imagens
+0.99 - 00014049 - SEND_PIPE - 2992
+1.02 - 00014049 - EXIT - 0
+0.59 - 00014041 - RECV_PIPE - 2992
+0.15 - 00014061 - CREATE - Command: ./simpledu test_dir/pasta
+0.15 - 00014063 - CREATE - Command: ./simpledu test_dir/pasta/copy
+0.15 - 00014064 - CREATE - Command: ./simpledu test_dir/pasta/copy/pasta
+0.47 - 00014064 - ENTRY - 8	test_dir/pasta/copy/pasta
+0.57 - 00014064 - SEND_PIPE - 8
+0.60 - 00014064 - EXIT - 0
+0.73 - 00014063 - RECV_PIPE - 8
+0.86 - 00014063 - ENTRY - 12	test_dir/pasta/copy
+0.96 - 00014063 - SEND_PIPE - 12
+1.01 - 00014063 - EXIT - 0
+0.60 - 00014061 - RECV_PIPE - 12
+0.71 - 00014061 - ENTRY - 16	test_dir/pasta
+0.78 - 00014061 - SEND_PIPE - 16
+0.81 - 00014061 - EXIT - 0
+0.90 - 00014041 - RECV_PIPE - 16
+1.00 - 00014041 - ENTRY - 3084	test_dir
+1.07 - 00014041 - EXIT - 0
+0.18 - 00014071 - CREATE - Command: ./simpledu test_dir -l -b
+0.15 - 00014074 - CREATE - Command: ./simpledu test_dir/imagens
+0.18 - 00014076 - CREATE - Command: ./simpledu test_dir/imagens/HQ
+0.15 - 00014077 - CREATE - Command: ./simpledu test_dir/imagens/HQ/old
+0.49 - 00014077 - ENTRY - 1174656	test_dir/imagens/HQ/old
+0.59 - 00014077 - SEND_PIPE - 1174656
+0.62 - 00014077 - EXIT - 0
+0.78 - 00014076 - RECV_PIPE - 1174656
+0.92 - 00014076 - ENTRY - 2763951	test_dir/imagens/HQ
+1.03 - 00014076 - SEND_PIPE - 2763951
+1.08 - 00014076 - EXIT - 0
+0.73 - 00014074 - RECV_PIPE - 2763951
+0.86 - 00014074 - ENTRY - 3049217	test_dir/imagens
+0.93 - 00014074 - SEND_PIPE - 3049217
+0.96 - 00014074 - EXIT - 0
+0.68 - 00014071 - RECV_PIPE - 3049217
+0.15 - 00014078 - CREATE - Command: ./simpledu test_dir/pasta
+0.17 - 00014079 - CREATE - Command: ./simpledu test_dir/pasta/copy
+0.15 - 00014080 - CREATE - Command: ./simpledu test_dir/pasta/copy/pasta
+0.55 - 00014080 - ENTRY - 4196	test_dir/pasta/copy/pasta
+0.67 - 00014080 - SEND_PIPE - 4196
+0.71 - 00014080 - EXIT - 0
+0.72 - 00014079 - RECV_PIPE - 4196
+0.85 - 00014079 - ENTRY - 8292	test_dir/pasta/copy
+0.98 - 00014079 - SEND_PIPE - 8292
+1.03 - 00014079 - EXIT - 0
+0.64 - 00014078 - RECV_PIPE - 8292
+0.76 - 00014078 - ENTRY - 12388	test_dir/pasta
+0.86 - 00014078 - SEND_PIPE - 12388
+0.93 - 00014078 - EXIT - 0
+1.04 - 00014071 - RECV_PIPE - 12388
+1.14 - 00014071 - ENTRY - 3135371	test_dir
+1.21 - 00014071 - EXIT - 0
+0.21 - 00014093 - CREATE - Command: ./simpledu test_dir -l -b -S
+0.19 - 00014096 - CREATE - Command: ./simpledu test_dir/imagens
+0.16 - 00014097 - CREATE - Command: ./simpledu test_dir/imagens/HQ
+0.16 - 00014098 - CREATE - Command: ./simpledu test_dir/imagens/HQ/old
+0.46 - 00014098 - ENTRY - 1174656	test_dir/imagens/HQ/old
+0.56 - 00014098 - SEND_PIPE - 1174656
+0.60 - 00014098 - EXIT - 0
+0.74 - 00014097 - RECV_PIPE - 1174656
+0.88 - 00014097 - ENTRY - 1589295	test_dir/imagens/HQ
+0.98 - 00014097 - SEND_PIPE - 1589295
+1.05 - 00014097 - EXIT - 0
+0.79 - 00014096 - RECV_PIPE - 1589295
+0.91 - 00014096 - ENTRY - 285266	test_dir/imagens
+1.02 - 00014096 - SEND_PIPE - 285266
+1.05 - 00014096 - EXIT - 0
+0.68 - 00014093 - RECV_PIPE - 285266
+0.17 - 00014099 - CREATE - Command: ./simpledu test_dir/pasta
+0.06 - 00014101 - CREATE - Command: ./simpledu test_dir/pasta/copy
+0.16 - 00014102 - CREATE - Command: ./simpledu test_dir/pasta/copy/pasta
+0.49 - 00014102 - ENTRY - 4196	test_dir/pasta/copy/pasta
+0.62 - 00014102 - SEND_PIPE - 4196
+0.66 - 00014102 - EXIT - 0
+0.60 - 00014101 - RECV_PIPE - 4196
+0.69 - 00014101 - ENTRY - 4096	test_dir/pasta/copy
+0.76 - 00014101 - SEND_PIPE - 4096
+0.79 - 00014101 - EXIT - 0
+0.52 - 00014099 - RECV_PIPE - 4096
+0.62 - 00014099 - ENTRY - 4096	test_dir/pasta
+0.69 - 00014099 - SEND_PIPE - 4096
+0.73 - 00014099 - EXIT - 0
+1.05 - 00014093 - RECV_PIPE - 4096
+1.20 - 00014093 - ENTRY - 73766	test_dir
+1.29 - 00014093 - EXIT - 0
+0.07 - 00014110 - CREATE - Command: ./simpledu test_dir -l -b -S --max-depth
+0.16 - 00014113 - CREATE - Command: ./simpledu test_dir/imagens
+0.16 - 00014114 - CREATE - Command: ./simpledu test_dir/imagens/HQ
+0.18 - 00014120 - CREATE - Command: ./simpledu test_dir/imagens/HQ/old
+0.50 - 00014120 - SEND_PIPE - 1174656
+0.59 - 00014120 - EXIT - 0
+0.76 - 00014114 - RECV_PIPE - 1174656
+0.88 - 00014114 - ENTRY - 1589295	test_dir/imagens/HQ
+0.98 - 00014114 - SEND_PIPE - 1589295
+1.02 - 00014114 - EXIT - 0
+0.85 - 00014113 - RECV_PIPE - 1589295
+0.97 - 00014113 - ENTRY - 285266	test_dir/imagens
+1.04 - 00014113 - SEND_PIPE - 285266
+1.07 - 00014113 - EXIT - 0
+0.50 - 00014110 - RECV_PIPE - 285266
+0.18 - 00014121 - CREATE - Command: ./simpledu test_dir/pasta
+0.16 - 00014122 - CREATE - Command: ./simpledu test_dir/pasta/copy
+0.16 - 00014123 - CREATE - Command: ./simpledu test_dir/pasta/copy/pasta
+0.49 - 00014123 - SEND_PIPE - 4196
+0.61 - 00014123 - EXIT - 0
+0.71 - 00014122 - RECV_PIPE - 4196
+0.80 - 00014122 - ENTRY - 4096	test_dir/pasta/copy
+0.88 - 00014122 - SEND_PIPE - 4096
+0.91 - 00014122 - EXIT - 0
+0.67 - 00014121 - RECV_PIPE - 4096
+0.78 - 00014121 - ENTRY - 4096	test_dir/pasta
+0.87 - 00014121 - SEND_PIPE - 4096
+0.91 - 00014121 - EXIT - 0
+0.89 - 00014110 - RECV_PIPE - 4096
+1.02 - 00014110 - ENTRY - 73766	test_dir
+1.10 - 00014110 - EXIT - 0
+0.06 - 00014130 - CREATE - Command: ./simpledu test_dir -l -B 1
+0.15 - 00014139 - CREATE - Command: ./simpledu test_dir/imagens
+0.14 - 00014141 - CREATE - Command: ./simpledu test_dir/imagens/HQ
+0.14 - 00014143 - CREATE - Command: ./simpledu test_dir/imagens/HQ/old
+0.47 - 00014143 - ENTRY - 1175552	test_dir/imagens/HQ/old
+0.58 - 00014143 - SEND_PIPE - 1175552
+0.62 - 00014143 - EXIT - 0
+0.76 - 00014141 - RECV_PIPE - 1175552
+0.87 - 00014141 - ENTRY - 2768896	test_dir/imagens/HQ
+0.94 - 00014141 - SEND_PIPE - 2768896
+0.97 - 00014141 - EXIT - 0
+0.73 - 00014139 - RECV_PIPE - 2768896
+0.90 - 00014139 - ENTRY - 3063808	test_dir/imagens
+0.96 - 00014139 - SEND_PIPE - 3063808
+0.99 - 00014139 - EXIT - 0
+0.51 - 00014130 - RECV_PIPE - 3063808
+0.16 - 00014144 - CREATE - Command: ./simpledu test_dir/pasta
+0.14 - 00014145 - CREATE - Command: ./simpledu test_dir/pasta/copy
+0.14 - 00014147 - CREATE - Command: ./simpledu test_dir/pasta/copy/pasta
+0.47 - 00014147 - ENTRY - 8192	test_dir/pasta/copy/pasta
+0.57 - 00014147 - SEND_PIPE - 8192
+0.61 - 00014147 - EXIT - 0
+0.70 - 00014145 - RECV_PIPE - 8192
+0.81 - 00014145 - ENTRY - 12288	test_dir/pasta/copy
+0.93 - 00014145 - SEND_PIPE - 12288
+0.98 - 00014145 - EXIT - 0
+0.69 - 00014144 - RECV_PIPE - 12288
+0.78 - 00014144 - ENTRY - 16384	test_dir/pasta
+0.85 - 00014144 - SEND_PIPE - 16384
+0.89 - 00014144 - EXIT - 0
+0.83 - 00014130 - RECV_PIPE - 16384
+0.97 - 00014130 - ENTRY - 3158016	test_dir
+1.06 - 00014130 - EXIT - 0
+0.07 - 00014154 - CREATE - Command: ./simpledu test_dir -l -a
+0.21 - 00014157 - CREATE - Command: ./simpledu test_dir/imagens
+0.16 - 00014158 - CREATE - Command: ./simpledu test_dir/imagens/HQ
+0.44 - 00014158 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
+0.55 - 00014158 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
+0.17 - 00014159 - CREATE - Command: ./simpledu test_dir/imagens/HQ/old
+0.46 - 00014159 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
+0.58 - 00014159 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
+0.65 - 00014159 - ENTRY - 1148	test_dir/imagens/HQ/old
+0.69 - 00014159 - SEND_PIPE - 1148
+0.72 - 00014159 - EXIT - 0
+0.97 - 00014158 - RECV_PIPE - 1148
+1.06 - 00014158 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
+1.11 - 00014158 - ENTRY - 2704	test_dir/imagens/HQ
+1.13 - 00014158 - SEND_PIPE - 2704
+1.16 - 00014158 - EXIT - 0
+0.76 - 00014157 - RECV_PIPE - 2704
+0.87 - 00014157 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
+0.97 - 00014157 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
+1.01 - 00014157 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+1.05 - 00014157 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+1.10 - 00014157 - ENTRY - 2992	test_dir/imagens
+1.13 - 00014157 - SEND_PIPE - 2992
+1.16 - 00014157 - EXIT - 0
+0.54 - 00014154 - RECV_PIPE - 2992
+0.62 - 00014154 - ENTRY - 60	test_dir/big.txt
+0.70 - 00014154 - ENTRY - 4	test_dir/loremipsum.txt
+0.17 - 00014160 - CREATE - Command: ./simpledu test_dir/pasta
+0.16 - 00014161 - CREATE - Command: ./simpledu test_dir/pasta/copy
+0.19 - 00014162 - CREATE - Command: ./simpledu test_dir/pasta/copy/pasta
+0.55 - 00014162 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
+0.66 - 00014162 - ENTRY - 8	test_dir/pasta/copy/pasta
+0.69 - 00014162 - SEND_PIPE - 8
+0.71 - 00014162 - EXIT - 0
+0.67 - 00014161 - RECV_PIPE - 8
+0.74 - 00014161 - ENTRY - 12	test_dir/pasta/copy
+0.79 - 00014161 - SEND_PIPE - 12
+0.81 - 00014161 - EXIT - 0
+0.72 - 00014160 - RECV_PIPE - 12
+0.81 - 00014160 - ENTRY - 16	test_dir/pasta
+0.86 - 00014160 - SEND_PIPE - 16
+0.90 - 00014160 - EXIT - 0
+1.01 - 00014154 - RECV_PIPE - 16
+1.10 - 00014154 - ENTRY - 0	test_dir/importante
+1.16 - 00014154 - ENTRY - 0	test_dir/memorias
+1.18 - 00014154 - ENTRY - 8	test_dir/praesentcursus.txt
+1.21 - 00014154 - ENTRY - 3084	test_dir
+1.26 - 00014154 - EXIT - 0
+0.06 - 00014169 - CREATE - Command: ./simpledu test_dir -l -a -L
+0.15 - 00014172 - CREATE - Command: ./simpledu test_dir/imagens
+0.19 - 00014177 - CREATE - Command: ./simpledu test_dir/imagens/HQ
+0.48 - 00014177 - ENTRY - 392	test_dir/imagens/HQ/178-2000x2000.jpg
+0.58 - 00014177 - ENTRY - 1024	test_dir/imagens/HQ/29-2000x2000.jpg
+0.16 - 00014178 - CREATE - Command: ./simpledu test_dir/imagens/HQ/old
+0.46 - 00014178 - ENTRY - 480	test_dir/imagens/HQ/old/780-2000x2000.jpg
+0.61 - 00014178 - ENTRY - 664	test_dir/imagens/HQ/old/229-2000x2000.jpg
+0.64 - 00014178 - ENTRY - 1148	test_dir/imagens/HQ/old
+0.68 - 00014178 - SEND_PIPE - 1148
+0.73 - 00014178 - EXIT - 0
+0.94 - 00014177 - RECV_PIPE - 1148
+1.04 - 00014177 - ENTRY - 136	test_dir/imagens/HQ/602-2000x2000.jpg
+1.10 - 00014177 - ENTRY - 2704	test_dir/imagens/HQ
+1.12 - 00014177 - SEND_PIPE - 2704
+1.15 - 00014177 - EXIT - 0
+0.69 - 00014172 - RECV_PIPE - 2704
+0.79 - 00014172 - ENTRY - 64	test_dir/imagens/743-600x600.jpg
+0.86 - 00014172 - ENTRY - 88	test_dir/imagens/382-800x800.jpg
+0.89 - 00014172 - ENTRY - 88	test_dir/imagens/700-800x800.jpg
+0.91 - 00014172 - ENTRY - 44	test_dir/imagens/213-800x800.jpg
+0.94 - 00014172 - ENTRY - 2992	test_dir/imagens
+0.97 - 00014172 - SEND_PIPE - 2992
+0.99 - 00014172 - EXIT - 0
+0.46 - 00014169 - RECV_PIPE - 2992
+0.55 - 00014169 - ENTRY - 60	test_dir/big.txt
+0.63 - 00014169 - ENTRY - 4	test_dir/loremipsum.txt
+0.17 - 00014179 - CREATE - Command: ./simpledu test_dir/pasta
+0.16 - 00014180 - CREATE - Command: ./simpledu test_dir/pasta/copy
+0.20 - 00014181 - CREATE - Command: ./simpledu test_dir/pasta/copy/pasta
+0.51 - 00014181 - ENTRY - 4	test_dir/pasta/copy/pasta/copypasta.c
+0.62 - 00014181 - ENTRY - 8	test_dir/pasta/copy/pasta
+0.65 - 00014181 - SEND_PIPE - 8
+0.68 - 00014181 - EXIT - 0
+0.72 - 00014180 - RECV_PIPE - 8
+0.81 - 00014180 - ENTRY - 12	test_dir/pasta/copy
+0.88 - 00014180 - SEND_PIPE - 12
+0.91 - 00014180 - EXIT - 0
+0.79 - 00014179 - RECV_PIPE - 12
+0.88 - 00014179 - ENTRY - 16	test_dir/pasta
+0.93 - 00014179 - SEND_PIPE - 16
+0.96 - 00014179 - EXIT - 0
+0.94 - 00014169 - RECV_PIPE - 16
+1.04 - 00014169 - ENTRY - 4	test_dir/importante
+0.17 - 00014183 - CREATE - Command: ./simpledu test_dir/memorias
+0.51 - 00014183 - ENTRY - 480	test_dir/memorias/780-2000x2000.jpg
+0.66 - 00014183 - ENTRY - 664	test_dir/memorias/229-2000x2000.jpg
+0.74 - 00014183 - ENTRY - 1148	test_dir/memorias
+0.78 - 00014183 - SEND_PIPE - 1148
+0.81 - 00014183 - EXIT - 0
+1.39 - 00014169 - RECV_PIPE - 1148
+1.52 - 00014169 - ENTRY - 8	test_dir/praesentcursus.txt
+1.61 - 00014169 - ENTRY - 4236	test_dir
+1.65 - 00014169 - EXIT - 0

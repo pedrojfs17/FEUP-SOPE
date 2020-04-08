@@ -26,6 +26,8 @@ void writeRegister(Register * reg);
 
 void logCreate(int argc, char *argv[]);
 
+void logCreateFork(char * path);
+
 void logExit(int exitStatus);
 
 void logRecvSignal(int sig);

@@ -40,6 +40,7 @@ void createRegister(Register * reg, Action action) {
 
 void writeRegister(Register * reg) {
     fprintf(logFile, "%.2f - %.8d - %s - %s\n", reg->instant, reg->pid, getAction(reg->action), reg->info);
+    fflush(logFile);
 }
 
 void logCreate(int argc, char *argv[]) {
@@ -50,6 +51,15 @@ void logCreate(int argc, char *argv[]) {
         if (i != argc-1)
             strcat(reg.info," ");
 	}
+
+    writeRegister(&reg);
+}
+
+void logCreateFork(char * path) {
+    Register reg; createRegister(&reg, CREATE);
+
+    strcat(reg.info, "./simpledu ");
+    strcat(reg.info, path);
 
     writeRegister(&reg);
 }

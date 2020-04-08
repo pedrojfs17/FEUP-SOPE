@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "register.h"
+#include "signals.h"
 #include "args.h"
 
 #define COMMAND_SIZE 200
