@@ -33,7 +33,7 @@ void initLogs() {
 
     setenv("LOG_FILENAME", "log.txt", 0);
 
-    logFile = fopen(getenv("LOG_FILENAME"), "a");
+    logFile = fopen(getenv("LOG_FILENAME"), "w");
     if(logFile == NULL) {
         perror("Error opening file");
         exit(1);
