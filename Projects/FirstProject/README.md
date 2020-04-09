@@ -20,9 +20,9 @@ Trabalho desenvolvido de forma a simular o comportamento o comando `du` da conso
 
 O programa desenvolvido apresenta todas as funcionalidades do comando `du`, com algumas modificações:
 
-..* Não é permitida a repetição de flags, por exemplo, `./simpledu -a -a` não é aceite pelo programa;
-..* A execução do programa cria um registo "log.txt", onde é possível analisar a sua execução;
-..* É possível interromper a execução do programa com **CTRL+C** e, posteriormente, retomar ou terminar a execução deste;
+- Não é permitida a repetição de flags, por exemplo, `./simpledu -a -a` não é aceite pelo programa;
+- A execução do programa cria um registo "log.txt", onde é possível analisar a sua execução;
+- É possível interromper a execução do programa com **CTRL+C** e, posteriormente, retomar ou terminar a execução deste;
 
 ## Detalhes
 
