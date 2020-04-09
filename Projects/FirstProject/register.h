@@ -21,7 +21,11 @@ typedef struct {
 
 const char* getAction(Action action);
 
+const char* getSignal(int signo);
+
 void initLogs();
+
+double elapsed_time();
 
 void createRegister(Register * reg, Action action);
 

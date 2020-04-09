@@ -32,9 +32,9 @@ void sigint_handler(int signo) {
         if(terminate == 'Y' || terminate == 'y'){
             if (childrenPid) {
                 logSendSignal(childrenPid, SIGTERM);
-                kill(childrenPid, SIGTERM);
+                kill(-childrenPid, SIGTERM);
                 logSendSignal(childrenPid, SIGCONT);
-                kill(childrenPid, SIGCONT); // Precisa deste sinal para poder continuar a correr o codigo do handler sigterm
+                kill(-childrenPid, SIGCONT); // Precisa deste sinal para poder continuar a correr o codigo do handler sigterm
                 waitpid(-childrenPid, NULL, 0);
             }
             logExit(1);
@@ -42,7 +42,7 @@ void sigint_handler(int signo) {
         else if(terminate == 'N' || terminate == 'n'){
             if (childrenPid) {
                 logSendSignal(childrenPid, SIGCONT);
-                kill(childrenPid, SIGCONT); 
+                kill(-childrenPid, SIGCONT); 
             }
         }
         else if (terminate != '\n'){
@@ -54,19 +54,11 @@ void sigint_handler(int signo) {
 
 void sigterm_handler(int signo) {
     logRecvSignal(signo);
-    if (childrenPid) {
-        logSendSignal(childrenPid, SIGTERM);
-        kill(childrenPid, SIGTERM);
-    }
     logExit(1);
 }
 
 void sigcont_handler(int signo) {
     logRecvSignal(signo);
-    if (childrenPid) {
-        logSendSignal(childrenPid, SIGCONT);
-        kill(childrenPid, SIGCONT);
-    }
 }
 
 void save_children_pid(pid_t pid) {
