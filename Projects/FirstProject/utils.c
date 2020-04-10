@@ -77,11 +77,7 @@ int activate_flag(char *arg, int num) {
         else args.bytes = 1;
     else if (!strcmp(ARGS[4], arg) || !strcmp(ARGS[5], arg))
         if (args.block_size != 1024 || num < 0) return -1;
-        else {
-            if (args.bytes == 1)
-                args.bytes = 0;
-            args.block_size = num;
-        }
+        else  args.block_size = num;
     else if (!strcmp(ARGS[6], arg) || !strcmp(ARGS[7], arg))
         if (args.countLinks == 1) return -1;
         else args.countLinks = 1;
