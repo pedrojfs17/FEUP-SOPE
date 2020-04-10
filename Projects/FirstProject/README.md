@@ -28,6 +28,7 @@ O programa desenvolvido apresenta todas as funcionalidades do comando `du`, com 
 ## Detalhes
 
 Inicialmente, o programa estava estruturado de forma a usar `fork()` e `execv()`, no entanto, devido a alguns problemas,
-decidimos reestruturá-lo de modo a usar `fork()` com recursividade, diminuindo assim a complexidade.
+decidimos reestruturá-lo de modo a usar `fork()` com recursividade, diminuindo assim a complexidade.  
+
 Em `du` o comando `du -b -B N` apresentaria o tamanho em blocos, no entanto, de acordo com o enunciado do trabalho, a flag **-b/--bytes**, independentemente
 da ordem dos argumentos, mostra sempre o resultado em bytes. Assim, na comparação do funcionamento dos dois comandos, podem haver "erros".
