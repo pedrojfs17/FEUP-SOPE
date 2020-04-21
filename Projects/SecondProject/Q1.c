@@ -9,6 +9,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <time.h>
+#include "defs.h"
 
 #define MAX_NAME_LEN 50
 
@@ -63,7 +64,7 @@ int main(int argc, char*argv[]){
         printf("FIFO '%s' sucessfully created\n",argv[3]);
     
     if ((fd=open(argv[3],O_RDONLY)) !=-1)
-        printf("FIFO '%s' openned in READONLY mode\n",argv[3]);
+        printf("FIFO '%s' opened in READONLY mode\n",argv[3]);
     
 
     do{
