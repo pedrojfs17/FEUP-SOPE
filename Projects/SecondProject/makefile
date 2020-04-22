@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -pthread
 OBJS = U1.o 
 XHDRS = U1.h defs.h
 EXEC = U1
