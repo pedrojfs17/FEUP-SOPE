@@ -10,7 +10,7 @@
 #include <sys/time.h>
 #include <pthread.h>
 
-#include "defs.h"
+#include "../server/defs.h"
 
 #define MAX_MSG_LEN 255
 #define NUM_THREADS_MAX 100
@@ -18,19 +18,23 @@
 int i=0;
 
 void *threader(void * arg){
-    int fd=open(*(char**)arg,O_WRONLY);
-    int fd_dummy;
+    printf("Entered THREAD\n");
+    char *fifo=arg;
+    int fd=open(fifo,O_WRONLY);
+    printf("Opened Fifo: %s\n",fifo);
+    
     if(fd==-1){
         printf("Oops !!! Service is closed !!!\n");
-        pthread_exit(NULL);
+        return NULL;
     }
-    printf("FIFO '%s' openned in WRITEONLY mode\n",*(char**)arg);
+    printf("FIFO '%s' openned in WRITEONLY mode\n",fifo);
 
     char msg[MAX_MSG_LEN];
     time_t t;
     srand((unsigned)time(&t));
 
     sprintf(msg,"[ %d, %d, %ld, %d, -1]",i,getpid(),pthread_self(),rand()%20+1);
+    printf("Message to send: %s\n",msg);
     write(fd,&msg,MAX_MSG_LEN);
     close(fd);
 
@@ -42,6 +46,7 @@ void *threader(void * arg){
     sprintf(buff,"%ld",pthread_self());
     strcat(private_fifo,buff);
 
+    int fd_dummy;
     if (mkfifo(private_fifo,0660)<0)
         if (errno == EEXIST) printf("FIFO '%s' already exists\n",private_fifo);
         else printf("Can't create FIFO\n");
@@ -84,9 +89,10 @@ int main(int argc, char *argv[]){
     double time_taken=(end.tv_sec-begin.tv_sec)*1e6;
     time_taken=(time_taken+(end.tv_usec-begin.tv_usec))*1e6;
 
-    char *fifo_copy;
-    strcpy(fifo_copy,argv[3]);
-
+    char fifo_copy[MAX_MSG_LEN]="../server/";
+    strcat(fifo_copy,argv[3]);
+    printf("This is fifo: %s\n",fifo_copy);
+    printf("Commencing cycle\n");
     while(time_taken<nsecs){
         pthread_create(&threads[t],NULL,threader,&fifo_copy);
         pthread_join(threads[t],NULL);
@@ -99,5 +105,5 @@ int main(int argc, char *argv[]){
     }
     printf("FInished work\n");
 
-    return 0;
+    pthread_exit(0);
 } 
