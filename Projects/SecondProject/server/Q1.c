@@ -22,8 +22,6 @@ void * func(void * arg){
     struct cln_msg *cop;
     cop=(struct cln_msg *) arg;
 
-    //printf("Message Received: %s\n",cop->msg);
-
     char fifo_name[MAX_NAME_LEN]="/tmp/", pidStr[MAX_NAME_LEN], tidStr[MAX_NAME_LEN];
     int i,duration, pid;
     long tid;
@@ -37,14 +35,23 @@ void * func(void * arg){
     strcat(fifo_name,tidStr);
 
     while ((fd_dummy=open(fifo_name,O_WRONLY)) < 0) {
+        writeRegister(i, pid, tid, duration, -1, GAVEUP);
         printf("Tryied to open FIFO '%s' and failed. Trying again.\n",fifo_name);
         usleep(1000);
     }
     
     char client_msg[MAX_NAME_LEN];
-    sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),duration,place++);
-    //printf("Sending message: %s\n",client_msg);
-    writeRegister(i, getpid(), pthread_self(), duration, place - 1, ENTER);
+    if(elapsed_time()+duration*1e-3<cop->bathroom_time){
+        sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),duration,place++);
+        writeRegister(i, getpid(), pthread_self(), duration, place - 1, ENTER);
+    }
+    else{
+        sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),-1,-1);
+        writeRegister(i, getpid(), pthread_self(), duration, place - 1, TOLATE);
+    }
+
+    usleep(duration*1000);
+    writeRegister(i, getpid(), pthread_self(), duration, place - 1, TIMEUP);
     write(fd_dummy,&client_msg,MAX_NAME_LEN);
     close(fd_dummy);
 
@@ -84,32 +91,24 @@ int main(int argc, char*argv[]){
             printf("FIFO '%s' has been destroyed\n",fifo_cpy);
     }
     
-    //struct timeval begin,end;
-    //gettimeofday(&begin,NULL); gettimeofday(&end,NULL);
     double nsecs;
     sscanf(argv[2],"%lf",&nsecs);
+    cm.bathroom_time=nsecs;
 
     do{
         if(read(fd,&msg,MAX_NAME_LEN) > 0 && msg[0] == '['){
-            //printf("Read msg: |%s|\n", msg);
             strcpy(cm.msg,msg);
             pthread_create(&t,NULL,func,(void *)&cm);
             pthread_join(t,NULL);
         }
-        /*gettimeofday(&end,NULL);
-        time_taken=(end.tv_sec-begin.tv_sec)*1e6;
-        time_taken=(time_taken+(end.tv_usec-begin.tv_usec))*1e-6;*/
+        
     } while(elapsed_time()<nsecs);
 
     close(fd);
-
     printf("CLOSED BATHROOM!\n");
-
 
     if (unlink(argv[3])<0)
         printf("Error when destroying FIFO '%s'\n",argv[3]);
-    //else
-        //printf("FIFO '%s' has been destroyed\n",argv[3]);
     
     
     pthread_exit(0);
