@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -pthread
-OBJS = Q1.o
-XHDRS = Q1.h defs.h
+OBJS = Q1.o ../logs/logs.o
+XHDRS = Q1.h defs.h ../logs/logs.h
 EXEC = Q1
 
 $(EXEC): $(OBJS)
