@@ -11,7 +11,8 @@
 #include <pthread.h>
 
 #include "../server/defs.h"
-#include "../logs/logs.h"
+#include "../utils/logs.h"
+#include "../utils/utils.h"
 
 #define MAX_MSG_LEN 255
 #define NUM_THREADS_MAX 100
@@ -33,7 +34,6 @@ void *threader(void * arg){
 
     if(fd==-1){
         closed=1;
-        writeRegister(i,getpid(),pthread_self(),duration,-1,FAILED);
         writeRegister(i,getpid(),pthread_self(),-1,-1,CLOSED);
         printf("Oops !!! Service is closed !!!\n");
         return NULL;
@@ -63,15 +63,19 @@ void *threader(void * arg){
 
     char server_msg[MAX_MSG_LEN];
 
-    read(fd_dummy,&server_msg,MAX_MSG_LEN);
+    if(read(fd_dummy,&server_msg,MAX_MSG_LEN)<0){
+        writeRegister(i,getpid(),pthread_self(),duration,-1,FAILED);
+        return NULL;
+    }
     
     int num1, pid, place;
     long tid;
     sscanf(server_msg,"[ %d, %d, %ld, %d, %d]",&num1,&pid,&tid,&duration, &place);
     if(place==-1 && duration==-1)
-        writeRegister(i,getpid(),pthread_self(),duration,-1,CLOSED);
+        writeRegister(num1,pid,tid,-1,-1,CLOSED);
     else
         writeRegister(num1, pid, tid, duration, place, IAMIN);
+        
     close(fd_dummy);
 
     if (unlink(private_fifo)<0)
@@ -83,29 +87,30 @@ void *threader(void * arg){
 int main(int argc, char *argv[]){
     
     pthread_t threads[NUM_THREADS_MAX];
+    cl_args args;
     int t=0;    
 
     srand(time(NULL));
 
-    if (argc!=4) {
-        printf("Usage: U1 <-t secs> fifoname\n");
+    if (check_client_arg(&args,argc,argv)==-1) {
+        perror("Error in args!\n");
         exit(1);
     }
 
     initClock();
 
-    printf("Time of execution: %s\tFifoname:%s\n",argv[2],argv[3]);
+    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,args.fifoname);
 
     
-    double nsecs;
-    sscanf(argv[2],"%lf",&nsecs);
+    /*double nsecs;
+    sscanf(argv[2],"%lf",&nsecs);*/
 
     char fifo_copy[MAX_MSG_LEN]="../server/";
-    strcat(fifo_copy,argv[3]);
+    strcat(fifo_copy,args.fifoname);
     
-    while(elapsed_time()<nsecs && !closed){
+    while(elapsed_time()<args.nsecs && !closed){
         pthread_create(&threads[t],NULL,threader,&fifo_copy);
-        pthread_join(threads[t],NULL);
+        //pthread_join(threads[t],NULL);
         usleep(50000);
         i++;
         t++;
