@@ -15,7 +15,7 @@
 #include "../utils/utils.h"
 
 #define MAX_MSG_LEN 255
-#define NUM_THREADS_MAX 100
+#define NUM_THREADS_MAX 100000
 
 int i=1;
 int closed=0;
@@ -110,8 +110,9 @@ int main(int argc, char *argv[]){
     
     while(elapsed_time()<args.nsecs && !closed){
         pthread_create(&threads[t],NULL,threader,&fifo_copy);
+        pthread_detach(threads[t]);
         //pthread_join(threads[t],NULL);
-        usleep(50000);
+        usleep(5000);
         i++;
         t++;
 

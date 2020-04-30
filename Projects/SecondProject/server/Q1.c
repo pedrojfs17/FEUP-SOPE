@@ -9,6 +9,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include <pthread.h>
 #include "defs.h"
 #include "../utils/logs.h"
 #include "../utils/utils.h"
@@ -18,6 +19,7 @@ int occupied=0;
 int closed=0;
 double time_taken = 0.0;
 
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void * func(void * arg){
     int fd_dummy;
@@ -41,23 +43,32 @@ void * func(void * arg){
         printf("Tryied to open FIFO '%s' and failed. Trying again.\n",fifo_name);
         usleep(1000);
     }
-    
+
+    pthread_mutex_lock(&mutex);
+
+    int my_place = place;
+    place++;
+
+    pthread_mutex_unlock(&mutex);
+
     char client_msg[MAX_NAME_LEN];
     if(elapsed_time()+duration*1e-3<cop->bathroom_time){
-        sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),duration,place++);
-        writeRegister(i, getpid(), pthread_self(), duration, place - 1, ENTER);
+        sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),duration,my_place);
+        writeRegister(i, getpid(), pthread_self(), duration, my_place, ENTER);
     }
     else{
         closed=1;
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),-1,-1);
-        writeRegister(i, getpid(), pthread_self(), duration, place - 1, TOLATE);
+        writeRegister(i, getpid(), pthread_self(), duration, -1, TOLATE);
     }
 
-    usleep(duration*1000);
-    if(!closed)
-        writeRegister(i, getpid(), pthread_self(), duration, place - 1, TIMEUP);
     write(fd_dummy,&client_msg,MAX_NAME_LEN);
     close(fd_dummy);
+
+    usleep(duration*1000);
+
+    if(!closed)
+        writeRegister(i, getpid(), pthread_self(), duration, my_place, TIMEUP);
 
     return NULL;
 }
@@ -106,6 +117,7 @@ int main(int argc, char*argv[]){
             strcpy(cm.msg,msg);
             pthread_create(&t,NULL,func,(void *)&cm);
             //pthread_join(t,NULL);
+            pthread_detach(t);
         }
         
     } while(elapsed_time()<args.nsecs);
@@ -116,6 +128,6 @@ int main(int argc, char*argv[]){
     if (unlink(args.fifoname)<0)
         printf("Error when destroying FIFO '%s'\n",args.fifoname);
     
-    printf("CLOSED BATHROOM!\n");
+    printf("CLOSED BATHROOM! Time : %f\n", elapsed_time());
     pthread_exit(0);
 } 
