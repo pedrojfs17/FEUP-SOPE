@@ -88,12 +88,12 @@ int main(int argc, char *argv[]){
     
     pthread_t threads[NUM_THREADS_MAX];
     cl_args args;
-    int t=0;    
+    int t=0;        
 
     srand(time(NULL));
 
     if (check_client_arg(&args,argc,argv)==-1) {
-        perror("Error in args!\n");
+        printf("Usage: U1 <-t secs> fifoname\n");
         exit(1);
     }
 

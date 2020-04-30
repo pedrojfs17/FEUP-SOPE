@@ -82,7 +82,7 @@ int main(int argc, char*argv[]){
     pthread_t t;
 
     if(check_server_arg(&args,argc,argv)==-1){
-        perror("Error in args!\n");
+        printf("Usage: U1 <-t secs> fifoname\n");
         exit(1);
     }
 
