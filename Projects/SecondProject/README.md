@@ -24,7 +24,7 @@ Cada thread é responsável por um pedido, ou seja:
 - No final, a thread irá fechar o FIFO privado e destruí-lo;
 
 
-## Programa do servidor (Qn)
+## Programa do servidor (_Qn_)
 
 Tal como descrito no enunciado, o programa _Qn_ lança threads por cada pedido dos clientes. Inicialmente, o programa cria o FIFO público com o nome fornecido pelo utilizador. Após esta abertura, está constatemente a ler o FIFO, de modo a receber um pedido. Quando o encontrar, cria uma thread.
 
