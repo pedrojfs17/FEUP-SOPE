@@ -40,7 +40,10 @@ void *threader(void * arg){
     }
 
     writeRegister(i, getpid(), pthread_self(), duration, -1, IWANT);
-    write(fd,&msg,MAX_MSG_LEN);
+    if(write(fd,&msg,MAX_MSG_LEN)<0){
+        printf("Can't write to public FIFO!\n");
+        return NULL;
+    }
     close(fd);
 
     char private_fifo[MAX_NAME_LEN]="/tmp/";
@@ -58,7 +61,7 @@ void *threader(void * arg){
     
     if ((fd_dummy=open(private_fifo,O_RDONLY)) < 0){
         printf("Error opening FIFO '%s' in READONLY mode\n",private_fifo);
-        exit(2);
+        return NULL;
     }
 
     char server_msg[MAX_MSG_LEN];
@@ -110,8 +113,8 @@ int main(int argc, char *argv[]){
     
     while(elapsed_time()<args.nsecs && !closed){
         pthread_create(&threads[t],NULL,threader,&fifo_copy);
-        pthread_detach(threads[t]);
-        //pthread_join(threads[t],NULL);
+        //pthread_detach(threads[t]);
+        pthread_join(threads[t],NULL);
         usleep(5000);
         i++;
         t++;
@@ -119,5 +122,5 @@ int main(int argc, char *argv[]){
     }
     printf("FInished work\n");
 
-    pthread_exit(0);
+    exit(0);
 } 

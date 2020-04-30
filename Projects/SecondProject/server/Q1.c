@@ -41,7 +41,8 @@ void * func(void * arg){
     while ((fd_dummy=open(fifo_name,O_WRONLY)) < 0) {
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
         printf("Tryied to open FIFO '%s' and failed. Trying again.\n",fifo_name);
-        usleep(1000);
+        //usleep(1000);
+        return NULL;
     }
 
     pthread_mutex_lock(&mutex);
@@ -79,7 +80,7 @@ int main(int argc, char*argv[]){
     char fifo_cpy[MAX_NAME_LEN];
     struct cln_msg cm;
     srv_args args;
-    pthread_t t;
+    
 
     if(check_server_arg(&args,argc,argv)==-1){
         printf("Usage: U1 <-t secs> fifoname\n");
@@ -115,6 +116,7 @@ int main(int argc, char*argv[]){
     do{
         if(read(fd,&msg,MAX_NAME_LEN) > 0 && msg[0] == '['){
             strcpy(cm.msg,msg);
+            pthread_t t;
             pthread_create(&t,NULL,func,(void *)&cm);
             //pthread_join(t,NULL);
             pthread_detach(t);
@@ -129,5 +131,5 @@ int main(int argc, char*argv[]){
         printf("Error when destroying FIFO '%s'\n",args.fifoname);
     
     printf("CLOSED BATHROOM! Time : %f\n", elapsed_time());
-    pthread_exit(0);
+    exit(0);
 } 
