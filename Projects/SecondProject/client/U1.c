@@ -93,8 +93,11 @@ void *threader(void * arg){
     int num1, pid, place;
     long tid;
     sscanf(server_msg,"[ %d, %d, %ld, %d, %d]",&num1,&pid,&tid,&duration, &place);
-    if(place==-1 && duration==-1)
+    if(place==-1 && duration==-1) {
+        closed = 1;
         writeRegister(num1,pid,tid,-1,-1,CLOSED);
+        printf("Oops !!! Service is closed !!!\n");
+    }
     else
         writeRegister(num1, pid, tid, duration, place, IAMIN);
         
