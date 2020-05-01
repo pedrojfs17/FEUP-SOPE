@@ -41,5 +41,4 @@ Cada thread é responsável por um atender um pedido, ou seja:
 
 ### Notas
 Existe um make file no diretório principal do programa, que permite compilar os dois programas.
-Alguns erros: o fecho do quarto de banho pode dar-se em 5,000000±0,000500 s; há erros no cálculo de lugares devido a falhas de comunicação entre FIFOS (só ocorre se o tempo de execução dos dois programas for igual)
-É necessário dar make dentro das pastas client e server, antes de correr os dois programas, em dois terminais separados.
+Alguns erros: o fecho do quarto de banho pode dar-se em 5,000000±0,000500 s; De vez em quando, há erros no cálculo de lugares devido a falhas de comunicação entre FIFOS (só ocorre se o tempo de execução dos dois programas for igual).
