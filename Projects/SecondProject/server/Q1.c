@@ -10,7 +10,7 @@
 #include <pthread.h>
 #include <sys/time.h>
 #include <pthread.h>
-#include "defs.h"
+#include "../utils/defs.h"
 #include "../utils/logs.h"
 #include "../utils/utils.h"
 
@@ -39,10 +39,10 @@ void * func(void * arg){
     strcat(fifo_name,tidStr);
 
     while ((fd_dummy=open(fifo_name,O_WRONLY)) < 0) {
-        writeRegister(i, pid, tid, duration, -1, GAVEUP);
-        printf("Tryied to open FIFO '%s' and failed. Trying again.\n",fifo_name);
-        //usleep(1000);
-        return NULL;
+        //writeRegister(i, pid, tid, duration, -1, GAVEUP);
+        //printf("Tryied to open FIFO '%s' and failed. Trying again.\n",fifo_name);
+        usleep(1000);
+        //return NULL;
     }
 
     pthread_mutex_lock(&mutex);
@@ -63,7 +63,10 @@ void * func(void * arg){
         writeRegister(i, getpid(), pthread_self(), duration, -1, TOLATE);
     }
 
-    write(fd_dummy,&client_msg,MAX_NAME_LEN);
+    if(write(fd_dummy,&client_msg,MAX_NAME_LEN)<0){
+        writeRegister(i, pid, tid, duration, -1, GAVEUP);
+        return NULL;
+    }
     close(fd_dummy);
 
     usleep(duration*1000);
@@ -77,43 +80,44 @@ void * func(void * arg){
 int main(int argc, char*argv[]){
     int fd;
     char msg[MAX_NAME_LEN];
-    char fifo_cpy[MAX_NAME_LEN];
+    char fifo_cpy[MAX_NAME_LEN]="server/";
     struct cln_msg cm;
     srv_args args;
+    args.nsecs=0;
     
 
     if(check_server_arg(&args,argc,argv)==-1){
-        printf("Usage: U1 <-t secs> fifoname\n");
+        printf("Usage: Q1 <-t secs> fifoname\n");
         exit(1);
     }
 
     initClock();
     
-    //strcpy(fifo_cpy,argv[3]);
-    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,args.fifoname);
+    strcat(fifo_cpy,args.fifoname);
+    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,fifo_cpy);
 
-    if (mkfifo(args.fifoname,0660)<0) //Makes fifoname
-        if (errno == EEXIST) printf("FIFO '%s' already exists\n",args.fifoname);
+    if (mkfifo(fifo_cpy,0660)<0) //Makes fifoname
+        if (errno == EEXIST) printf("FIFO '%s' already exists\n",fifo_cpy);
         else printf("Can't create FIFO\n");
     else 
-        printf("FIFO '%s' sucessfully created\n",args.fifoname);
+        printf("FIFO '%s' sucessfully created\n",fifo_cpy);
 
     
-    if ((fd=open(args.fifoname,O_RDONLY | O_NONBLOCK)) !=-1)
-        printf("FIFO '%s' opened in READONLY mode\n",args.fifoname);
+    if ((fd=open(fifo_cpy,O_RDONLY | O_NONBLOCK)) !=-1)
+        printf("FIFO '%s' opened in READONLY mode\n",fifo_cpy);
     else{
         printf("Can't open FIFO\n");
-        if (unlink(args.fifoname)<0)
-        printf("Error when destroying FIFO '%s'\n",args.fifoname);
+        if (unlink(fifo_cpy)<0)
+        printf("Error when destroying FIFO '%s'\n",fifo_cpy);
         else
-            printf("FIFO '%s' has been destroyed\n",args.fifoname);
+            printf("FIFO '%s' has been destroyed\n",fifo_cpy);
     }
     
     /*double nsecs;
     sscanf(argv[2],"%lf",&nsecs);*/
     cm.bathroom_time=args.nsecs;
 
-    do{
+    while(elapsed_time()<args.nsecs){
         if(read(fd,&msg,MAX_NAME_LEN) > 0 && msg[0] == '['){
             strcpy(cm.msg,msg);
             pthread_t t;
@@ -122,14 +126,15 @@ int main(int argc, char*argv[]){
             pthread_detach(t);
         }
         
-    } while(elapsed_time()<args.nsecs);
+    }
     closed=1;
     close(fd);
     
 
-    if (unlink(args.fifoname)<0)
-        printf("Error when destroying FIFO '%s'\n",args.fifoname);
-    
+    if (unlink(fifo_cpy)<0)
+        printf("Error when destroying FIFO '%s'\n",fifo_cpy);
+
+    printf("Destroyed FIFO '%s'\n",fifo_cpy);
     printf("CLOSED BATHROOM! Time : %f\n", elapsed_time());
     exit(0);
 } 

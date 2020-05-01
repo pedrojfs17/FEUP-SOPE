@@ -10,7 +10,7 @@
 #include <sys/time.h>
 #include <pthread.h>
 
-#include "../server/defs.h"
+#include "../utils/defs.h"
 #include "../utils/logs.h"
 #include "../utils/utils.h"
 
@@ -23,13 +23,12 @@ int closed=0;
 void *threader(void * arg){
     
     char *fifo=arg;
-    int fd=open(fifo,O_WRONLY);
+    int fd=open(fifo,O_WRONLY|O_NONBLOCK,0660);
     
     char msg[MAX_MSG_LEN];
-    time_t t;
 
     int duration = rand() % 20 + 1;
-
+    int try=0;
     sprintf(msg,"[ %d, %d, %ld, %d, -1]",i,(int)getpid(),(long)pthread_self(),duration);
 
     if(fd==-1){
@@ -38,12 +37,24 @@ void *threader(void * arg){
         printf("Oops !!! Service is closed !!!\n");
         return NULL;
     }
-
-    writeRegister(i, getpid(), pthread_self(), duration, -1, IWANT);
-    if(write(fd,&msg,MAX_MSG_LEN)<0){
-        printf("Can't write to public FIFO!\n");
+    if(closed){
+        writeRegister(i,getpid(),pthread_self(),-1,-1,CLOSED);
         return NULL;
     }
+    
+    writeRegister(i, getpid(), pthread_self(), duration, -1, IWANT);
+    while(write(fd,&msg,MAX_MSG_LEN)<=0 && try<5){
+        printf("Can't write to public FIFO!\n");
+        usleep(500);
+        try++;
+    }
+    if(try==5){
+        writeRegister(i,getpid(),pthread_self(),-1,-1,FAILED);
+        close(fd);
+        try=0;
+        return NULL;
+    }
+    try=0;
     close(fd);
 
     char private_fifo[MAX_NAME_LEN]="/tmp/";
@@ -53,21 +64,29 @@ void *threader(void * arg){
     strcat(private_fifo,".");
     sprintf(buff,"%ld",pthread_self());
     strcat(private_fifo,buff);
-
     int fd_dummy;
-    if (mkfifo(private_fifo,0660)<0)
+
+    if (mkfifo(private_fifo,0660)<0){
         if (errno == EEXIST) printf("FIFO '%s' already exists\n",private_fifo);
-        else{ printf("Can't create FIFO\n"); exit(1);}
+        else{ printf("Can't create FIFO\n"); return NULL;}
+    }
     
-    if ((fd_dummy=open(private_fifo,O_RDONLY)) < 0){
+    if ((fd_dummy=open(private_fifo,O_RDONLY|O_NONBLOCK)) <= 0){
         printf("Error opening FIFO '%s' in READONLY mode\n",private_fifo);
         return NULL;
     }
 
     char server_msg[MAX_MSG_LEN];
+    
+    while(read(fd_dummy,&server_msg,MAX_MSG_LEN)<=0 && try<5){
+        usleep(1000);
+        try++;
+    }
 
-    if(read(fd_dummy,&server_msg,MAX_MSG_LEN)<0){
+    if(try==5){
         writeRegister(i,getpid(),pthread_self(),duration,-1,FAILED);
+        if (unlink(private_fifo)<0)
+            printf("Error when destroying FIFO '%s'\n",private_fifo);
         return NULL;
     }
     
@@ -102,15 +121,15 @@ int main(int argc, char *argv[]){
 
     initClock();
 
-    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,args.fifoname);
-
     
     /*double nsecs;
     sscanf(argv[2],"%lf",&nsecs);*/
 
-    char fifo_copy[MAX_MSG_LEN]="../server/";
+    char fifo_copy[MAX_MSG_LEN]="server/";
     strcat(fifo_copy,args.fifoname);
-    
+
+    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,fifo_copy);
+
     while(elapsed_time()<args.nsecs && !closed){
         pthread_create(&threads[t],NULL,threader,&fifo_copy);
         //pthread_detach(threads[t]);

@@ -40,4 +40,5 @@ Cada thread é responsável por um atender um pedido, ou seja:
 - Finalmente, a thread espera o tempo da duração do cliente e, após esse intervalo, acusa a mensagem de término de tempo de utilização, _TIMUP_;
 
 ### Notas
-É necessário dar make dentro das pastas client e server, antes de correr os dois programas, em dois terminais separados.
+Existe um make file no diretório principal do programa, que permite compilar os dois programas.
+Alguns erros: o fecho do quarto de banho pode dar-se em 5,000000±0,000500 s; há erros no cálculo de lugares devido a falhas de comunicação entre FIFOS (só ocorre se o tempo de execução dos dois programas for igual)
