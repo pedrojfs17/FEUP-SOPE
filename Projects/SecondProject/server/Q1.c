@@ -18,8 +18,10 @@ int place=1;
 int closed=0;
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mutex2 = PTHREAD_MUTEX_INITIALIZER;
 
 void * func(void * arg){
+    
     int privateFifo;
     struct cln_msg *cop;
     cop=(struct cln_msg *) arg;
@@ -35,37 +37,48 @@ void * func(void * arg){
     strcat(privateFifoName,".");
     sprintf(tidStr, "%ld", tid);
     strcat(privateFifoName,tidStr);
-
-    while ((privateFifo=open(privateFifoName,O_WRONLY)) < 0) {usleep(1000);}
-
+    int try=0;
+    while ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) <= 0 && try<5) {try++;usleep(500);}
+    if(try==5){
+        writeRegister(i, pid, tid, duration, -1, GAVEUP);
+        pthread_exit(NULL);
+    }
+    
     pthread_mutex_lock(&mutex);
     int my_place = place;
     place++;
     pthread_mutex_unlock(&mutex);
 
     char client_msg[MAX_NAME_LEN];
-    if(elapsed_time()+duration*1e-3<cop->bathroom_time){
+
+    pthread_mutex_lock(&mutex2);
+    if(elapsed_time()+duration*1e-3<cop->bathroom_time || closed){
+        pthread_mutex_unlock(&mutex2);
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),duration,my_place);
         writeRegister(i, getpid(), pthread_self(), duration, my_place, ENTER);
     }
     else{
-        closed=1;
+        pthread_mutex_unlock(&mutex2);
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),-1,-1);
         writeRegister(i, getpid(), pthread_self(), duration, -1, TOOLATE);
     }
 
-    if(write(privateFifo,&client_msg,MAX_NAME_LEN)<0){
+    if(write(privateFifo,&client_msg,MAX_NAME_LEN)<=0){
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
-        return NULL;
+        close(privateFifo);
+        pthread_exit(NULL);
     }
     close(privateFifo);
 
-    usleep(duration*1000);
-
-    if(!closed)
+    pthread_mutex_lock(&mutex2);
+    if(!closed){
+        pthread_mutex_unlock(&mutex2);
+        usleep(duration*1000);
         writeRegister(i, getpid(), pthread_self(), duration, my_place, TIMEUP);
+    }
+        
 
-    return NULL;
+    pthread_exit(NULL);
 }
 
 int main(int argc, char*argv[]){
@@ -112,7 +125,9 @@ int main(int argc, char*argv[]){
         }
         
     }
+    pthread_mutex_lock(&mutex2);
     closed=1;
+    pthread_mutex_unlock(&mutex2);
     close(fd);
     
     if (unlink(publicFifoName)<0)

@@ -29,7 +29,7 @@ void *threader(void * arg){
         closed=1;
         writeRegister(i,getpid(),pthread_self(),-1,-1,CLOSED);
         printf("Oops !!! Service is closed !!!\n");
-        return NULL;
+        pthread_exit(NULL);
     }
 
     char msg[MAX_MSG_LEN];
@@ -49,7 +49,7 @@ void *threader(void * arg){
     if(try==5){
         writeRegister(i,getpid(),pthread_self(),-1,-1,FAILED);
         close(fd);
-        return NULL;
+        pthread_exit(NULL);
     }
 
     try=0;
@@ -67,26 +67,29 @@ void *threader(void * arg){
 
     if (mkfifo(privateFifoName,0660)<0){
         if (errno == EEXIST) printf("FIFO '%s' already exists\n",privateFifoName);
-        else { printf("Can't create FIFO\n"); return NULL;}
+        else { printf("Can't create FIFO\n"); pthread_exit(NULL);}
     }
     
     if ((privateFifo=open(privateFifoName,O_RDONLY|O_NONBLOCK)) <= 0){
         printf("Error opening FIFO '%s' in READONLY mode\n",privateFifoName);
-        return NULL;
+        pthread_exit(NULL);
     }
 
     char server_msg[MAX_MSG_LEN];
     
     while(read(privateFifo,&server_msg,MAX_MSG_LEN)<=0 && try<5){
-        usleep(1000);
+        //printf("Can't read from private FIFO\n");
+        usleep(500);
         try++;
     }
 
     if(try==5){
         writeRegister(i,getpid(),pthread_self(),duration,-1,FAILED);
+        if (close(privateFifo) < 0)
+            printf("Error closing FIFO %s file descriptor.\n", privateFifoName);
         if (unlink(privateFifoName)<0)
             printf("Error when destroying FIFO '%s'\n",privateFifoName);
-        return NULL;
+        pthread_exit(NULL);
     }
     
     int num1, pid, place;
@@ -107,7 +110,7 @@ void *threader(void * arg){
     if (unlink(privateFifoName) < 0)
         printf("Error when destroying FIFO '%s'\n",privateFifoName);
 
-    return NULL;
+    pthread_exit(NULL);
 }
 
 int main(int argc, char *argv[]){
