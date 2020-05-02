@@ -14,7 +14,7 @@
 #define ENTER "ENTER"
 #define IAMIN "IAMIN"
 #define TIMEUP "TIMUP"
-#define TOLATE "2LATE"
+#define TOOLATE "2LATE"
 #define CLOSED "CLOSD"
 #define FAILED "FAILD"
 #define GAVEUP "GAVUP"

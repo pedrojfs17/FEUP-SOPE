@@ -15,41 +15,32 @@
 #include "../utils/utils.h"
 
 int place=1;
-int occupied=0;
 int closed=0;
-double time_taken = 0.0;
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void * func(void * arg){
-    int fd_dummy;
+    int privateFifo;
     struct cln_msg *cop;
     cop=(struct cln_msg *) arg;
 
-    char fifo_name[MAX_NAME_LEN]="/tmp/", pidStr[MAX_NAME_LEN], tidStr[MAX_NAME_LEN];
+    char privateFifoName[MAX_NAME_LEN]="/tmp/", pidStr[MAX_NAME_LEN], tidStr[MAX_NAME_LEN];
     int i,duration, pid;
     long tid;
     sscanf(cop->msg,"[ %d, %d, %ld, %d, -1]",&i,&pid,&tid,&duration);
     writeRegister(i, pid, tid, duration, -1, RECEIVED);
 
     sprintf(pidStr, "%d", pid);
-    strcat(fifo_name,pidStr);
-    strcat(fifo_name,".");
+    strcat(privateFifoName,pidStr);
+    strcat(privateFifoName,".");
     sprintf(tidStr, "%ld", tid);
-    strcat(fifo_name,tidStr);
+    strcat(privateFifoName,tidStr);
 
-    while ((fd_dummy=open(fifo_name,O_WRONLY)) < 0) {
-        //writeRegister(i, pid, tid, duration, -1, GAVEUP);
-        //printf("Tryied to open FIFO '%s' and failed. Trying again.\n",fifo_name);
-        usleep(1000);
-        //return NULL;
-    }
+    while ((privateFifo=open(privateFifoName,O_WRONLY)) < 0) {usleep(1000);}
 
     pthread_mutex_lock(&mutex);
-
     int my_place = place;
     place++;
-
     pthread_mutex_unlock(&mutex);
 
     char client_msg[MAX_NAME_LEN];
@@ -60,14 +51,14 @@ void * func(void * arg){
     else{
         closed=1;
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),-1,-1);
-        writeRegister(i, getpid(), pthread_self(), duration, -1, TOLATE);
+        writeRegister(i, getpid(), pthread_self(), duration, -1, TOOLATE);
     }
 
-    if(write(fd_dummy,&client_msg,MAX_NAME_LEN)<0){
+    if(write(privateFifo,&client_msg,MAX_NAME_LEN)<0){
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
         return NULL;
     }
-    close(fd_dummy);
+    close(privateFifo);
 
     usleep(duration*1000);
 
@@ -80,12 +71,11 @@ void * func(void * arg){
 int main(int argc, char*argv[]){
     int fd;
     char msg[MAX_NAME_LEN];
-    char fifo_cpy[MAX_NAME_LEN]="server/";
+    char publicFifoName[MAX_NAME_LEN]="server/";
     struct cln_msg cm;
     srv_args args;
     args.nsecs=0;
     
-
     if(check_server_arg(&args,argc,argv)==-1){
         printf("Usage: Q1 <-t secs> fifoname\n");
         exit(1);
@@ -93,28 +83,24 @@ int main(int argc, char*argv[]){
 
     initClock();
     
-    strcat(fifo_cpy,args.fifoname);
-    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,fifo_cpy);
+    strcat(publicFifoName,args.fifoname);
+    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,publicFifoName);
 
-    if (mkfifo(fifo_cpy,0660)<0) //Makes fifoname
-        if (errno == EEXIST) printf("FIFO '%s' already exists\n",fifo_cpy);
+    if (mkfifo(publicFifoName,0660)<0)
+        if (errno == EEXIST) printf("FIFO '%s' already exists\n",publicFifoName);
         else printf("Can't create FIFO\n");
     else 
-        printf("FIFO '%s' sucessfully created\n",fifo_cpy);
+        printf("FIFO '%s' sucessfully created\n",publicFifoName);
 
     
-    if ((fd=open(fifo_cpy,O_RDONLY | O_NONBLOCK)) !=-1)
-        printf("FIFO '%s' opened in READONLY mode\n",fifo_cpy);
+    if ((fd=open(publicFifoName,O_RDONLY | O_NONBLOCK)) != -1)
+        printf("FIFO '%s' opened in READONLY mode\n",publicFifoName);
     else{
         printf("Can't open FIFO\n");
-        if (unlink(fifo_cpy)<0)
-        printf("Error when destroying FIFO '%s'\n",fifo_cpy);
-        else
-            printf("FIFO '%s' has been destroyed\n",fifo_cpy);
+        if (unlink(publicFifoName)<0) printf("Error when destroying FIFO '%s'\n",publicFifoName);
+        else printf("FIFO '%s' has been destroyed\n",publicFifoName);
     }
     
-    /*double nsecs;
-    sscanf(argv[2],"%lf",&nsecs);*/
     cm.bathroom_time=args.nsecs;
 
     while(elapsed_time()<args.nsecs){
@@ -122,7 +108,6 @@ int main(int argc, char*argv[]){
             strcpy(cm.msg,msg);
             pthread_t t;
             pthread_create(&t,NULL,func,(void *)&cm);
-            //pthread_join(t,NULL);
             pthread_detach(t);
         }
         
@@ -130,11 +115,10 @@ int main(int argc, char*argv[]){
     closed=1;
     close(fd);
     
+    if (unlink(publicFifoName)<0)
+        printf("Error when destroying FIFO '%s'\n",publicFifoName);
 
-    if (unlink(fifo_cpy)<0)
-        printf("Error when destroying FIFO '%s'\n",fifo_cpy);
-
-    printf("Destroyed FIFO '%s'\n",fifo_cpy);
+    printf("Destroyed FIFO '%s'\n",publicFifoName);
     printf("CLOSED BATHROOM! Time : %f\n", elapsed_time());
     exit(0);
 } 
