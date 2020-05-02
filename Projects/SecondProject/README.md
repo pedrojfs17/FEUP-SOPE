@@ -39,7 +39,10 @@ Cada thread é responsável por um atender um pedido, ou seja:
 - De seguida escreve a mensagem composta no FIFO privado e fecha-o;
 - Finalmente, a thread espera o tempo da duração do cliente e, após esse intervalo, acusa a mensagem de término de tempo de utilização, _TIMUP_;
 
-### Notas
-Existe um make file no diretório principal do programa, que permite compilar os dois programas.
+### Notas sobre o funcionamento do programa
+
+Existe um make file no diretório principal do programa, que permite compilar os dois programas, simultaneamente.
+
+Através da nossa interpretação do enunciado, 
 Alguns erros: o fecho do quarto de banho pode dar-se em 5,000000±0,000500 s; De vez em quando, há erros no cálculo de lugares devido a falhas de comunicação entre FIFOS (só ocorre se o tempo de execução dos dois programas for igual).
 Durante o desenvolvimento do programa, foi difícil testar se as funcionalidades estavam a ser executadas corretamente, visto que erros que apareciam a um colega de trabalho não apareciam ao outro e vice-versa.

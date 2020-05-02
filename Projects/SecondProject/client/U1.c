@@ -19,6 +19,7 @@
 
 int i=1;
 int closed=0;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void *threader(void * arg){
     
@@ -36,9 +37,12 @@ void *threader(void * arg){
 
     int duration = rand() % 20 + 1;
     int try=0;
-    sprintf(msg,"[ %d, %d, %ld, %d, -1]",i,(int)getpid(),(long)pthread_self(),duration);
+    pthread_mutex_lock(&mutex);
+        int mynum=i;
+    pthread_mutex_unlock(&mutex);
+    sprintf(msg,"[ %d, %d, %ld, %d, -1]",mynum,(int)getpid(),(long)pthread_self(),duration);
     
-    writeRegister(i, getpid(), pthread_self(), duration, -1, IWANT);
+    writeRegister(mynum, getpid(), pthread_self(), duration, -1, IWANT);
 
     while(write(fd,&msg,MAX_MSG_LEN)<=0 && try<5){
         printf("Can't write to public FIFO!\n");
@@ -47,7 +51,7 @@ void *threader(void * arg){
     }
 
     if(try==5){
-        writeRegister(i,getpid(),pthread_self(),-1,-1,FAILED);
+        writeRegister(mynum,getpid(),pthread_self(),-1,-1,FAILED);
         close(fd);
         pthread_exit(NULL);
     }
@@ -84,7 +88,7 @@ void *threader(void * arg){
     }
 
     if(try==5){
-        writeRegister(i,getpid(),pthread_self(),duration,-1,FAILED);
+        writeRegister(mynum,getpid(),pthread_self(),duration,-1,FAILED);
         if (close(privateFifo) < 0)
             printf("Error closing FIFO %s file descriptor.\n", privateFifoName);
         if (unlink(privateFifoName)<0)
@@ -136,9 +140,12 @@ int main(int argc, char *argv[]){
     while(elapsed_time()<args.nsecs && !closed){
         pthread_create(&threads[t],NULL,threader,&publicFifoName);
         pthread_join(threads[t],NULL);
-        usleep(5000);
+        pthread_mutex_lock(&mutex);
         i++;
         t++;
+        pthread_mutex_unlock(&mutex);
+        usleep(5000);
+        
     }
     
     printf("FInished work! Time : %f\n", elapsed_time());
