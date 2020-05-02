@@ -41,7 +41,7 @@ void * func(void * arg){
     sprintf(tidStr, "%ld", tid);
     strcat(privateFifoName,tidStr);
     int try=0;
-    while ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) <= 0 && try<5) {try++;usleep(500);}
+    while ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) <= 0 && try<5) {try++;usleep(200);}
     if(try==5){
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
         pthread_mutex_lock(&running_mutex);

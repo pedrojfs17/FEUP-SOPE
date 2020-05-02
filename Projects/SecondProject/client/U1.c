@@ -46,7 +46,7 @@ void *threader(void * arg){
 
     while(write(fd,&msg,MAX_MSG_LEN)<=0 && try<5){
         printf("Can't write to public FIFO!\n");
-        usleep(500);
+        usleep(100);
         try++;
     }
 
@@ -80,10 +80,12 @@ void *threader(void * arg){
     }
 
     char server_msg[MAX_MSG_LEN];
+
+    usleep(400);
     
     while(read(privateFifo,&server_msg,MAX_MSG_LEN)<=0 && try<5){
-        //printf("Can't read from private FIFO\n");
-        usleep(500);
+        printf("Can't read from private FIFO\n");
+        usleep(1000);
         try++;
     }
 
