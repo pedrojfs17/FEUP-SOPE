@@ -17,6 +17,9 @@
 int place=1;
 int closed=0;
 
+volatile int running_threads = 0;
+pthread_mutex_t running_mutex = PTHREAD_MUTEX_INITIALIZER;
+
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mutex2 = PTHREAD_MUTEX_INITIALIZER;
 
@@ -41,6 +44,9 @@ void * func(void * arg){
     while ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) <= 0 && try<5) {try++;usleep(500);}
     if(try==5){
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
+        pthread_mutex_lock(&running_mutex);
+        running_threads--;
+        pthread_mutex_unlock(&running_mutex);
         pthread_exit(NULL);
     }
     
@@ -52,12 +58,12 @@ void * func(void * arg){
     char client_msg[MAX_NAME_LEN];
 
     pthread_mutex_lock(&mutex2);
-    if(elapsed_time()+duration*1e-3<cop->bathroom_time || closed){
+    if(elapsed_time()<cop->bathroom_time){
         pthread_mutex_unlock(&mutex2);
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),duration,my_place);
         writeRegister(i, getpid(), pthread_self(), duration, my_place, ENTER);
     }
-    else{
+    else {
         pthread_mutex_unlock(&mutex2);
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),-1,-1);
         writeRegister(i, getpid(), pthread_self(), duration, -1, TOOLATE);
@@ -66,6 +72,9 @@ void * func(void * arg){
     if(write(privateFifo,&client_msg,MAX_NAME_LEN)<=0){
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
         close(privateFifo);
+        pthread_mutex_lock(&running_mutex);
+        running_threads--;
+        pthread_mutex_unlock(&running_mutex);
         pthread_exit(NULL);
     }
     close(privateFifo);
@@ -76,8 +85,13 @@ void * func(void * arg){
         usleep(duration*1000);
         writeRegister(i, getpid(), pthread_self(), duration, my_place, TIMEUP);
     }
+    else
+        pthread_mutex_unlock(&mutex2);
         
-
+        
+    pthread_mutex_lock(&running_mutex);
+    running_threads--;
+    pthread_mutex_unlock(&running_mutex);
     pthread_exit(NULL);
 }
 
@@ -116,18 +130,23 @@ int main(int argc, char*argv[]){
     
     cm.bathroom_time=args.nsecs;
 
-    while(elapsed_time()<args.nsecs){
+    while(elapsed_time()<args.nsecs || running_threads > 0){
         if(read(fd,&msg,MAX_NAME_LEN) > 0 && msg[0] == '['){
             strcpy(cm.msg,msg);
             pthread_t t;
+            pthread_mutex_lock(&running_mutex);
+            running_threads++;
+            pthread_mutex_unlock(&running_mutex);
             pthread_create(&t,NULL,func,(void *)&cm);
             pthread_detach(t);
         }
-        
+        if (elapsed_time()>args.nsecs && !closed) {
+            pthread_mutex_lock(&mutex2);
+            closed=1;
+            pthread_mutex_unlock(&mutex2);
+        }
     }
-    pthread_mutex_lock(&mutex2);
-    closed=1;
-    pthread_mutex_unlock(&mutex2);
+    
     close(fd);
     
     if (unlink(publicFifoName)<0)

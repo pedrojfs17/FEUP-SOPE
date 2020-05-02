@@ -25,7 +25,7 @@ void *threader(void * arg){
     char *publicFifoName = arg;
     int fd = open(publicFifoName,O_WRONLY|O_NONBLOCK,0660);
     
-    if(fd == -1 || closed){
+    if(fd == -1 && !closed){
         closed=1;
         writeRegister(i,getpid(),pthread_self(),-1,-1,CLOSED);
         printf("Oops !!! Service is closed !!!\n");
@@ -141,7 +141,7 @@ int main(int argc, char *argv[]){
         t++;
     }
     
-    printf("FInished work\n");
+    printf("FInished work! Time : %f\n", elapsed_time());
 
     exit(0);
 } 

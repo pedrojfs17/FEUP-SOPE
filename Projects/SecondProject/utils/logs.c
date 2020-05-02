@@ -2,17 +2,15 @@
 
 struct timeval beginTime;
 struct timeval currentTime;
-double elapsed;
 
 void initClock() {
     gettimeofday(&beginTime, NULL);
-    elapsed = 0;
 }
 
 double elapsed_time() {
     gettimeofday(&currentTime, NULL);
 
-    elapsed = (currentTime.tv_sec - beginTime.tv_sec) * 1e6;
+    double elapsed = (currentTime.tv_sec - beginTime.tv_sec) * 1e6;
     elapsed = (elapsed + (currentTime.tv_usec - beginTime.tv_usec)) * 1e-6;
 
     return elapsed;
