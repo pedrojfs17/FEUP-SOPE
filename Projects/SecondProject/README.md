@@ -3,7 +3,7 @@
 ## Objetivos
 
 - Criar programas _multithread_;
-- Promver a intercomunicação entre processos através de canais com nome (_named pipes_ ou _FIFOs_);
+- Promover a intercomunicação entre processos através de canais com nome (_named pipes_ ou _FIFOs_);
 - Evitar conflitos entre entidades concorrentes, por via de _mecanismos de sincronização_;
 
 ## Programa do cliente (_Un_)
@@ -35,7 +35,7 @@ Cada thread é responsável por um atender um pedido, ou seja:
 "[i,pid,tid,dur,pl]", que foi enviada pelo cliente;
 - De seguida, irá tentar abrir o FIFO privado que foi fornecido pelo cliente sendo que no caso desta comunicação não ser possível , o servidor acusará uma mensagem de que desistiu, _GAVUP_.
 - Estabelecendo-se uma ligação ao FIFO privado, a variável responsável pelo controlo dos lugares será alterada. Esta variável está protegida por processos de sincronização, de modo a que o incremento seja sequencial;
-- Após este passo, a thread vai verificar se a duração que o cliente quer não excede o tempo de execução do Quarto de Banho. No caso de não exceder, compõe uma mensagem com o mesmo formato da que recebeu, com o devido lugar na fila e duração de utilização e acusa uma mensagem de entrada do cliente, _ENTER_. No caso de exceder, a mensagem irá retornar a duração e o lugar do cliente como _-1_ e acusa a mensagem de atraso, _2LATE_;
+- Após este passo, a thread vai verificar se o tempo em que o cliente fez o pedido não excedeu o tempo de execução do Quarto de Banho. No caso de não exceder, compõe uma mensagem com o mesmo formato da que recebeu, com o devido lugar na fila e duração de utilização e acusa uma mensagem de entrada do cliente, _ENTER_. No caso de exceder, a mensagem irá retornar a duração e o lugar do cliente como _-1_ e acusa a mensagem de atraso, _2LATE_;
 - De seguida escreve a mensagem composta no FIFO privado e fecha-o;
 - Finalmente, a thread espera o tempo da duração do cliente e, após esse intervalo, acusa a mensagem de término de tempo de utilização, _TIMUP_;
 
@@ -43,6 +43,10 @@ Cada thread é responsável por um atender um pedido, ou seja:
 
 Existe um make file no diretório principal do programa, que permite compilar os dois programas, simultaneamente.
 
-Através da nossa interpretação do enunciado, 
-Alguns erros: o fecho do quarto de banho pode dar-se em 5,000000±0,000500 s; De vez em quando, há erros no cálculo de lugares devido a falhas de comunicação entre FIFOS (só ocorre se o tempo de execução dos dois programas for igual).
-Durante o desenvolvimento do programa, foi difícil testar se as funcionalidades estavam a ser executadas corretamente, visto que erros que apareciam a um colega de trabalho não apareciam ao outro e vice-versa.
+Através da nossa interpretação do enunciado, o pedido de um cliente é atendido, independentemente do seu tempo de duração, se este foi feito anterior ao fecho da casa de banho (semelhante ao funcionamento de uma loja, quando um cliente entra antes de fechar). Assim, o FIFO só será encerrado após responder a todos os pedidos feitos até ao seu fecho.
+
+Alguns erros: os pedidos que são recebidos pelo quarto de banho podem dar-se até ±0,005000 s depois do tempo de execução desta (caso o tempo de execução do Quarto de Banho seja inferior ao tempo de execução do ciclo de pedidos).
+
+De vez em quando, há erros no cálculo de lugares devido a falhas de comunicação entre FIFOS, ou seja, no caso de ocorrer um _GAVUP_ OU _FAILD_.
+
+Durante o desenvolvimento do programa, foi difícil testar se as funcionalidades estavam a ser executadas corretamente, visto que erros que apareciam a um colega de trabalho não apareciam ao outro e vice-versa. Tempos de execução, número de threads lançadas, posicionamento dos clientes, número de tentativas de leitura/escrita para um FIFO de modo a que funcionasse corretamente foram alguns dos problemas encontrados.
