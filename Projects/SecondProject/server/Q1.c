@@ -104,28 +104,28 @@ int main(int argc, char*argv[]){
     args.nsecs=0;
     
     if(check_server_arg(&args,argc,argv)==-1){
-        printf("Usage: Q1 <-t secs> fifoname\n");
+        fprintf(stderr, "Usage: Q1 <-t secs> fifoname\n");
         exit(1);
     }
 
     initClock();
     
     strcat(publicFifoName,args.fifoname);
-    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,publicFifoName);
+    fprintf(stderr, "Time of execution: %d\tFifoname:%s\n",args.nsecs,publicFifoName);
 
     if (mkfifo(publicFifoName,0660)<0)
-        if (errno == EEXIST) printf("FIFO '%s' already exists\n",publicFifoName);
-        else printf("Can't create FIFO\n");
+        if (errno == EEXIST) fprintf(stderr, "FIFO '%s' already exists\n",publicFifoName);
+        else fprintf(stderr, "Can't create FIFO\n");
     else 
-        printf("FIFO '%s' sucessfully created\n",publicFifoName);
+        fprintf(stderr, "FIFO '%s' sucessfully created\n",publicFifoName);
 
     
     if ((fd=open(publicFifoName,O_RDONLY | O_NONBLOCK)) != -1)
-        printf("FIFO '%s' opened in READONLY mode\n",publicFifoName);
+        fprintf(stderr, "FIFO '%s' opened in READONLY mode\n",publicFifoName);
     else{
-        printf("Can't open FIFO\n");
-        if (unlink(publicFifoName)<0) printf("Error when destroying FIFO '%s'\n",publicFifoName);
-        else printf("FIFO '%s' has been destroyed\n",publicFifoName);
+        fprintf(stderr, "Can't open FIFO\n");
+        if (unlink(publicFifoName)<0) fprintf(stderr, "Error when destroying FIFO '%s'\n",publicFifoName);
+        else fprintf(stderr, "FIFO '%s' has been destroyed\n",publicFifoName);
     }
     
     cm.bathroom_time=args.nsecs;
@@ -150,9 +150,9 @@ int main(int argc, char*argv[]){
     close(fd);
     
     if (unlink(publicFifoName)<0)
-        printf("Error when destroying FIFO '%s'\n",publicFifoName);
+        fprintf(stderr, "Error when destroying FIFO '%s'\n",publicFifoName);
 
-    printf("Destroyed FIFO '%s'\n",publicFifoName);
-    printf("CLOSED BATHROOM! Time : %f\n", elapsed_time());
+    fprintf(stderr, "Destroyed FIFO '%s'\n",publicFifoName);
+    fprintf(stderr, "CLOSED BATHROOM! Time : %f\n", elapsed_time());
     exit(0);
 } 

@@ -29,7 +29,7 @@ void *threader(void * arg){
     if(fd == -1 && !closed){
         closed=1;
         writeRegister(i,getpid(),pthread_self(),-1,-1,CLOSED);
-        printf("Oops !!! Service is closed !!!\n");
+        fprintf(stderr, "Oops !!! Service is closed !!!\n");
         pthread_exit(NULL);
     }
 
@@ -38,14 +38,15 @@ void *threader(void * arg){
     int duration = rand() % 20 + 1;
     int try=0;
     pthread_mutex_lock(&mutex);
-        int mynum=i;
+    int mynum=i;
+    i++;
     pthread_mutex_unlock(&mutex);
     sprintf(msg,"[ %d, %d, %ld, %d, -1]",mynum,(int)getpid(),(long)pthread_self(),duration);
     
     writeRegister(mynum, getpid(), pthread_self(), duration, -1, IWANT);
 
     while(write(fd,&msg,MAX_MSG_LEN)<=0 && try<5){
-        printf("Can't write to public FIFO!\n");
+        fprintf(stderr,"Can't write to public FIFO!\n");
         usleep(100);
         try++;
     }
@@ -70,12 +71,12 @@ void *threader(void * arg){
     int privateFifo;
 
     if (mkfifo(privateFifoName,0660)<0){
-        if (errno == EEXIST) printf("FIFO '%s' already exists\n",privateFifoName);
-        else { printf("Can't create FIFO\n"); pthread_exit(NULL);}
+        if (errno == EEXIST) fprintf(stderr, "FIFO '%s' already exists\n",privateFifoName);
+        else { fprintf(stderr, "Can't create FIFO\n"); pthread_exit(NULL);}
     }
     
     if ((privateFifo=open(privateFifoName,O_RDONLY|O_NONBLOCK)) <= 0){
-        printf("Error opening FIFO '%s' in READONLY mode\n",privateFifoName);
+        fprintf(stderr, "Error opening FIFO '%s' in READONLY mode\n",privateFifoName);
         pthread_exit(NULL);
     }
 
@@ -84,7 +85,7 @@ void *threader(void * arg){
     usleep(400);
     
     while(read(privateFifo,&server_msg,MAX_MSG_LEN)<=0 && try<5){
-        printf("Can't read from private FIFO\n");
+        fprintf(stderr, "Can't read from private FIFO\n");
         usleep(1000);
         try++;
     }
@@ -92,9 +93,9 @@ void *threader(void * arg){
     if(try==5){
         writeRegister(mynum,getpid(),pthread_self(),duration,-1,FAILED);
         if (close(privateFifo) < 0)
-            printf("Error closing FIFO %s file descriptor.\n", privateFifoName);
+            fprintf(stderr, "Error closing FIFO %s file descriptor.\n", privateFifoName);
         if (unlink(privateFifoName)<0)
-            printf("Error when destroying FIFO '%s'\n",privateFifoName);
+            fprintf(stderr, "Error when destroying FIFO '%s'\n",privateFifoName);
         pthread_exit(NULL);
     }
     
@@ -105,16 +106,16 @@ void *threader(void * arg){
     if(place == -1 && duration == -1) {
         closed = 1;
         writeRegister(num1,pid,tid,-1,-1,CLOSED);
-        printf("Oops !!! Service is closed !!!\n");
+        fprintf(stderr, "Oops !!! Service is closed !!!\n");
     }
     else
         writeRegister(num1, pid, tid, duration, place, IAMIN);
         
     if (close(privateFifo) < 0)
-        printf("Error closing FIFO %s file descriptor.\n", privateFifoName);
+        fprintf(stderr, "Error closing FIFO %s file descriptor.\n", privateFifoName);
 
     if (unlink(privateFifoName) < 0)
-        printf("Error when destroying FIFO '%s'\n",privateFifoName);
+        fprintf(stderr, "Error when destroying FIFO '%s'\n",privateFifoName);
 
     pthread_exit(NULL);
 }
@@ -128,7 +129,7 @@ int main(int argc, char *argv[]){
     srand(time(NULL));
 
     if (check_client_arg(&args,argc,argv)==-1) {
-        printf("Usage: U1 <-t secs> fifoname\n");
+        fprintf(stderr, "Usage: U1 <-t secs> fifoname\n");
         exit(1);
     }
 
@@ -137,20 +138,17 @@ int main(int argc, char *argv[]){
     char publicFifoName[MAX_MSG_LEN]="server/";
     strcat(publicFifoName,args.fifoname);
 
-    printf("Time of execution: %d\tFifoname:%s\n",args.nsecs,publicFifoName);
+    fprintf(stderr, "Time of execution: %d\tFifoname:%s\n",args.nsecs,publicFifoName);
 
     while(elapsed_time()<args.nsecs && !closed){
         pthread_create(&threads[t],NULL,threader,&publicFifoName);
-        pthread_join(threads[t],NULL);
-        pthread_mutex_lock(&mutex);
-        i++;
+        pthread_detach(threads[t]);
         t++;
-        pthread_mutex_unlock(&mutex);
         usleep(5000);
         
     }
     
-    printf("FInished work! Time : %f\n", elapsed_time());
+    fprintf(stderr, "FInished work! Time : %f\n", elapsed_time());
 
     exit(0);
 } 
