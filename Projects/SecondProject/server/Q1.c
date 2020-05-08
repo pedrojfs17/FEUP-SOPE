@@ -17,9 +17,6 @@
 int place=1;
 int closed=0;
 
-volatile int running_threads = 0;
-pthread_mutex_t running_mutex = PTHREAD_MUTEX_INITIALIZER;
-
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mutex2 = PTHREAD_MUTEX_INITIALIZER;
 
@@ -44,9 +41,6 @@ void * func(void * arg){
     while ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) <= 0 && try<5) {try++;usleep(200);}
     if(try==5){
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
-        pthread_mutex_lock(&running_mutex);
-        running_threads--;
-        pthread_mutex_unlock(&running_mutex);
         pthread_exit(NULL);
     }
     
@@ -72,26 +66,15 @@ void * func(void * arg){
     if(write(privateFifo,&client_msg,MAX_NAME_LEN)<=0){
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
         close(privateFifo);
-        pthread_mutex_lock(&running_mutex);
-        running_threads--;
-        pthread_mutex_unlock(&running_mutex);
         pthread_exit(NULL);
     }
     close(privateFifo);
 
-    pthread_mutex_lock(&mutex2);
     if(!closed){
-        pthread_mutex_unlock(&mutex2);
         usleep(duration*1000);
         writeRegister(i, getpid(), pthread_self(), duration, my_place, TIMEUP);
     }
-    else
-        pthread_mutex_unlock(&mutex2);
         
-        
-    pthread_mutex_lock(&running_mutex);
-    running_threads--;
-    pthread_mutex_unlock(&running_mutex);
     pthread_exit(NULL);
 }
 
@@ -113,6 +96,7 @@ int main(int argc, char*argv[]){
     strcat(publicFifoName,args.fifoname);
     fprintf(stderr, "Time of execution: %d\tFifoname:%s\n",args.nsecs,publicFifoName);
 
+    // Create public FIFO
     if (mkfifo(publicFifoName,0660)<0)
         if (errno == EEXIST) fprintf(stderr, "FIFO '%s' already exists\n",publicFifoName);
         else fprintf(stderr, "Can't create FIFO\n");
@@ -120,6 +104,7 @@ int main(int argc, char*argv[]){
         fprintf(stderr, "FIFO '%s' sucessfully created\n",publicFifoName);
 
     
+    // Open public FIFO
     if ((fd=open(publicFifoName,O_RDONLY | O_NONBLOCK)) != -1)
         fprintf(stderr, "FIFO '%s' opened in READONLY mode\n",publicFifoName);
     else{
@@ -130,29 +115,31 @@ int main(int argc, char*argv[]){
     
     cm.bathroom_time=args.nsecs;
 
-    while(elapsed_time()<args.nsecs || running_threads > 0){
+    while(elapsed_time()<args.nsecs){
         if(read(fd,&msg,MAX_NAME_LEN) > 0 && msg[0] == '['){
             strcpy(cm.msg,msg);
             pthread_t t;
-            pthread_mutex_lock(&running_mutex);
-            running_threads++;
-            pthread_mutex_unlock(&running_mutex);
             pthread_create(&t,NULL,func,(void *)&cm);
             pthread_detach(t);
         }
-        if (elapsed_time()>args.nsecs && !closed) {
-            pthread_mutex_lock(&mutex2);
-            closed=1;
-            pthread_mutex_unlock(&mutex2);
-        }
     }
     
+    closed=1;
     close(fd);
     
     if (unlink(publicFifoName)<0)
         fprintf(stderr, "Error when destroying FIFO '%s'\n",publicFifoName);
 
+    while (read(fd, &msg, MAX_NAME_LEN) > 0) {
+        if (msg[0] == '[') {
+            strcpy(cm.msg,msg);
+            pthread_t t;
+            pthread_create(&t,NULL,func,(void *)&cm);
+            pthread_detach(t);
+        }
+    }
+
     fprintf(stderr, "Destroyed FIFO '%s'\n",publicFifoName);
     fprintf(stderr, "CLOSED BATHROOM! Time : %f\n", elapsed_time());
-    exit(0);
+    pthread_exit(0);
 } 

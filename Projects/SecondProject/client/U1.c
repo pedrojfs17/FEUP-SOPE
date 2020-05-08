@@ -24,63 +24,51 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 void *threader(void * arg){
     
     char *publicFifoName = arg;
+
     int fd = open(publicFifoName,O_WRONLY|O_NONBLOCK,0660);
-    
-    if(fd == -1 && !closed){
+    if(fd == -1){
         closed=1;
         writeRegister(i,getpid(),pthread_self(),-1,-1,CLOSED);
         fprintf(stderr, "Oops !!! Service is closed !!!\n");
         pthread_exit(NULL);
     }
 
-    char msg[MAX_MSG_LEN];
-
-    int duration = rand() % 20 + 1;
-    int try=0;
-    pthread_mutex_lock(&mutex);
-    int mynum=i;
-    i++;
-    pthread_mutex_unlock(&mutex);
-    sprintf(msg,"[ %d, %d, %ld, %d, -1]",mynum,(int)getpid(),(long)pthread_self(),duration);
-    
-    writeRegister(mynum, getpid(), pthread_self(), duration, -1, IWANT);
-
-    while(write(fd,&msg,MAX_MSG_LEN)<=0 && try<5){
-        fprintf(stderr,"Can't write to public FIFO!\n");
-        usleep(100);
-        try++;
-    }
-
-    if(try==5){
-        writeRegister(mynum,getpid(),pthread_self(),-1,-1,FAILED);
-        close(fd);
-        pthread_exit(NULL);
-    }
-
-    try=0;
-    close(fd);
-
-    char privateFifoName[MAX_NAME_LEN]="/tmp/";
-    char buff[MAX_MSG_LEN];
-    sprintf(buff,"%d",getpid());
-    strcat(privateFifoName,buff);
-    strcat(privateFifoName,".");
-    sprintf(buff,"%ld",pthread_self());
-    strcat(privateFifoName,buff);
-
-    int privateFifo;
+    char privateFifoName[MAX_NAME_LEN];
+    sprintf(privateFifoName, "/tmp/%d.%ld", getpid(), pthread_self());
 
     if (mkfifo(privateFifoName,0660)<0){
         if (errno == EEXIST) fprintf(stderr, "FIFO '%s' already exists\n",privateFifoName);
         else { fprintf(stderr, "Can't create FIFO\n"); pthread_exit(NULL);}
     }
+
+    char msg[MAX_MSG_LEN];
+    int duration = rand() % 20 + 1;
+    pthread_mutex_lock(&mutex);
+    int mynum=i;
+    i++;
+    pthread_mutex_unlock(&mutex);
+    sprintf(msg,"[ %d, %d, %ld, %d, -1]",mynum,(int)getpid(),(long)pthread_self(),duration);
+
+    if(write(fd,&msg,MAX_MSG_LEN)<0){
+        writeRegister(mynum, getpid(), pthread_self(), -1, -1, FAILED);
+        close(fd);
+        if (unlink(privateFifoName) < 0) fprintf(stderr, "Cannot delete private FIFO");
+        closed = 1;
+        pthread_exit(NULL);
+    }
+
+    writeRegister(mynum, getpid(), pthread_self(), duration, -1, IWANT);
+    close(fd);
     
+    int privateFifo;
     if ((privateFifo=open(privateFifoName,O_RDONLY|O_NONBLOCK)) <= 0){
         fprintf(stderr, "Error opening FIFO '%s' in READONLY mode\n",privateFifoName);
+        if (unlink(privateFifoName) < 0) fprintf(stderr, "Cannot delete private FIFO");
         pthread_exit(NULL);
     }
 
     char server_msg[MAX_MSG_LEN];
+    int try = 0;
 
     usleep(400);
     
@@ -145,7 +133,6 @@ int main(int argc, char *argv[]){
         pthread_detach(threads[t]);
         t++;
         usleep(5000);
-        
     }
     
     fprintf(stderr, "FInished work! Time : %f\n", elapsed_time());

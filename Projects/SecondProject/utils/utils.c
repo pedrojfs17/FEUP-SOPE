@@ -31,7 +31,7 @@ int check_client_arg(cl_args * args, int argc, char *argv[]){
 }
 
 int check_server_arg(srv_args * args, int argc, char *argv[]){
-    if (argc>8) {
+    if (argc < 4 || argc > 8) {
         return -1;
     }
 
