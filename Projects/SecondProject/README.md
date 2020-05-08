@@ -8,7 +8,7 @@
 
 ## Programa do cliente (_Un_)
 
-Tal como descrito no enunciado, o programa _Un_ lança threads num intervalo curto de tempo (_5 ms_), de modo a promover uma condição de competição.
+Tal como descrito no enunciado, o programa _Un_ lança threads num intervalo curto de tempo (_50 ms_), de modo a promover uma condição de competição.
 
 O programa funciona até terminar o tempo de execução fornecido pelo utilizador ou até o Quarto de Banho estar fechado. 
 _O caso do Quarto de Banho já estar fechado quando se iniciam os pedidos dos clientes, encontra-se na situação referida anteriormente e como tal, deve-se ter o cuidado de iniciar o programa do servidor antes do programa do cliente._
@@ -34,10 +34,10 @@ Cada thread é responsável por um atender um pedido, ou seja:
 - Numa fase inicial, a thread irá extrair a mensagem de formato
 "[i,pid,tid,dur,pl]", que foi enviada pelo cliente;
 - De seguida, irá tentar abrir o FIFO privado que foi fornecido pelo cliente sendo que no caso desta comunicação não ser possível , o servidor acusará uma mensagem de que desistiu, _GAVUP_.
-- Estabelecendo-se uma ligação ao FIFO privado, a variável responsável pelo controlo dos lugares será alterada. Esta variável está protegida por processos de sincronização, de modo a que o incremento seja sequencial;
+- Estabelecendo-se uma ligação ao FIFO privado, a variável responsável pelo controlo dos lugares será alterada. Esta variável está protegida por processos de sincronização, de modo a que o incremento seja sequencial. No caso dos lugares serem limitados, o cliente ocupará um lugar numa fila;
 - Após este passo, a thread vai verificar se o tempo em que o cliente fez o pedido não excedeu o tempo de execução do Quarto de Banho. No caso de não exceder, compõe uma mensagem com o mesmo formato da que recebeu, com o devido lugar na fila e duração de utilização e acusa uma mensagem de entrada do cliente, _ENTER_. No caso de exceder, a mensagem irá retornar a duração e o lugar do cliente como _-1_ e acusa a mensagem de atraso, _2LATE_;
-- De seguida escreve a mensagem composta no FIFO privado e fecha-o;
-- Finalmente, a thread espera o tempo da duração do cliente e, após esse intervalo, acusa a mensagem de término de tempo de utilização, _TIMUP_;
+- De seguida tenta escrever a mensagem composta no FIFO privado. Se não o conseguir, o servidor acusa uma mensagem de _GAVUP_ e, no caso de haver um número máximo de lugares, desocupa o lugar do cliente;
+- Finalmente, a thread espera o tempo da duração do cliente e, após esse intervalo, acusa a mensagem de término de tempo de utilização, _TIMUP_. Se houver um número máximo de lugares, o servidor desocupa o lugar;
 
 ### Notas sobre o funcionamento do programa
 
