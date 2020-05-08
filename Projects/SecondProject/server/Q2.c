@@ -14,6 +14,7 @@
 #include "../utils/defs.h"
 #include "../utils/logs.h"
 #include "../utils/utils.h"
+#include "../utils/queue.h"
 
 int place=1;
 int closed=0;
@@ -27,8 +28,10 @@ sem_t nMaxPlaces;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mutex2 = PTHREAD_MUTEX_INITIALIZER;
 
+queue q;
+
 void * func(void * arg){
-    
+    pthread_detach(pthread_self());
     int privateFifo;
     struct cln_msg *cop;
     cop=(struct cln_msg *) arg;
@@ -50,11 +53,22 @@ void * func(void * arg){
         if (activateMaxThreads) sem_post(&nMaxThreads);
         pthread_exit(NULL);
     }
+
+    int my_place;
+    if(activateMaxPlaces){
+        sem_wait(&nMaxPlaces);
+        pthread_mutex_lock(&mutex);
+        my_place = occupy(&q);
+        pthread_mutex_unlock(&mutex);
+
+    }
+    else{
+        pthread_mutex_lock(&mutex);
+        my_place = place;
+        place++;
+        pthread_mutex_unlock(&mutex);
+    }
     
-    pthread_mutex_lock(&mutex);
-    int my_place = place;
-    place++;
-    pthread_mutex_unlock(&mutex);
 
     char client_msg[MAX_NAME_LEN];
 
@@ -74,6 +88,12 @@ void * func(void * arg){
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
         close(privateFifo);
         if (activateMaxThreads) sem_post(&nMaxThreads);
+        if(activateMaxPlaces){
+            pthread_mutex_lock(&mutex);
+            deoccupy(&q,my_place);
+            pthread_mutex_unlock(&mutex);
+            sem_post(&nMaxPlaces);
+        }
         pthread_exit(NULL);
     }
     close(privateFifo);
@@ -84,6 +104,12 @@ void * func(void * arg){
     }
     
     if (activateMaxThreads) sem_post(&nMaxThreads);
+    if(activateMaxPlaces){
+            pthread_mutex_lock(&mutex);
+            deoccupy(&q,my_place);
+            pthread_mutex_unlock(&mutex);
+            sem_post(&nMaxPlaces);
+    }
     pthread_exit(NULL);
 }
 
@@ -137,6 +163,8 @@ int main(int argc, char*argv[]){
     }
     if (activateMaxPlaces) {
         sem_init(&nMaxPlaces, 0, args.nplaces);
+        q=createQueue(args.nplaces);
+        fillQueue(&q);
     }
 
     while(elapsed_time()<args.nsecs){
@@ -161,7 +189,6 @@ int main(int argc, char*argv[]){
             strcpy(cm.msg,msg);
             pthread_t t;
             pthread_create(&t,NULL,func,(void *)&cm);
-            pthread_detach(t);
         }
     }
 

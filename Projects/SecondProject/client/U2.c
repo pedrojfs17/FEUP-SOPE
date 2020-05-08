@@ -22,9 +22,10 @@ int closed=0;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void *threader(void * arg){
+    pthread_detach(pthread_self());
     
     char *publicFifoName = arg;
-
+    
     int fd = open(publicFifoName,O_WRONLY|O_NONBLOCK,0660);
     if(fd == -1){
         closed=1;
@@ -122,9 +123,8 @@ int main(int argc, char *argv[]){
 
     while(elapsed_time()<args.nsecs && !closed){
         pthread_create(&threads[t],NULL,threader,&publicFifoName);
-        pthread_detach(threads[t]);
         t++;
-        usleep(5000);
+        usleep(50000);
     }
     
     fprintf(stderr, "FInished work! Time : %f\n", elapsed_time());
