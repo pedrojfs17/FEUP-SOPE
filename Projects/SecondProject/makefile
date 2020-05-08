@@ -1,19 +1,19 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic -Wno-unused-parameter -pthread -lpthread
-UOBJ = client/U1.o
-QOBJ = server/Q1.o
+UOBJ = client/U2.o
+QOBJ = server/Q2.o
 COBJ = utils/utils.o utils/logs.o
-TARGETS = U1 Q1
+TARGETS = U2 Q2
 
-all: U1 Q1
+all: U2 Q2
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-U1: $(UOBJ) $(COBJ)
+U2: $(UOBJ) $(COBJ)
 	$(CC) $(CFLAGS) $(COBJ) $(UOBJ) -o $@
 
-Q1: $(QOBJ) $(COBJ)
+Q2: $(QOBJ) $(COBJ)
 	$(CC) $(CFLAGS) $(COBJ) $(QOBJ) -o $@
 
 .PHONY : clean
