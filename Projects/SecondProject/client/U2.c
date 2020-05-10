@@ -87,7 +87,6 @@ void *threader(void * arg){
     if(place == -1 && duration == -1) {
         closed = 1;
         writeRegister(num1,pid,tid,-1,-1,CLOSED);
-        fprintf(stderr, "Oops !!! Service is closed !!!\n");
     }
     else
         writeRegister(num1, pid, tid, duration, place, IAMIN);
@@ -129,5 +128,5 @@ int main(int argc, char *argv[]){
     
     fprintf(stderr, "FInished work! Time : %f\n", elapsed_time());
 
-    exit(0);
+    pthread_exit(0);
 } 
