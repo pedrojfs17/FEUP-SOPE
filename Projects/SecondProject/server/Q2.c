@@ -26,27 +26,22 @@ sem_t nMaxThreads;
 sem_t nMaxPlaces;
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t mutex2 = PTHREAD_MUTEX_INITIALIZER;
 
 queue q;
 
 void * func(void * arg){
     pthread_detach(pthread_self());
+
     int privateFifo;
     struct cln_msg *cop;
     cop=(struct cln_msg *) arg;
 
-    char privateFifoName[MAX_NAME_LEN]="/tmp/", pidStr[MAX_NAME_LEN], tidStr[MAX_NAME_LEN];
-    int i,duration, pid;
-    long tid;
+    char privateFifoName[MAX_NAME_LEN];
+    int i, duration, pid; long tid;
     sscanf(cop->msg,"[ %d, %d, %ld, %d, -1]",&i,&pid,&tid,&duration);
     writeRegister(i, pid, tid, duration, -1, RECEIVED);
 
-    sprintf(pidStr, "%d", pid);
-    strcat(privateFifoName,pidStr);
-    strcat(privateFifoName,".");
-    sprintf(tidStr, "%ld", tid);
-    strcat(privateFifoName,tidStr);
+    sprintf(privateFifoName, "/tmp/%d.%ld", pid, tid);
     
     if ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) <= 0) {
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
@@ -60,7 +55,6 @@ void * func(void * arg){
         pthread_mutex_lock(&mutex);
         my_place = occupy(&q);
         pthread_mutex_unlock(&mutex);
-
     }
     else{
         pthread_mutex_lock(&mutex);
@@ -72,23 +66,21 @@ void * func(void * arg){
 
     char client_msg[MAX_NAME_LEN];
 
-    pthread_mutex_lock(&mutex2);
     if(elapsed_time()<cop->bathroom_time){
-        pthread_mutex_unlock(&mutex2);
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),duration,my_place);
         writeRegister(i, getpid(), pthread_self(), duration, my_place, ENTER);
     }
     else {
-        pthread_mutex_unlock(&mutex2);
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),-1,-1);
         writeRegister(i, getpid(), pthread_self(), duration, -1, TOOLATE);
     }
 
     if(write(privateFifo,&client_msg,MAX_NAME_LEN)<=0){
+        fprintf(stderr, "Error writing to private fifo of request %d\n",i);
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
         close(privateFifo);
         if (activateMaxThreads) sem_post(&nMaxThreads);
-        if(activateMaxPlaces){
+        if (activateMaxPlaces) {
             pthread_mutex_lock(&mutex);
             deoccupy(&q,my_place);
             pthread_mutex_unlock(&mutex);
@@ -104,12 +96,14 @@ void * func(void * arg){
     }
     
     if (activateMaxThreads) sem_post(&nMaxThreads);
-    if(activateMaxPlaces){
-            pthread_mutex_lock(&mutex);
-            deoccupy(&q,my_place);
-            pthread_mutex_unlock(&mutex);
-            sem_post(&nMaxPlaces);
+
+    if (activateMaxPlaces) {
+        pthread_mutex_lock(&mutex);
+        deoccupy(&q,my_place);
+        pthread_mutex_unlock(&mutex);
+        sem_post(&nMaxPlaces);
     }
+
     pthread_exit(NULL);
 }
 
@@ -124,15 +118,12 @@ int main(int argc, char*argv[]){
     args.nthreads = 0;
     
     if(check_server_arg(&args,argc,argv)==-1){
-        fprintf(stderr, "Usage: Q1 <-t secs> fifoname\n");
+        fprintf(stderr, "Usage: Q1 <-t secs> [-l nplaces] [-n nthreads] fifoname\n");
         exit(1);
     }
 
-
     if (args.nplaces > 0) activateMaxPlaces = 1;
     if (args.nthreads > 0) activateMaxThreads = 1;
-
-    printf("Name: %s\nPlaces: %d\nSecs: %d\nThreads: %d\n", args.fifoname, args.nplaces, args.nsecs, args.nthreads);
 
     initClock();
     
@@ -163,12 +154,12 @@ int main(int argc, char*argv[]){
     }
     if (activateMaxPlaces) {
         sem_init(&nMaxPlaces, 0, args.nplaces);
-        q=createQueue(args.nplaces);
+        q = createQueue(args.nplaces);
         fillQueue(&q);
     }
 
-    while(elapsed_time()<args.nsecs){
-        if(read(fd,&msg,MAX_NAME_LEN) > 0 && msg[0] == '['){
+    while (elapsed_time() < args.nsecs){
+        if (read(fd,&msg,MAX_NAME_LEN) > 0 && msg[0] == '['){
             if (activateMaxThreads) sem_wait(&nMaxThreads);
             strcpy(cm.msg,msg);
             pthread_t t;
