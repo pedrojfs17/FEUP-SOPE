@@ -23,11 +23,10 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void *threader(void * arg){
     pthread_detach(pthread_self());
-    
     char *publicFifoName = arg;
     
-    int fd = open(publicFifoName,O_WRONLY|O_NONBLOCK,0660);
-    if(fd == -1){
+    int fd;
+    if((fd= open(publicFifoName,O_WRONLY|O_NONBLOCK,0660)) == -1){
         closed=1;
         writeRegister(i,getpid(),pthread_self(),-1,-1,CLOSED);
         fprintf(stderr, "Oops !!! Service is closed !!!\n");
@@ -52,17 +51,20 @@ void *threader(void * arg){
 
     if(write(fd,&msg,MAX_MSG_LEN)<0){
         writeRegister(mynum, getpid(), pthread_self(), -1, -1, FAILED);
-        close(fd);
+        if(close(fd)<0) fprintf(stderr, "Cannot close public FIFO");
         if (unlink(privateFifoName) < 0) fprintf(stderr, "Cannot delete private FIFO");
         closed = 1;
         pthread_exit(NULL);
     }
 
     writeRegister(mynum, getpid(), pthread_self(), duration, -1, IWANT);
-    close(fd);
+    if(close(fd)<0){
+        fprintf(stderr, "Cannot close public FIFO");
+        pthread_exit(NULL);
+    }
     
     int privateFifo;
-    if ((privateFifo=open(privateFifoName,O_RDONLY)) <= 0){
+    if ((privateFifo=open(privateFifoName,O_RDONLY)) < 0){
         fprintf(stderr, "Error opening FIFO '%s' in READONLY mode\n",privateFifoName);
         if (unlink(privateFifoName) < 0) fprintf(stderr, "Cannot delete private FIFO");
         pthread_exit(NULL);
@@ -70,7 +72,7 @@ void *threader(void * arg){
 
     char server_msg[MAX_MSG_LEN];
     
-    if(read(privateFifo,&server_msg,MAX_MSG_LEN)<0){
+    if(read(privateFifo,&server_msg,MAX_MSG_LEN)<=0){
         fprintf(stderr, "Can't read from private FIFO\n");
         writeRegister(mynum,getpid(),pthread_self(),duration,-1,FAILED);
         if (close(privateFifo) < 0)
@@ -97,6 +99,7 @@ void *threader(void * arg){
     if (unlink(privateFifoName) < 0)
         fprintf(stderr, "Error when destroying FIFO '%s'\n",privateFifoName);
 
+    //fprintf(stderr, "Finished %d thread normally \n",mynum);
     pthread_exit(NULL);
 }
 
@@ -123,10 +126,10 @@ int main(int argc, char *argv[]){
     while(elapsed_time()<args.nsecs && !closed){
         pthread_create(&threads[t],NULL,threader,&publicFifoName);
         t++;
-        usleep(50000);
+        usleep(20000);
     }
     
-    fprintf(stderr, "FInished work! Time : %f\n", elapsed_time());
+    fprintf(stderr, "Finished work! Time : %f\n", elapsed_time());
 
     pthread_exit(0);
 } 

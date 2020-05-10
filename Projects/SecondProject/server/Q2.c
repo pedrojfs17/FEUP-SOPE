@@ -43,7 +43,7 @@ void * func(void * arg){
 
     sprintf(privateFifoName, "/tmp/%d.%ld", pid, tid);
     
-    if ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) <= 0) {
+    if ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) < 0) {
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
         if (activateMaxThreads) sem_post(&nMaxThreads);
         pthread_exit(NULL);
@@ -75,10 +75,10 @@ void * func(void * arg){
         writeRegister(i, getpid(), pthread_self(), duration, -1, TOOLATE);
     }
 
-    if(write(privateFifo,&client_msg,MAX_NAME_LEN)<=0){
+    if(write(privateFifo,&client_msg,MAX_NAME_LEN)<0){
         fprintf(stderr, "Error writing to private fifo of request %d\n",i);
         writeRegister(i, pid, tid, duration, -1, GAVEUP);
-        close(privateFifo);
+        if(close(privateFifo)<0) fprintf(stderr, "Error closing private fifo of request %d\n",i);
         if (activateMaxThreads) sem_post(&nMaxThreads);
         if (activateMaxPlaces) {
             pthread_mutex_lock(&mutex);
@@ -88,10 +88,14 @@ void * func(void * arg){
         }
         pthread_exit(NULL);
     }
-    close(privateFifo);
+    if(close(privateFifo)<0){
+        fprintf(stderr, "Error closing private fifo of request %d\n",i);
+        pthread_exit(NULL);
+    }
 
     if(!closed){
         usleep(duration*1000);
+        //fprintf(stderr, "Waiting\n");
         writeRegister(i, getpid(), pthread_self(), duration, my_place, TIMEUP);
     }
     
@@ -164,12 +168,12 @@ int main(int argc, char*argv[]){
             strcpy(cm.msg,msg);
             pthread_t t;
             pthread_create(&t,NULL,func,(void *)&cm);
-            pthread_detach(t);
         }
     }
     
     closed=1;
-    close(fd);
+    if(close(fd)<0)
+        fprintf(stderr, "Error when closing public FIFO\n");
     
     if (unlink(publicFifoName)<0)
         fprintf(stderr, "Error when destroying FIFO '%s'\n",publicFifoName);
