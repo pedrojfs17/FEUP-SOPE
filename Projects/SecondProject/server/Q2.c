@@ -19,6 +19,8 @@
 int place=1;
 int closed=0;
 
+int bathroomTime;
+
 int activateMaxThreads = 0;
 int activateMaxPlaces = 0;
 
@@ -33,21 +35,13 @@ void * func(void * arg){
     pthread_detach(pthread_self());
 
     int privateFifo;
-    struct cln_msg *cop;
-    cop=(struct cln_msg *) arg;
-
     char privateFifoName[MAX_NAME_LEN];
+
     int i, duration, pid; long tid;
-    sscanf(cop->msg,"[ %d, %d, %ld, %d, -1]",&i,&pid,&tid,&duration);
+    sscanf((char*) arg,"[ %d, %d, %ld, %d, -1]",&i,&pid,&tid,&duration);
     writeRegister(i, pid, tid, duration, -1, RECEIVED);
 
     sprintf(privateFifoName, "/tmp/%d.%ld", pid, tid);
-    
-    if ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) < 0) {
-        writeRegister(i, pid, tid, duration, -1, GAVEUP);
-        if (activateMaxThreads) sem_post(&nMaxThreads);
-        pthread_exit(NULL);
-    }
 
     int my_place;
     if(activateMaxPlaces){
@@ -63,10 +57,28 @@ void * func(void * arg){
         pthread_mutex_unlock(&mutex);
     }
     
+    int tries = 0;
+    while ((privateFifo=open(privateFifoName,O_WRONLY|O_NONBLOCK)) < 0 && tries < 5) {
+        fprintf(stderr, "Cant open private fifo %s\n",privateFifoName);
+        usleep(200);
+        tries++;
+    }
+
+    if (tries == 5) {
+        writeRegister(i, pid, tid, duration, -1, GAVEUP);
+        if (activateMaxThreads) sem_post(&nMaxThreads);
+        if (activateMaxPlaces) {
+            pthread_mutex_lock(&mutex);
+            deoccupy(&q,my_place);
+            pthread_mutex_unlock(&mutex);
+            sem_post(&nMaxPlaces);
+        }
+        pthread_exit(NULL);
+    }
 
     char client_msg[MAX_NAME_LEN];
 
-    if(elapsed_time()<cop->bathroom_time){
+    if(elapsed_time()<bathroomTime){
         sprintf(client_msg,"[ %d, %d, %ld, %d, %d]",i,getpid(),pthread_self(),duration,my_place);
         writeRegister(i, getpid(), pthread_self(), duration, my_place, ENTER);
     }
@@ -88,6 +100,7 @@ void * func(void * arg){
         }
         pthread_exit(NULL);
     }
+
     if(close(privateFifo)<0){
         fprintf(stderr, "Error closing private fifo of request %d\n",i);
         pthread_exit(NULL);
@@ -95,7 +108,6 @@ void * func(void * arg){
 
     if(!closed){
         usleep(duration*1000);
-        //fprintf(stderr, "Waiting\n");
         writeRegister(i, getpid(), pthread_self(), duration, my_place, TIMEUP);
     }
     
@@ -115,7 +127,6 @@ int main(int argc, char*argv[]){
     int fd;
     char msg[MAX_NAME_LEN];
     char publicFifoName[MAX_NAME_LEN]="server/";
-    struct cln_msg cm;
     srv_args args;
     args.nplaces = 0;
     args.nsecs = 0;
@@ -151,7 +162,7 @@ int main(int argc, char*argv[]){
         else fprintf(stderr, "FIFO '%s' has been destroyed\n",publicFifoName);
     }
     
-    cm.bathroom_time=args.nsecs;
+    bathroomTime = args.nsecs;
 
     if (activateMaxThreads) {
         sem_init(&nMaxThreads, 0, args.nthreads);
@@ -163,11 +174,14 @@ int main(int argc, char*argv[]){
     }
 
     while (elapsed_time() < args.nsecs){
-        if (read(fd,&msg,MAX_NAME_LEN) > 0 && msg[0] == '['){
-            if (activateMaxThreads) sem_wait(&nMaxThreads);
-            strcpy(cm.msg,msg);
-            pthread_t t;
-            pthread_create(&t,NULL,func,(void *)&cm);
+        if (read_public_message(fd, msg) > 0) {
+            if (msg[0] == '[') {
+                if (activateMaxThreads) sem_wait(&nMaxThreads);
+                char * message;
+                message = strdup(msg);
+                pthread_t t;
+                pthread_create(&t,NULL,func,message);
+            }
         }
     }
     
@@ -178,12 +192,13 @@ int main(int argc, char*argv[]){
     if (unlink(publicFifoName)<0)
         fprintf(stderr, "Error when destroying FIFO '%s'\n",publicFifoName);
 
-    while (read(fd, &msg, MAX_NAME_LEN) > 0) {
+    while (read_public_message(fd, msg) > 0) {
         if (msg[0] == '[') {
             if (activateMaxThreads) sem_wait(&nMaxThreads);
-            strcpy(cm.msg,msg);
+            char * message;
+            message = strdup(msg);
             pthread_t t;
-            pthread_create(&t,NULL,func,(void *)&cm);
+            pthread_create(&t,NULL,func,message);
         }
     }
 

@@ -95,3 +95,16 @@ int check_server_arg(srv_args * args, int argc, char *argv[]){
 
     return 0;
 }
+
+int read_public_message(int fd, char* msg) {
+    char c;
+    int pos = 0;
+    
+    while (read(fd, &c, 1) > 0 && c != '\n') {
+        msg[pos] = c;
+        pos++;
+    }
+    msg[pos] = '\0';
+
+    return strlen(msg);
+}

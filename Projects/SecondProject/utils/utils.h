@@ -19,3 +19,5 @@ typedef struct{
 
 int check_client_arg(cl_args * args, int argc, char *argv[]);
 int check_server_arg(srv_args * args, int argc, char *argv[]);
+
+int read_public_message(int fd, char* msg);

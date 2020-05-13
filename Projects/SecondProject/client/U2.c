@@ -47,9 +47,9 @@ void *threader(void * arg){
     int mynum=i;
     i++;
     pthread_mutex_unlock(&mutex);
-    sprintf(msg,"[ %d, %d, %ld, %d, -1]",mynum,(int)getpid(),(long)pthread_self(),duration);
+    sprintf(msg,"[ %d, %d, %ld, %d, -1]\n",mynum,getpid(),pthread_self(),duration);
 
-    if(write(fd,&msg,MAX_MSG_LEN)<0){
+    if(write(fd,&msg,strlen(msg))<0){
         writeRegister(mynum, getpid(), pthread_self(), -1, -1, FAILED);
         if(close(fd)<0) fprintf(stderr, "Cannot close public FIFO");
         if (unlink(privateFifoName) < 0) fprintf(stderr, "Cannot delete private FIFO");
@@ -72,7 +72,18 @@ void *threader(void * arg){
 
     char server_msg[MAX_MSG_LEN];
     
-    if(read(privateFifo,&server_msg,MAX_MSG_LEN)<=0){
+    int tries = 0;
+    while(read(privateFifo,server_msg,MAX_MSG_LEN)<=0 && tries < 5){
+       fprintf(stderr, "Cant read. Try again");
+       usleep(200);
+       tries++;
+    }
+
+    if (tries > 0 && tries < 5) {
+        fprintf(stderr,"READ!");
+    }
+
+    if (tries == 5) {
         fprintf(stderr, "Can't read from private FIFO\n");
         writeRegister(mynum,getpid(),pthread_self(),duration,-1,FAILED);
         if (close(privateFifo) < 0)
@@ -81,7 +92,7 @@ void *threader(void * arg){
             fprintf(stderr, "Error when destroying FIFO '%s'\n",privateFifoName);
         pthread_exit(NULL);
     }
-    
+
     int num1, pid, place;
     long tid;
     sscanf(server_msg,"[ %d, %d, %ld, %d, %d]",&num1,&pid,&tid,&duration, &place);
@@ -104,10 +115,7 @@ void *threader(void * arg){
 }
 
 int main(int argc, char *argv[]){
-    
-    pthread_t threads[NUM_THREADS_MAX];
     cl_args args;
-    int t=0;        
 
     srand(time(NULL));
 
@@ -124,9 +132,9 @@ int main(int argc, char *argv[]){
     fprintf(stderr, "Time of execution: %d\tFifoname:%s\n",args.nsecs,publicFifoName);
 
     while(elapsed_time()<args.nsecs && !closed){
-        pthread_create(&threads[t],NULL,threader,&publicFifoName);
-        t++;
-        usleep(20000);
+        pthread_t t;
+        pthread_create(&t,NULL,threader,&publicFifoName);
+        usleep(5000);
     }
     
     fprintf(stderr, "Finished work! Time : %f\n", elapsed_time());
