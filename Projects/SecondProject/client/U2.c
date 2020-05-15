@@ -43,10 +43,12 @@ void *threader(void * arg){
 
     char msg[MAX_MSG_LEN];
     int duration = rand() % 20 + 1;
+
     pthread_mutex_lock(&mutex);
     int mynum=i;
     i++;
     pthread_mutex_unlock(&mutex);
+
     sprintf(msg,"[ %d, %d, %ld, %d, -1]\n",mynum,getpid(),pthread_self(),duration);
 
     if(write(fd,&msg,strlen(msg))<0){
@@ -58,6 +60,7 @@ void *threader(void * arg){
     }
 
     writeRegister(mynum, getpid(), pthread_self(), duration, -1, IWANT);
+
     if(close(fd)<0){
         fprintf(stderr, "Cannot close public FIFO");
         pthread_exit(NULL);
@@ -74,13 +77,9 @@ void *threader(void * arg){
     
     int tries = 0;
     while(read(privateFifo,server_msg,MAX_MSG_LEN)<=0 && tries < 5){
-       fprintf(stderr, "Cant read. Try again");
+       fprintf(stderr, "Cant read. Trying again");
        usleep(200);
        tries++;
-    }
-
-    if (tries > 0 && tries < 5) {
-        fprintf(stderr,"READ!");
     }
 
     if (tries == 5) {
@@ -110,7 +109,6 @@ void *threader(void * arg){
     if (unlink(privateFifoName) < 0)
         fprintf(stderr, "Error when destroying FIFO '%s'\n",privateFifoName);
 
-    //fprintf(stderr, "Finished %d thread normally \n",mynum);
     pthread_exit(NULL);
 }
 
@@ -134,7 +132,7 @@ int main(int argc, char *argv[]){
     while(elapsed_time()<args.nsecs && !closed){
         pthread_t t;
         pthread_create(&t,NULL,threader,&publicFifoName);
-        usleep(5000);
+        usleep(10000);
     }
     
     fprintf(stderr, "Finished work! Time : %f\n", elapsed_time());

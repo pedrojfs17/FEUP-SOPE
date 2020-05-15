@@ -137,6 +137,7 @@ int main(int argc, char*argv[]){
         exit(1);
     }
 
+    bathroomTime = args.nsecs;
     if (args.nplaces > 0) activateMaxPlaces = 1;
     if (args.nthreads > 0) activateMaxThreads = 1;
 
@@ -161,8 +162,6 @@ int main(int argc, char*argv[]){
         if (unlink(publicFifoName)<0) fprintf(stderr, "Error when destroying FIFO '%s'\n",publicFifoName);
         else fprintf(stderr, "FIFO '%s' has been destroyed\n",publicFifoName);
     }
-    
-    bathroomTime = args.nsecs;
 
     if (activateMaxThreads) {
         sem_init(&nMaxThreads, 0, args.nthreads);
@@ -186,8 +185,6 @@ int main(int argc, char*argv[]){
     }
     
     closed=1;
-    if(close(fd)<0)
-        fprintf(stderr, "Error when closing public FIFO\n");
     
     if (unlink(publicFifoName)<0)
         fprintf(stderr, "Error when destroying FIFO '%s'\n",publicFifoName);
@@ -202,7 +199,11 @@ int main(int argc, char*argv[]){
         }
     }
 
+    if(close(fd)<0)
+        fprintf(stderr, "Error when closing public FIFO\n");
+
     fprintf(stderr, "Destroyed FIFO '%s'\n",publicFifoName);
     fprintf(stderr, "CLOSED BATHROOM! Time : %f\n", elapsed_time());
+
     pthread_exit(0);
 } 
