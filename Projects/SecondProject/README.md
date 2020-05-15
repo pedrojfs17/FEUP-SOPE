@@ -8,7 +8,7 @@
 
 ## Programa do cliente (_Un_)
 
-Tal como descrito no enunciado, o programa _Un_ lança threads num intervalo curto de tempo (_50 ms_), de modo a promover uma condição de competição.
+Tal como descrito no enunciado, o programa _Un_ lança threads num intervalo curto de tempo (_10 ms_), de modo a promover uma condição de competição.
 
 O programa funciona até terminar o tempo de execução fornecido pelo utilizador ou até o Quarto de Banho estar fechado. 
 _O caso do Quarto de Banho já estar fechado quando se iniciam os pedidos dos clientes, encontra-se na situação referida anteriormente e como tal, deve-se ter o cuidado de iniciar o programa do servidor antes do programa do cliente._
@@ -17,10 +17,10 @@ Cada thread é responsável por um pedido, ou seja:
 - Numa fase inicial, a thread irá compôr uma mensagem no formato
 "[i,pid,tid,dur,pl]" (as variáveis são as mesmas do enunciado);
 - De seguida, irá tentar abrir o FIFO público que foi fornecido pelo utilizador sendo que no caso desta comunicação não ser possível devido ao fecho do Quarto de Banho, o cliente receberá uma mensagem de que este se encontra fechado, _CLSD_. Além disso o ciclo de geração de threads de pedidos será terminado, através de uma flag;
-- Estabelecendo-se uma ligação ao FIFO público, a mensagem previamente composta será escrita neste e é fechada a ligação ao FIFO público;
-- Após este passo, a thread criará um FIFO privado de comunicação com o servidor, de modo a obter uma resposta deste;
+- Estabelecendo-se uma ligação ao FIFO público, a thread criará um FIFO privado de comunicação com o servidor, de modo a obter uma resposta deste;
+- Após o sucesso na criação do FIFO privado, a mensagem previamente composta será escrita para o FIFO público e é fechada a ligação ao FIFO público;
 - No caso da thread não conseguir obter uma resposta do servidor, o cliente receberá uma mensagem da falha, _FAILD_;
-- No caso de sucesso, a thread irá analisar tanto a posição como a duração que o servidor enviou. No caso de _ambas serem -1_, é uma indicação de que o tempo de utilização do cliente irá exceder o tempo de execução do Quarto de Banho e por isso é transmitida uma mensagem de fecho ao utilizador, _CLOSD_. No caso de ser possível pôr o cliente na fila de espera de utilização, o cliente receberá uma mensagem de que entrou, _IAMIN_;
+- No caso de sucesso, a thread irá analisar tanto a posição como a duração que o servidor enviou. No caso de _ambas serem -1_, é uma indicação de que o tempo de execução do Quarto de Banho terminou e por isso é transmitida uma mensagem de fecho ao utilizador, _CLOSD_. No caso de ser possível pôr o cliente na fila de espera de utilização, o cliente receberá uma mensagem de que entrou, _IAMIN_;
 - No final, a thread irá fechar o FIFO privado e destruí-lo;
 
 
@@ -28,7 +28,7 @@ Cada thread é responsável por um pedido, ou seja:
 
 Tal como descrito no enunciado, o programa _Qn_ lança threads por cada pedido dos clientes. Inicialmente, o programa cria o FIFO público com o nome fornecido pelo utilizador. Após esta abertura, está constatemente a ler o FIFO, de modo a receber um pedido. Quando o encontrar, cria uma thread.
 
-O programa funciona até terminar o tempo de execução fornecido pelo utilizador.
+O programa funciona até terminar o tempo de execução fornecido pelo utilizador. Após este tempo, o servidor certifica-se que envia uma mesnagem a confirmar que terminou a todos os pedidos restantes de forma a que todos os pedidos recebidos sejam atendidos.
 
 Cada thread é responsável por um atender um pedido, ou seja:
 - Numa fase inicial, a thread irá extrair a mensagem de formato
@@ -44,9 +44,5 @@ Cada thread é responsável por um atender um pedido, ou seja:
 Existe um make file no diretório principal do programa, que permite compilar os dois programas, simultaneamente.
 
 Através da nossa interpretação do enunciado, o pedido de um cliente é atendido, independentemente do seu tempo de duração, se este foi feito anterior ao fecho da casa de banho (semelhante ao funcionamento de uma loja, quando um cliente entra antes de fechar). Assim, o FIFO só será encerrado após responder a todos os pedidos feitos até ao seu fecho.
-
-Alguns erros: os pedidos que são recebidos pelo quarto de banho podem dar-se até ±0,005000 s depois do tempo de execução desta (caso o tempo de execução do Quarto de Banho seja inferior ao tempo de execução do ciclo de pedidos).
-
-De vez em quando, há erros no cálculo de lugares devido a falhas de comunicação entre FIFOS, ou seja, no caso de ocorrer um _GAVUP_ OU _FAILD_.
 
 Durante o desenvolvimento do programa, foi difícil testar se as funcionalidades estavam a ser executadas corretamente, visto que erros que apareciam a um colega de trabalho não apareciam ao outro e vice-versa. Tempos de execução, número de threads lançadas, posicionamento dos clientes, número de tentativas de leitura/escrita para um FIFO de modo a que funcionasse corretamente foram alguns dos problemas encontrados.
