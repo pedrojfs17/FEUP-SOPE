@@ -3,7 +3,7 @@
 ## Sistemas Operativos
 
 
-[***Course Page***](https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=436436)
+[***Course Page***](https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=436440)
 
 
 Este repositório contém:
