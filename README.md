@@ -14,6 +14,6 @@ Este repositório contém:
 
 **SOPE final grade : 18**
 
-| | Projeto 1 | Projeto 2 (1ª Parte) | Projeto 2 (2ª Parte) | Exame |
-| --- | --- | --- | --- | --- |
-| **Nota** | 20 | 13 | 17.0 | 19.2 |
+| | Projeto 1 | Projeto 2 (1ª Parte , 2ª Parte) | Exame |
+| --- | --- | --- | --- |
+| **Nota** | 20.0 | 14.6 (13.0, 17.0) | 19.2 |
